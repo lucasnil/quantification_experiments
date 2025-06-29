@@ -79,7 +79,7 @@ class APPBagGenerator(BaseBagGenerator):
                 for n, p in zip(classes, ps):
                     if p > 0:
                         indices = class_indices[n.item()]
-                        sampled_indices = indices[torch.randint(len(indices), (p,), generator=self.gen, device=self.device)]
+                        sampled_indices = indices[torch.randint(len(indices), (p,), generator=self.gen, device='cpu')]
                         bag_samples.append(sampled_indices)
 
                 # Concatenate and shuffle
