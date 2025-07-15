@@ -171,9 +171,9 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--data", required=True, help="Caminho para o arquivo .csv do GASP")
-    parser.add_argument("--difficulty_metric", default="l1", choices=["l1", "kl", "mae"], help="Métrica de dificuldade")
-    parser.add_argument("--difficulty_top_k", type=int, default=100, help="Top-K instâncias mais difíceis")
-    parser.add_argument("--difficulty_mode", default="hardest", choices=["hardest", "easiest", "mixed"], help="Modo de dificuldade")
+    parser.add_argument("--difficulty_metric", default=None, choices=["l1", "kl"], help="Métrica de dificuldade")
+    parser.add_argument("--difficulty_top_k", type=int, default=None, help="Top-K instâncias mais difíceis")
+    parser.add_argument("--difficulty_mode", default=None, choices=["hardest", "easiest"], help="Modo de dificuldade")
 
     args = parser.parse_args()
 
