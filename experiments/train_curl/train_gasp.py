@@ -122,6 +122,15 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         sample_size=BAG_SIZE
     )
 
+    test_bag_generator = UnlabeledBagGenerator(
+        device='cpu',
+        pick_all=False,
+        seed=SEED,
+        prevalences=test_prevalences,
+        sample_size=BAG_SIZE
+    )
+
+
     fe = NoFeatureExtractionModule(input_size=EMBEDDING_SIZE)
     loss = MAE()
 
@@ -131,6 +140,7 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         "feature_extraction_module": fe,
         "bag_generator": train_bag_generator,
         "val_bag_generator": val_bag_generator,
+        "test_bag_generator": test_bag_generator,
         "device": device,
         "quant_loss": loss,
         "dataset_name": "GASP",
