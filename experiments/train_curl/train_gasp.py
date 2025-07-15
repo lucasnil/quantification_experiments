@@ -187,8 +187,7 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     #    (isso corresponde ao “Case 3” na sua implementação)
     preds_bags_np = model.predict(
         test_dataset_bags,
-        process_in_batches=n_bags,      # força predição uma bag por vez
-        return_classification=False     # retorna só a quantificação
+        process_in_batches=n_bags     # força predição uma bag por vez
     )
     # preds_bags_np: numpy array de shape (n_bags, N_CLASSES)
 
