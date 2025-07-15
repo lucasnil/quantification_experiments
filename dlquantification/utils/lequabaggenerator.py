@@ -12,7 +12,9 @@ class LeQuaBagGenerator(BaseBagGenerator):
         app_bags_proportion,
         mixed_bags_proportion,
         labeled_unlabeled_split,
-        difficulty_metric=None  # Novo parâmetro para escolher a métrica de dificuldade ('l1' ou 'kl')
+        difficulty_metric=None,  # Novo parâmetro para escolher a métrica de dificuldade ('l1' ou 'kl')
+        difficulty_top_k=None,         # int ou None → quantos bags manter
+        difficulty_mode="hardest",  # 'hardest' ou 'easiest'
     ):
         self.device = device
         self.appBagGenerator = APPBagGenerator(device=device, seed=seed)
@@ -31,6 +33,9 @@ class LeQuaBagGenerator(BaseBagGenerator):
         self.labeled_indexes = labeled_unlabeled_split[0]
         self.unlabeled_indexes = labeled_unlabeled_split[1]
         self.difficulty_metric = difficulty_metric  # Armazena a métrica de dificuldade selecionada
+        self.difficulty_top_k = difficulty_top_k
+        self.difficulty_mode = difficulty_mode  # Define o modo de dificuldade (hardest ou easiest)
+        
 
     def compute_bags(self, n_bags: int, bag_size: int, y):
         app_bags = round(n_bags * self.app_bags_proportion)
@@ -73,8 +78,18 @@ class LeQuaBagGenerator(BaseBagGenerator):
             else:
                 raise ValueError(f"Unknown difficulty_metric: {self.difficulty_metric}")
 
-            # Ordena os bags com base na dificuldade (do menor para o maior, ou seja, os mais "fáceis" primeiro)
-            sorted_idxs = torch.argsort(difficulty)
+            # Ordena os bags com base na dificuldade
+            if self.difficulty_mode == "hardest":
+                sorted_idxs = torch.argsort(difficulty, descending=True)
+            elif self.difficulty_mode == "easiest":
+                sorted_idxs = torch.argsort(difficulty, descending=False)
+            else:
+                raise ValueError("Invalid difficulty_mode, expected one of [hardest, easiest]")
+
+            # Aplica corte top_k se definido
+            if self.difficulty_top_k is not None:
+                sorted_idxs = sorted_idxs[self.difficulty_top_k:]
+
             samples_indexes = samples_indexes[sorted_idxs, :]
             prevalences = prevalences[sorted_idxs, :]
 
