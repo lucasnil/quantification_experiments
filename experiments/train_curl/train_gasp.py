@@ -149,7 +149,7 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         "use_wandb": False,
         "use_multiple_devices": False,
         "num_workers": 4,
-        "train_epochs": 4,
+        "train_epochs": 1,
         "test_epochs": 1,
         "start_lr": 1e-3,
         "end_lr": 1e-5,
@@ -173,18 +173,34 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     model.fit(dataset=train_dataset, val_dataset=val_dataset)
 
     # antes
-# test_dataset = TensorDataset(x_test_bags)
 
-    # depois
-    test_dataset = TensorDataset(
-        x_test_bags.view(-1, EMBEDDING_SIZE),                              # (n_bags * BAG_SIZE, 1)
-        torch.full((x_test_bags.numel() // EMBEDDING_SIZE,), -1, dtype=torch.long)
+    # --- após model.fit(...) ---
+
+    # 1) Reconstrói o dataset de bags (não achatado):
+    test_dataset_bags = torch.utils.data.TensorDataset(x_test_bags)  
+    # cada elemento do dataset é um tensor de shape (BAG_SIZE, EMBEDDING_SIZE)
+
+    # 2) Número de bags de teste:
+    n_bags = x_test_bags.shape[0]
+
+    # 3) Chama o predict em modo “process_in_batches” para retornar todas as bags:
+    #    (isso corresponde ao “Case 3” na sua implementação)
+    preds_bags_np = model.predict(
+        test_dataset_bags,
+        process_in_batches=n_bags,      # força predição uma bag por vez
+        return_classification=False     # retorna só a quantificação
     )
+    # preds_bags_np: numpy array de shape (n_bags, N_CLASSES)
 
-    preds = model.predict(test_dataset)
+    # 4) Converte para tensor e calcula MAE por bag:
+    preds_bags = torch.from_numpy(preds_bags_np).to(test_prevalences.dtype)
+    mae_per_bag = torch.nn.functional.l1_loss(
+        preds_bags,                     # (n_bags, 3)
+        test_prevalences,               # (n_bags, 3)
+        reduction="none"
+    ).mean(dim=1)                       # calcula MAE ao longo das classes para cada bag
 
-    mae = torch.nn.functional.l1_loss(preds, test_prevalences, reduction="none").mean(dim=1)
-    print(f"MAE final: {mae.mean().item():.4f}")
+    print(f"MAE médio por bag: {mae_per_bag.mean().item():.4f}")
 
 
 if __name__ == "__main__":
