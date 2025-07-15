@@ -172,8 +172,17 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     model = GMNet(**params)
     model.fit(dataset=train_dataset, val_dataset=val_dataset)
 
-    test_dataset = TensorDataset(x_test_bags)
+    # antes
+# test_dataset = TensorDataset(x_test_bags)
+
+    # depois
+    test_dataset = TensorDataset(
+        x_test_bags.view(-1, EMBEDDING_SIZE),                              # (n_bags * BAG_SIZE, 1)
+        torch.full((x_test_bags.numel() // EMBEDDING_SIZE,), -1, dtype=torch.long)
+    )
+
     preds = model.predict(test_dataset)
+
     mae = torch.nn.functional.l1_loss(preds, test_prevalences, reduction="none").mean(dim=1)
     print(f"MAE final: {mae.mean().item():.4f}")
 
