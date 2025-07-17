@@ -12,6 +12,7 @@ from dlquantification.featureextraction.nofe import NoFeatureExtractionModule
 from dlquantification.utils.lossfunc import MAE
 from dlquantification.utils.utils import UnlabeledBagGenerator
 from dlquantification.utils.lequabaggenerator import LeQuaBagGenerator
+from dlquantification.utils.utils import UnlabeledMixerBagGenerator
 
 
 def padronizar(x_train, x_val, x_test):
@@ -122,12 +123,19 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         sample_size=BAG_SIZE
     )
 
-    test_bag_generator = UnlabeledBagGenerator(
+    test_bag_generator = UnlabeledMixerBagGenerator(
         device='cpu',
-        pick_all=False,
-        seed=SEED,
-        prevalences=test_prevalences,
-        sample_size=BAG_SIZE
+        prevalences=test_prevalences,           # (3, 3)
+        sample_size=BAG_SIZE,
+        real_bags_proportion=3 / 100,           # 3 reais em 100 total
+        seed=SEED
+    )
+
+    # gera 100 bags (3 reais + 97 sintéticas)
+    total_test_bags = 100
+    x_test_bags, _, test_prevalences = test_bag_generator.compute_bags(
+        n_bags=total_test_bags,
+        x=x_test
     )
 
 
@@ -176,36 +184,36 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
 
     # --- após model.fit(...) ---
 
-    # 1) Reconstrói o dataset de bags (não achatado):
-    test_dataset_bags = torch.utils.data.TensorDataset(x_test_bags)  
-    # cada elemento do dataset é um tensor de shape (BAG_SIZE, EMBEDDING_SIZE)
+   # 1) Dataset de teste com bags (não achatado)
+    test_dataset_bags = torch.utils.data.TensorDataset(x_test_bags)
 
-    # 2) Número de bags de teste:
-    n_bags = x_test_bags.shape[0]
-
-    # 3) Chama o predict em modo “process_in_batches” para retornar todas as bags:
-    #    (isso corresponde ao “Case 3” na sua implementação)
+    # 2) Chamada ao predict com todas as bags
     preds_bags_np = model.predict(
         test_dataset_bags,
-        process_in_batches=n_bags     # força predição uma bag por vez
+        process_in_batches=total_test_bags
     )
-    # preds_bags_np: numpy array de shape (n_bags, N_CLASSES)
 
-    # 4) Converte para tensor e calcula MAE por bag:
-    preds_bags = preds_bags_np.to(test_prevalences.dtype)
+    # 3) Converte para tensor
+    preds_bags = torch.from_numpy(preds_bags_np).to(test_prevalences.dtype)
 
+    # 4) Calcula o MAE por bag
     mae_per_bag = torch.nn.functional.l1_loss(
-        preds_bags,                     # (n_bags, 3)
-        test_prevalences,               # (n_bags, 3)
+        preds_bags,
+        test_prevalences,
         reduction="none"
-    ).mean(dim=1)                       # calcula MAE ao longo das classes para cada bag
+    ).mean(dim=1)
 
     print(f"MAE médio por bag: {mae_per_bag.mean().item():.4f}")
 
-    df_mae = pd.DataFrame({"bag_id": list(range(len(mae_per_bag))),"mae": mae_per_bag.cpu().numpy()})
+    # 5) Salva CSV
+    df_mae = pd.DataFrame({
+        "bag_id": list(range(len(mae_per_bag))),
+        "mae": mae_per_bag.cpu().numpy()
+    })
 
     df_mae.to_csv("mae_por_bag.csv", index=False)
     print("Salvo em mae_por_bag.csv")
+
 
 
 if __name__ == "__main__":
