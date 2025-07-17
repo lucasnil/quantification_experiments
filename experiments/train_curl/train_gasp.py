@@ -192,7 +192,8 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     # preds_bags_np: numpy array de shape (n_bags, N_CLASSES)
 
     # 4) Converte para tensor e calcula MAE por bag:
-    preds_bags = torch.from_numpy(preds_bags_np).to(test_prevalences.dtype)
+    preds_bags = preds_bags_np.to(test_prevalences.dtype)
+
     mae_per_bag = torch.nn.functional.l1_loss(
         preds_bags,                     # (n_bags, 3)
         test_prevalences,               # (n_bags, 3)
@@ -200,6 +201,11 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     ).mean(dim=1)                       # calcula MAE ao longo das classes para cada bag
 
     print(f"MAE médio por bag: {mae_per_bag.mean().item():.4f}")
+
+    df_mae = pd.DataFrame({"bag_id": list(range(len(mae_per_bag))),"mae": mae_per_bag.cpu().numpy()})
+
+    df_mae.to_csv("mae_por_bag.csv", index=False)
+    print("Salvo em mae_por_bag.csv")
 
 
 if __name__ == "__main__":
