@@ -200,7 +200,7 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     )
 
     # 3) Converte para tensor
-    preds_bags = torch.from_numpy(preds_bags_np).to(test_prevalences.dtype)
+    preds_bags = preds_bags_np.to(test_prevalences.dtype)
 
     # 4) Calcula o MAE por bag
     mae_per_bag = torch.nn.functional.l1_loss(
