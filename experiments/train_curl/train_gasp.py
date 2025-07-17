@@ -131,12 +131,18 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         seed=SEED
     )
 
-    # gera 100 bags (3 reais + 97 sintéticas)
     total_test_bags = 100
-    x_test_bags, _, test_prevalences = test_bag_generator.compute_bags(
+
+    # 1) Gera índices das bags e prevalências
+    x_test_bags_indexes, test_prevalences = test_bag_generator.compute_bags(
         n_bags=total_test_bags,
-        x=x_test
+        bag_size=BAG_SIZE
     )
+
+    # 2) Extrai as embeddings correspondentes usando os índices
+    # x_test deve ser tensor com shape (n_samples, EMBEDDING_SIZE)
+    x_test_bags = x_test[x_test_bags_indexes.view(-1)].view(total_test_bags, BAG_SIZE, EMBEDDING_SIZE)
+
 
 
     fe = NoFeatureExtractionModule(input_size=EMBEDDING_SIZE)
