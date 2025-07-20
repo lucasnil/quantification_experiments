@@ -170,8 +170,8 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         "num_workers": 4,
         "train_epochs": 1000,
         "test_epochs": 1,
-        "start_lr": 1e-3,
-        "end_lr": 1e-5,
+        "start_lr": 5e-03,
+        "end_lr": 1e-04,
         "lr_factor": 0.5,
         "batch_size": 128,
         "gradient_accumulation": 1,
@@ -180,13 +180,14 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         "cka_regularization": "view",
         "n_bags": [5000, 300, 1],
         "bag_size": BAG_SIZE,
-        "linear_sizes": [512, 128],
-        "n_gm_layers": 4,
-        "num_gaussians": [40] * 4,
-        "gaussian_dimensions": [6] * 4,
+        "linear_sizes": [4000],
+        "n_gm_layers": 9,
+        "num_gaussians": [10] * 9,
+        "gaussian_dimensions": [5] * 9,
         "patience": 20,
         "verbose": 8
     }
+
 
     model = GMNet(**params)
     model.fit(dataset=train_dataset, val_dataset=val_dataset)
