@@ -24,6 +24,7 @@ BERT_MODEL = "bert-base-uncased"
 EMBEDDING_CACHE = Path(f"{TRAIN_NAME}_embeddings.pt")
 LABELS_CACHE = Path(f"{TRAIN_NAME}_labels.pt")
 
+torch.manual_seed(SEED)
 
 def gerar_embeddings(texts, tokenizer, model, device, batch_size=32, max_length=128):
     embeddings = []
@@ -167,7 +168,7 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         "use_wandb": False,
         "use_multiple_devices": False,
         "num_workers": 4,
-        "train_epochs": 1,
+        "train_epochs": 1000,
         "test_epochs": 1,
         "start_lr": 1e-3,
         "end_lr": 1e-5,
@@ -197,9 +198,23 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     mae_per_bag = torch.nn.functional.l1_loss(preds_bags, test_prevalences, reduction="none").mean(dim=1)
     print(f"MAE médio por bag: {mae_per_bag.mean().item():.4f}")
 
-    df_mae = pd.DataFrame({"bag_id": list(range(len(mae_per_bag))), "mae": mae_per_bag.cpu().numpy()})
-    df_mae.to_csv("mae_por_bag.csv", index=False)
-    print("Salvo em mae_por_bag.csv")
+    # Cria um dicionário com colunas de prevalência dinamicamente
+    prevalence_columns = {
+        f"prev_class_{i}": test_prevalences[:, i].cpu().numpy()
+        for i in range(test_prevalences.shape[1])
+    }
+
+    # Junta tudo em um DataFrame
+    df_resultados = pd.DataFrame({
+        "bag_id": list(range(len(mae_per_bag))),
+        "mae": mae_per_bag.cpu().numpy(),
+        **prevalence_columns
+    })
+
+    csv_path = f"resultados_{TRAIN_NAME}.csv"
+    df_resultados.to_csv(csv_path, index=False)
+    print(f"Salvo em {csv_path}")
+
 
 
 if __name__ == "__main__":
