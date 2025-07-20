@@ -212,9 +212,20 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         **prevalence_columns
     })
 
-    csv_path = f"resultados_{TRAIN_NAME}.csv"
+    # Constrói o sufixo do nome do arquivo com base nos argumentos de dificuldade
+    difficulty_suffix = ""
+    if args.difficulty_metric:
+        difficulty_suffix += f"_{args.difficulty_metric}"
+    if args.difficulty_mode:
+        difficulty_suffix += f"_{args.difficulty_mode}"
+    if args.difficulty_top_k is not None:
+        difficulty_suffix += f"_top{args.difficulty_top_k}"
+
+    # Define o caminho do CSV com o sufixo apropriado
+    csv_path = f"resultados_{TRAIN_NAME}{difficulty_suffix}.csv"
     df_resultados.to_csv(csv_path, index=False)
     print(f"Salvo em {csv_path}")
+
 
 
 
