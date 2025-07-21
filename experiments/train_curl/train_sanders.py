@@ -197,7 +197,10 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     preds_bags = preds_bags_np.to(test_prevalences.dtype)
 
     mae_per_bag = torch.nn.functional.l1_loss(preds_bags, test_prevalences, reduction="none").mean(dim=1)
-    print(f"MAE médio por bag: {mae_per_bag.mean().item():.4f}")
+    mean_mae = mae_per_bag.mean().item()
+    std_mae = mae_per_bag.std().item()
+    print(f"MAE médio por bag: {mean_mae:.4f} ± {std_mae:.4f}")
+
 
     # Cria um dicionário com colunas de prevalência dinamicamente
     prevalence_columns = {
