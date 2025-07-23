@@ -21,8 +21,8 @@ EMBEDDING_SIZE = 768
 TRAIN_NAME = "twitter_bert"
 BERT_MODEL = "bert-base-uncased"
 
-EMBEDDING_CACHE = Path(f"{TRAIN_NAME}_embeddings.pt")
-LABELS_CACHE = Path(f"{TRAIN_NAME}_labels.pt")
+EMBEDDING_NAME = Path(f"{TRAIN_NAME}_embeddings.pt")
+LABELS_NAME = Path(f"{TRAIN_NAME}_labels.pt")
 
 torch.manual_seed(SEED)
 
@@ -79,9 +79,10 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     df = pd.read_csv(dataset_path)
     label_map = {'Neg': 0, 'Neutral': 1, 'Pos': 2}
     df['label'] = df['class'].map(label_map)
-    
-    EMBEDDING_CACHE = Path(dataset_path) / EMBEDDING_CACHE
-    LABELS_CACHE = Path(dataset_path) / LABELS_CACHE
+
+    EMBEDDING_CACHE = Path(dataset_path).parent / EMBEDDING_NAME
+    LABELS_CACHE = Path(dataset_path).parent / LABELS_NAME
+
 
     if EMBEDDING_CACHE.exists() and LABELS_CACHE.exists():
         print("Carregando embeddings do cache...")
