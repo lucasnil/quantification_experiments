@@ -225,7 +225,7 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
         difficulty_suffix += f"_top{args.difficulty_top_k}"
 
     # Define o caminho do CSV com o sufixo apropriado
-    csv_path = f"resultados_{TRAIN_NAME}{difficulty_suffix}.csv"
+    csv_path = f"resultados_{TRAIN_NAME}{difficulty_suffix}_{args.run}.csv"
     df_resultados.to_csv(csv_path, index=False)
     print(f"Salvo em {csv_path}")
 
@@ -238,6 +238,7 @@ if __name__ == "__main__":
     parser.add_argument("--difficulty_metric", default=None, choices=["l1", "kl"], help="Métrica de dificuldade")
     parser.add_argument("--difficulty_top_k", type=int, default=None, help="Top-K instâncias mais difíceis")
     parser.add_argument("--difficulty_mode", default=None, choices=["hardest", "easiest"], help="Modo de dificuldade")
+    parser.add_argument("--run", type=int, default=1, help="Número da execução para diferenciar os resultados")
     args = parser.parse_args()
 
     main(
