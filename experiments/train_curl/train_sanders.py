@@ -80,8 +80,8 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     label_map = {'Neg': 0, 'Neutral': 1, 'Pos': 2}
     df['label'] = df['class'].map(label_map)
     
-    EMBEDDING_CACHE = args.data+'/'+EMBEDDING_CACHE
-    LABELS_CACHE = args.data+'/'+LABELS_CACHE
+    EMBEDDING_CACHE = Path(dataset_path) / EMBEDDING_CACHE
+    LABELS_CACHE = Path(dataset_path) / LABELS_CACHE
 
     if EMBEDDING_CACHE.exists() and LABELS_CACHE.exists():
         print("Carregando embeddings do cache...")
