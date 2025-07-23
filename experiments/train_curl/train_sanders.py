@@ -63,7 +63,15 @@ def criar_bags(x, y, bag_size, n_classes):
     return x_bags, y_bags, prevalences
 
 
-def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
+def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, result_path=".", run=1):
+    # Exemplo de debug/uso dos parâmetros
+    print(f"Dataset: {dataset_path}")
+    print(f"Dificuldade: metric={difficulty_metric}, mode={difficulty_mode}, top_k={difficulty_top_k}")
+    print(f"Rodada: {run}")
+    print(f"Salvar resultados em: {result_path}")
+    
+    # Aqui vai o código principal do treino
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Dispositivo de treino:", device)
 
