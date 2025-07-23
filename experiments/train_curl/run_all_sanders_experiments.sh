@@ -10,49 +10,46 @@ mkdir -p $RESULT_DIR
 for run in {1..5}; do
   echo "=== Execução $run ==="
 
-  # Sem curriculum (baseline)
-  nohup python -u $SCRIPT_PATH \
+  # Sem curriculum
+  python -u $SCRIPT_PATH \
     --data $DATA_PATH \
     --run $run \
     --result_path $RESULT_DIR \
-    > logs/sanders_none_run${run}.log 2>&1 &
+    | tee logs/sanders_none_run${run}.log
 
   # KL - hardest
-  nohup python -u $SCRIPT_PATH \
+  python -u $SCRIPT_PATH \
     --data $DATA_PATH \
     --difficulty_metric kl \
     --difficulty_mode hardest \
     --run $run \
     --result_path $RESULT_DIR \
-    > logs/sanders_kl_hardest_run${run}.log 2>&1 &
+    | tee logs/sanders_kl_hardest_run${run}.log
 
   # KL - easiest
-  nohup python -u $SCRIPT_PATH \
+  python -u $SCRIPT_PATH \
     --data $DATA_PATH \
     --difficulty_metric kl \
     --difficulty_mode easiest \
     --run $run \
     --result_path $RESULT_DIR \
-    > logs/sanders_kl_easiest_run${run}.log 2>&1 &
+    | tee logs/sanders_kl_easiest_run${run}.log
 
   # L1 - hardest
-  nohup python -u $SCRIPT_PATH \
+  python -u $SCRIPT_PATH \
     --data $DATA_PATH \
     --difficulty_metric l1 \
     --difficulty_mode hardest \
     --run $run \
     --result_path $RESULT_DIR \
-    > logs/sanders_l1_hardest_run${run}.log 2>&1 &
+    | tee logs/sanders_l1_hardest_run${run}.log
 
   # L1 - easiest
-  nohup python -u $SCRIPT_PATH \
+  python -u $SCRIPT_PATH \
     --data $DATA_PATH \
     --difficulty_metric l1 \
     --difficulty_mode easiest \
     --run $run \
     --result_path $RESULT_DIR \
-    > logs/sanders_l1_easiest_run${run}.log 2>&1 &
-
-  # Aguarda todos os processos da rodada atual
-  wait
+    | tee logs/sanders_l1_easiest_run${run}.log
 done
