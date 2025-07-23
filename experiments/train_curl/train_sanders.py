@@ -71,6 +71,9 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
     df = pd.read_csv(dataset_path)
     label_map = {'Neg': 0, 'Neutral': 1, 'Pos': 2}
     df['label'] = df['class'].map(label_map)
+    
+    EMBEDDING_CACHE = args.data+'/'+EMBEDDING_CACHE
+    LABELS_CACHE = args.data+'/'+LABELS_CACHE
 
     if EMBEDDING_CACHE.exists() and LABELS_CACHE.exists():
         print("Carregando embeddings do cache...")
