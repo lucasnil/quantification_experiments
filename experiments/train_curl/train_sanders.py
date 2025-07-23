@@ -235,14 +235,10 @@ def main(dataset_path, difficulty_metric, difficulty_top_k, difficulty_mode):
 
 
 
-def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, result_path=".", run=1):
-    # Aqui você colocaria o código principal do treino
-    print(f"Rodando com: metric={difficulty_metric}, mode={difficulty_mode}, run={run}")
-    # Você também pode salvar os resultados em arquivos com base nesses argumentos
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data", required=True, help="Caminho para o arquivo .csv do dataset")
+    parser.add_argument("--data", required=True, help="Caminho para o arquivo .csv do dataset Sanders")
     parser.add_argument("--difficulty_metric", default=None, choices=["l1", "kl"], help="Métrica de dificuldade")
     parser.add_argument("--difficulty_mode", default=None, choices=["hardest", "easiest"], help="Modo de dificuldade")
     parser.add_argument("--difficulty_top_k", type=int, default=None, help="Top-K instâncias mais difíceis")
