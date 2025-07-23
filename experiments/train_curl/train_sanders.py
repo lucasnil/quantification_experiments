@@ -165,6 +165,9 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     fe = NoFeatureExtractionModule(input_size=EMBEDDING_SIZE)
     loss = MAE()
 
+    difficulty_suffix = "none" if difficulty_metric is None else f"{difficulty_metric}_{difficulty_mode}"
+    save_model_path = f"savedmodels/{TRAIN_NAME}_{difficulty_suffix}_run{run}.pkl"
+
     params = {
         "n_classes": N_CLASSES,
         "random_seed": SEED,
@@ -175,7 +178,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         "device": device,
         "quant_loss": loss,
         "dataset_name": "Twitter",
-        "save_model_path": f"savedmodels/{TRAIN_NAME}.pkl",
+        "save_model_path": save_model_path,
         "wandb_experiment_name": TRAIN_NAME,
         "use_wandb": False,
         "use_multiple_devices": False,
