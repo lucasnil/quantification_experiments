@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# ❗ ADICIONE O CAMINHO CORRETO AQUI ❗
+# Define o caminho para o diretório pai da biblioteca 'dlquantification'
+export PYTHONPATH=/home/nildaimon/gmnet
+
 # Define o nome do script Python a ser executado
 SCRIPT_PATH="train_miniboone.py"
 # Define o diretório onde os resultados (CSVs) serão salvos
