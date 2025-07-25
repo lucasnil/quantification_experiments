@@ -6,10 +6,16 @@ import numpy as np
 import torch
 from sklearn.model_selection import train_test_split
 from transformers import AutoTokenizer, AutoModel
-from dlquantification.utils.lequabaggenerator import LeQuaBagGenerator
 from tqdm import tqdm
 
-# --- CONFIGURAÇÕES GLOBAIS (copiadas do seu script original) ---
+# Adicione esta seção para o PYTHONPATH
+import sys
+project_root = Path(__file__).resolve().parent.parent 
+sys.path.append(str(project_root))
+
+from dlquantification.utils.lequabaggenerator import LeQuaBagGenerator
+
+# --- CONFIGURAÇÕES GLOBAIS ---
 SEED = 42
 BAG_SIZE = 100
 N_CLASSES = 3
@@ -23,7 +29,7 @@ LABELS_NAME = Path(f"{TRAIN_NAME}_labels.pt")
 torch.manual_seed(SEED)
 np.set_printoptions(precision=3, suppress=True)
 
-# --- FUNÇÕES AUXILIARES (copiadas do seu script original) ---
+# --- FUNÇÕES AUXILIARES ---
 def gerar_embeddings(texts, tokenizer, model, device, batch_size=32, max_length=128):
     embeddings = []
     for i in tqdm(range(0, len(texts), batch_size), desc="Gerando embeddings"):
@@ -42,7 +48,7 @@ def gerar_embeddings(texts, tokenizer, model, device, batch_size=32, max_length=
 def padronizar(x_train, x_val, x_test):
     mean = x_train.mean(dim=0)
     std = x_train.std(dim=0)
-    std[std == 0] = 1.0 # Evitar divisão por zero
+    std[std == 0] = 1.0
     return (x_train - mean)/std, (x_val - mean)/std, (x_test - mean)/std, mean, std
 
 def criar_bags(x, y, bag_size, n_classes):
@@ -106,7 +112,6 @@ def main(dataset_path):
     print("Criando bags a partir dos dados de treino...")
     x_train_bags, train_prevalences = criar_bags(x_train, y_train, BAG_SIZE, N_CLASSES)
     
-    # Apenas para o parâmetro labeled_unlabeled_split
     n_labeled = x_train_bags.numel() // EMBEDDING_SIZE
 
     print("Inicializando o LeQuaBagGenerator...")
@@ -127,7 +132,9 @@ def main(dataset_path):
     n_bags_para_verificar = 10
     print(f"Gerando {n_bags_para_verificar} bags de exemplo com o gerador...")
     
+    # CORREÇÃO APLICADA AQUI:
     _, prevalencias_geradas = train_bag_generator.compute_bags(
+        y=y_train, # <--- Argumento 'y' necessário foi adicionado
         n_bags=n_bags_para_verificar,
         bag_size=BAG_SIZE
     )
