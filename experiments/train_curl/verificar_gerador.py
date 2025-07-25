@@ -13,7 +13,9 @@ import sys
 project_root = Path(__file__).resolve().parent.parent 
 sys.path.append(str(project_root))
 
+# --- MUDANÇA 1: Adicionado novo import ---
 from dlquantification.utils.lequabaggenerator import LeQuaBagGenerator
+from dlquantification.utils.utils import UnlabeledMixerBagGenerator
 
 # --- CONFIGURAÇÕES GLOBAIS ---
 SEED = 42
@@ -29,7 +31,7 @@ LABELS_NAME = Path(f"{TRAIN_NAME}_labels.pt")
 torch.manual_seed(SEED)
 np.set_printoptions(precision=3, suppress=True)
 
-# --- FUNÇÕES AUXILIARES ---
+# --- FUNÇÕES AUXILIARES (sem alterações) ---
 def gerar_embeddings(texts, tokenizer, model, device, batch_size=32, max_length=128):
     embeddings = []
     for i in tqdm(range(0, len(texts), batch_size), desc="Gerando embeddings"):
@@ -71,6 +73,7 @@ def main(dataset_path):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Dispositivo:", device)
 
+    # ... (carregamento, processamento, divisão de dados - sem alterações) ...
     print("Carregando e processando dataset...")
     df = pd.read_csv(dataset_path)
     label_map = {'Neg': 0, 'Neutral': 1, 'Pos': 2}
@@ -80,20 +83,16 @@ def main(dataset_path):
     LABELS_CACHE = Path(dataset_path).parent / LABELS_NAME
 
     if EMBEDDING_CACHE.exists() and LABELS_CACHE.exists():
-        print("Carregando embeddings do cache...")
         embeddings = torch.load(EMBEDDING_CACHE)
         labels = torch.load(LABELS_CACHE)
     else:
-        print("Gerando embeddings com BERT (pode levar um tempo)...")
         tokenizer = AutoTokenizer.from_pretrained(BERT_MODEL)
         model_bert = AutoModel.from_pretrained(BERT_MODEL).to(device).eval()
         embeddings = gerar_embeddings(df['text'].astype(str).tolist(), tokenizer, model_bert, device)
         labels = torch.tensor(df['label'].values, dtype=torch.long)
-        print("Salvando embeddings em cache para uso futuro...")
         torch.save(embeddings, EMBEDDING_CACHE)
         torch.save(labels, LABELS_CACHE)
 
-    print("Dividindo dados em treino, validação e teste...")
     x_temp_np, x_test_np, y_temp_np, y_test_np = train_test_split(
         embeddings.numpy(), labels.numpy(), test_size=0.2, stratify=labels.numpy(), random_state=SEED
     )
@@ -106,50 +105,70 @@ def main(dataset_path):
     x_test = torch.from_numpy(x_test_np)
     y_train = torch.from_numpy(y_train_np)
 
-    print("Padronizando os dados...")
     x_train, _, _, _, _ = padronizar(x_train, x_val, x_test)
-
-    print("Criando bags a partir dos dados de treino...")
     x_train_bags, train_prevalences = criar_bags(x_train, y_train, BAG_SIZE, N_CLASSES)
-    
     n_labeled = x_train_bags.numel() // EMBEDDING_SIZE
 
-    print("Inicializando o LeQuaBagGenerator...")
+    # --- Verificação do LeQuaBagGenerator ---
     train_bag_generator = LeQuaBagGenerator(
-        device='cpu',
-        seed=SEED,
-        prevalences=train_prevalences,
-        sample_size=BAG_SIZE,
-        app_bags_proportion=0.5,
-        mixed_bags_proportion=1.0,
+        device='cpu', seed=SEED, prevalences=train_prevalences, sample_size=BAG_SIZE,
+        app_bags_proportion=0.5, mixed_bags_proportion=1.0,
         labeled_unlabeled_split=(range(0, n_labeled), range(n_labeled, 2 * n_labeled))
     )
-
     print("\n" + "="*50)
-    print("VERIFICANDO A SAÍDA DO GERADOR DE BAGS")
+    print("VERIFICANDO O LeQuaBagGenerator")
     print("="*50)
-
     n_bags_para_verificar = 10
-    print(f"Gerando {n_bags_para_verificar} bags de exemplo com o gerador...")
+    _, prevalencias_lequa = train_bag_generator.compute_bags(
+        y=y_train, n_bags=n_bags_para_verificar, bag_size=BAG_SIZE
+    )
+    print("\nPrevalências GERADAS pelo LeQuaBagGenerator (mix de APP e Misto):")
+    print(prevalencias_lequa.numpy())
+
+
+    # --- MUDANÇA 2: Adicionado novo bloco de verificação para o Bag Mixer ---
+    print("\n" + "#"*50)
+    print("VERIFICANDO O UnlabeledMixerBagGenerator (Bag Mixer puro)")
+    print("#"*50)
+
+    # Inicializa o Bag Mixer para gerar 100% de bags misturados
+    bag_mixer_generator = UnlabeledMixerBagGenerator(
+        device='cpu',
+        prevalences=train_prevalences, # Usa as mesmas prevalências originais como base
+        sample_size=BAG_SIZE,
+        real_bags_proportion=0.0, # Garante que todos os bags gerados sejam misturados
+        seed=SEED
+    )
+
+    print(f"Gerando {n_bags_para_verificar} bags de exemplo com o Bag Mixer...")
     
-    # CORREÇÃO APLICADA AQUI:
-    _, prevalencias_geradas = train_bag_generator.compute_bags(
-        y=y_train, # <--- Argumento 'y' necessário foi adicionado
+    # Este gerador não precisa de 'y', pois apenas mistura as prevalências existentes
+    _, prevalencias_bag_mixer = bag_mixer_generator.compute_bags(
         n_bags=n_bags_para_verificar,
         bag_size=BAG_SIZE
     )
 
-    print("\nPrevalências GERADAS pelo LeQuaBagGenerator (amostra):")
-    print(prevalencias_geradas.numpy())
-
-    print("\nCompare com as prevalências ORIGINAIS dos bags de treino (amostra):")
-    print(train_prevalences[:n_bags_para_verificar].numpy())
+    print("\nPrevalências GERADAS pelo Bag Mixer:")
+    print(prevalencias_bag_mixer.numpy())
     
-    print("\n" + "="*50)
-    print("Verificação concluída.")
+    print("\nLembre-se: cada linha acima deve ser a média de duas linhas das prevalências ORIGINAIS.")
+    print("#"*50)
+    
+    # --- Impressão final de comparação ---
+    print("\n" + "*"*50)
+    print("COMPARAÇÃO FINAL")
+    print("*"*50)
+    print("\nPrevalências ORIGINAIS (amostra):")
+    print(train_prevalences[:n_bags_para_verificar].numpy())
+    print("\nPrevalências do LeQuaBagGenerator (APP + Misto):")
+    print(prevalencias_lequa.numpy())
+    print("\nPrevalências do Bag Mixer (Apenas Misto):")
+    print(prevalencias_bag_mixer.numpy())
+    print("\nVerificação concluída.")
+
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Verifica as prevalências geradas pelo LeQuaBagGenerator.")
+    parser = argparse.ArgumentParser(description="Verifica e compara diferentes geradores de bags.")
     parser.add_argument("--data", required=True, help="Caminho para o arquivo .csv do dataset.")
     args = parser.parse_args()
     main(dataset_path=args.data)
