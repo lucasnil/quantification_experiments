@@ -1,4 +1,5 @@
 #!/bin/bash
+export PYTHONPATH=/home/nildaimon/gmnet
 
 DATA_PATH="/home/nildaimon/gmnet/experiments/train_curl/Datasets/Sanders/twitter-sanders-apple3.csv"
 SCRIPT_PATH="train_sanders.py"
@@ -53,3 +54,5 @@ for run in {1..5}; do
     --result_path $RESULT_DIR \
     | tee logs/sanders_l1_easiest_run${run}.log
 done
+
+echo "=== Todas as execuções do Sanders foram concluídas. ==="
