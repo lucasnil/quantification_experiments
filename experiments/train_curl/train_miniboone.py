@@ -124,7 +124,7 @@ def main(difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, re
 
     train_bag_generator = LeQuaBagGenerator(
         device='cpu', seed=SEED, prevalences=train_prevalences, sample_size=BAG_SIZE,
-        app_bags_proportion=0.5, mixed_bags_proportion=1.0,
+        app_bags_proportion=1, mixed_bags_proportion=0,
         labeled_unlabeled_split=(range(0, n_labeled), range(n_labeled, 2 * n_labeled)),
         difficulty_metric=difficulty_metric, difficulty_top_k=difficulty_top_k, difficulty_mode=difficulty_mode
     )
