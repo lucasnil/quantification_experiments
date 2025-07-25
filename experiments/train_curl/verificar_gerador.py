@@ -112,7 +112,7 @@ def main(dataset_path):
     # --- Verificação do LeQuaBagGenerator ---
     train_bag_generator = LeQuaBagGenerator(
         device='cpu', seed=SEED, prevalences=train_prevalences, sample_size=BAG_SIZE,
-        app_bags_proportion=0.5, mixed_bags_proportion=1.0,
+        app_bags_proportion=1.0, mixed_bags_proportion=0,
         labeled_unlabeled_split=(range(0, n_labeled), range(n_labeled, 2 * n_labeled))
     )
     print("\n" + "="*50)
@@ -122,7 +122,7 @@ def main(dataset_path):
     _, prevalencias_lequa = train_bag_generator.compute_bags(
         y=y_train, n_bags=n_bags_para_verificar, bag_size=BAG_SIZE
     )
-    print("\nPrevalências GERADAS pelo LeQuaBagGenerator (mix de APP e Misto):")
+    print("\nPrevalências GERADAS pelo LeQuaBagGenerator (somente de APP):")
     print(prevalencias_lequa.numpy())
 
 
