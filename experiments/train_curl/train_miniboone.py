@@ -67,6 +67,10 @@ def criar_bags(x, y, bag_size, n_classes):
         print(f"[criar_bags] bag_size={bag_size} é muito grande para o número de amostras ({total_samples}).")
         empty_shape = (0, bag_size, x.shape[1])
         return torch.empty(empty_shape), torch.empty((0, bag_size), dtype=torch.long), torch.empty((0, n_classes))
+    # Embaralha os índices antes de truncar
+    shuffled_indices = torch.randperm(total_samples)
+    x, y = x[shuffled_indices], y[shuffled_indices]
+
     x = x[:n_bags * bag_size]
     y = y[:n_bags * bag_size]
     x_bags = x.view(n_bags, bag_size, -1)
@@ -120,16 +124,20 @@ def main(difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, re
 
     train_bag_generator = LeQuaBagGenerator(
         device='cpu', seed=SEED, prevalences=train_prevalences, sample_size=BAG_SIZE,
-        app_bags_proportion=0.5, mixed_bags_proportion=0.5,
+        app_bags_proportion=0.5, mixed_bags_proportion=1.0,
         labeled_unlabeled_split=(range(0, n_labeled), range(n_labeled, 2 * n_labeled)),
         difficulty_metric=difficulty_metric, difficulty_top_k=difficulty_top_k, difficulty_mode=difficulty_mode
     )
-    val_bag_generator = UnlabeledBagGenerator(
-        device='cpu', pick_all=False, seed=SEED, prevalences=val_prevalences, sample_size=BAG_SIZE
+    val_bag_generator = UnlabeledMixerBagGenerator(
+        device='cpu',
+        prevalences=val_prevalences,  # Este argumento é mantido, mas não será usado para os bags reais
+        sample_size=BAG_SIZE,
+        real_bags_proportion=0.0,      # <-- A CHAVE: Garante 100% de bags com prevalências aleatórias
+        seed=SEED
     )
     test_bag_generator = UnlabeledMixerBagGenerator(
         device='cpu', prevalences=test_prevalences, sample_size=BAG_SIZE,
-        real_bags_proportion=3 / 100, seed=SEED
+        real_bags_proportion=0.0, seed=SEED
     )
 
     total_test_bags = 1000
