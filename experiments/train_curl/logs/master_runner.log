@@ -1,0 +1,8 @@
+--- [Thu Jul 24 22:31:27 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
+--- [Thu Jul 24 22:31:27 -03 2025] Iniciando a suíte de experimentos 'Sanders' ---
+--- [Fri Jul 25 01:58:15 -03 2025] Suíte 'Sanders' concluída. Log salvo em logs/sanders_runner.log ---
+--- [Fri Jul 25 01:58:15 -03 2025] Iniciando a suíte de experimentos 'MiniBooNE' ---
+--- [Fri Jul 25 05:18:54 -03 2025] Suíte 'MiniBooNE' concluída. Log salvo em logs/miniboone_runner.log ---
+--- [Fri Jul 25 05:18:54 -03 2025] Iniciando a suíte de experimentos 'BlogFeedback' ---
+--- [Fri Jul 25 08:47:46 -03 2025] Suíte 'BlogFeedback' concluída. Log salvo em logs/blog_runner.log ---
+--- [Fri Jul 25 08:47:46 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
