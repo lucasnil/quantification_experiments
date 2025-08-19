@@ -13,7 +13,7 @@ mkdir -p $RESULT_DIR
 # Sem curriculum
 python -u $SCRIPT_PATH \
   --data $DATA_PATH \
-  --run $run \
+  
   --result_path $RESULT_DIR \
   | tee logs/sanders_none_run${run}.log
 
@@ -22,7 +22,7 @@ python -u $SCRIPT_PATH \
   --data $DATA_PATH \
   --difficulty_metric kl \
   --difficulty_mode hardest \
-  --run $run \
+  
   --result_path $RESULT_DIR \
   | tee logs/sanders_kl_hardest_run${run}.log
 
@@ -31,7 +31,7 @@ python -u $SCRIPT_PATH \
   --data $DATA_PATH \
   --difficulty_metric kl \
   --difficulty_mode easiest \
-  --run $run \
+  
   --result_path $RESULT_DIR \
   | tee logs/sanders_kl_easiest_run${run}.log
 
@@ -40,7 +40,7 @@ python -u $SCRIPT_PATH \
   --data $DATA_PATH \
   --difficulty_metric l1 \
   --difficulty_mode hardest \
-  --run $run \
+  
   --result_path $RESULT_DIR \
   | tee logs/sanders_l1_hardest_run${run}.log
 
@@ -49,7 +49,7 @@ python -u $SCRIPT_PATH \
   --data $DATA_PATH \
   --difficulty_metric l1 \
   --difficulty_mode easiest \
-  --run $run \
+  
   --result_path $RESULT_DIR \
   | tee logs/sanders_l1_easiest_run${run}.log
 
