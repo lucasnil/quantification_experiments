@@ -76,8 +76,8 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     
     # Aqui vai o código principal do treino
 
-    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    device = 'cuda'
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
     print("Dispositivo de treino:", device)
 
     print("Carregando e processando dataset Twitter")
