@@ -76,8 +76,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     
     # Aqui vai o código principal do treino
 
-    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    device = "cuda"
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Dispositivo de treino:", device)
 
     print("Carregando e processando dataset Twitter")
@@ -167,7 +166,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     # x_test_bags_indexes, test_prevalences = test_bag_generator.compute_bags(n_bags=total_test_bags, bag_size=BAG_SIZE)
     # x_test_bags = x_test[x_test_bags_indexes.view(-1)].view(total_test_bags, BAG_SIZE, EMBEDDING_SIZE)
 
-    test_bag_generator = APPBagGenerator(device=device, seed=SEED)
+    test_bag_generator = APPBagGenerator(device='cpu', seed=SEED)
     x_test_bags_indexes, test_prevalences = test_bag_generator.compute_bags(
         n_bags=1000, bag_size=BAG_SIZE, y=y_test
     )
@@ -187,7 +186,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         "bag_generator": train_bag_generator,
         "val_bag_generator": val_bag_generator,
         "test_bag_generator": test_bag_generator,
-        "device": device,
+        "device": 'cuda',
         "quant_loss": loss,
         "dataset_name": "Twitter",
         "save_model_path": save_model_path,
