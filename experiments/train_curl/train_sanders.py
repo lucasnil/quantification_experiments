@@ -163,15 +163,15 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     #     seed=SEED
     # )
 
-    # total_test_bags = 1000
+    total_test_bags = 1000
     # x_test_bags_indexes, test_prevalences = test_bag_generator.compute_bags(n_bags=total_test_bags, bag_size=BAG_SIZE)
     # x_test_bags = x_test[x_test_bags_indexes.view(-1)].view(total_test_bags, BAG_SIZE, EMBEDDING_SIZE)
 
     test_bag_generator = APPBagGenerator(device='cpu', seed=SEED)
     x_test_bags_indexes, test_prevalences = test_bag_generator.compute_bags(
-        n_bags=1000, bag_size=BAG_SIZE, y=y_test
+        n_bags=total_test_bags, bag_size=BAG_SIZE, y=y_test
     )
-    x_test_bags = x_test[x_test_bags_indexes.view(-1)].view(1000, BAG_SIZE, EMBEDDING_SIZE)
+    x_test_bags = x_test[x_test_bags_indexes.view(-1)].view(total_test_bags, BAG_SIZE, EMBEDDING_SIZE)
 
 
     fe = NoFeatureExtractionModule(input_size=EMBEDDING_SIZE)
