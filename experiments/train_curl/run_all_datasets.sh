@@ -13,6 +13,10 @@ mkdir -p logs
 echo "--- [$(date)] Iniciando a suíte de experimentos 'Sanders' ---"
 bash run_all_sanders_experiments.sh > logs/sanders_runner.log 2>&1
 echo "--- [$(date)] Suíte 'Sanders' concluída. Log salvo em logs/sanders_runner.log ---"
+# --- ETAPA 2: YELP ---
+echo "--- [$(date)] Iniciando a suíte de experimentos 'Yelp' ---"
+bash run_all_yelp_experiments.sh > logs/yelp_runner.log 2>&1
+echo "--- [$(date)] Suíte 'Yelp' concluída. Log salvo em logs/yelp_runner.log ---"
 
 
 
