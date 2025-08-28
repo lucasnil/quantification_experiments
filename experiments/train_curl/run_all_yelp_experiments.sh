@@ -8,6 +8,18 @@ RESULT_DIR="resultados_yelp"
 mkdir -p logs
 mkdir -p $RESULT_DIR
 
+echo "=== Apagando modelos salvos do Yelp ==="
+
+rm -f savedmodels/yelp*
+
+#verifica se apagou
+if ls savedmodels/yelp* 1> /dev/null 2>&1; then
+   echo "Modelos do Yelp não foram apagados."
+else
+   echo "Modelos do Yelp apagados com sucesso."
+fi
+
+
 # Sem curriculum
 python -u $SCRIPT_PATH \
   --data $DATA_PATH \

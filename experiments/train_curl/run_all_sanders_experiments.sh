@@ -8,8 +8,14 @@ RESULT_DIR="resultados_sanders"
 mkdir -p logs
 mkdir -p $RESULT_DIR
 
+rm -f savedmodels/sanders*
 
-
+#verifica se apagou
+if ls savedmodels/sanders* 1> /dev/null 2>&1; then
+   echo "Modelos do Sanders não foram apagados."
+else
+   echo "Modelos do Sanders apagados com sucesso."
+fi
 # Sem curriculum
 python -u $SCRIPT_PATH \
   --data $DATA_PATH \

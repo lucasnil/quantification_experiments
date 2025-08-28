@@ -171,6 +171,14 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     fe = NoFeatureExtractionModule(input_size=EMBEDDING_SIZE)
     loss = MAE()
 
+    difficulty_str = ""
+    if difficulty_metric is not None:
+        difficulty_str += f"_{difficulty_metric}"
+    if difficulty_mode is not None:
+        difficulty_str += f"_{difficulty_mode}"
+    if difficulty_top_k is not None:
+        difficulty_str += f"_top{difficulty_top_k}"
+
     params = {
         "n_classes": N_CLASSES,
         "random_seed": SEED,
@@ -181,7 +189,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         "device": device,
         "quant_loss": loss,
         "dataset_name": "Yelp",
-        "save_model_path": f"savedmodels/{TRAIN_NAME}_run{run}.pkl",
+        "save_model_path": f"savedmodels/{TRAIN_NAME}{difficulty_str}_run{run}.pkl",
         "wandb_experiment_name": TRAIN_NAME,
         "use_wandb": False,
         "num_workers": 4,
