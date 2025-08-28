@@ -1,5 +1,5 @@
 nohup: ignoring input
---- [Sun Aug 24 18:27:22 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
---- [Sun Aug 24 18:27:22 -03 2025] Iniciando a suíte de experimentos 'Sanders' ---
---- [Sun Aug 24 19:01:25 -03 2025] Suíte 'Sanders' concluída. Log salvo em logs/sanders_runner.log ---
---- [Sun Aug 24 19:01:25 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
+--- [Tue Aug 26 14:45:31 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
+--- [Tue Aug 26 14:45:31 -03 2025] Iniciando a suíte de experimentos 'Yelp' ---
+--- [Tue Aug 26 15:27:12 -03 2025] Suíte 'Yelp' concluída. Log salvo em logs/yelp_runner.log ---
+--- [Tue Aug 26 15:27:12 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
