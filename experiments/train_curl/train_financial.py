@@ -3,7 +3,9 @@ import argparse
 import os
 from pathlib import Path
 import pandas as pd
+import numpy as np
 import torch
+from sklearn.model_selection import train_test_split
 from torch.utils.data import TensorDataset
 from transformers import AutoTokenizer, AutoModel
 from dlquantification.gmnet import GMNet
@@ -12,7 +14,6 @@ from dlquantification.utils.lossfunc import MAE
 from dlquantification.utils.utils import UnlabeledMixerBagGenerator, APPBagGenerator
 from dlquantification.utils.lequabaggenerator import LeQuaBagGenerator
 from tqdm import tqdm
-from sklearn.model_selection import train_test_split
 
 SEED = 42
 BAG_SIZE = 100
@@ -21,7 +22,8 @@ EMBEDDING_SIZE = 768
 TRAIN_NAME = "financial_phrasebank"
 BERT_MODEL = "bert-base-uncased"
 
-SPLIT_CACHE = Path(f"{TRAIN_NAME}_splits.pt")
+EMBEDDING_NAME = Path(f"{TRAIN_NAME}_embeddings.pt")
+LABELS_NAME = Path(f"{TRAIN_NAME}_labels.pt")
 
 torch.manual_seed(SEED)
 
@@ -66,53 +68,54 @@ def criar_bags(x, y, bag_size, n_classes):
     return x_bags, y_bags, prevalences
 
 
-def carregar_financial_phrasebank():
-    print("Baixando Financial PhraseBank do Hugging Face...")
-    dataset = load_dataset("takala/financial_phrasebank", "sentences_allagree")
-    df = pd.DataFrame(dataset["train"])[["sentence", "label"]]
-    df = df.rename(columns={"sentence": "text"})
-    label_map = {"positive": 0, "neutral": 1, "negative": 2}
-    df["label"] = df["label"].map(label_map)
+def carregar_dataset():
+    print("Carregando Financial PhraseBank (atrost/financial_phrasebank)...")
+    ds = load_dataset("atrost/financial_phrasebank")
+
+    # junta splits (train/val/test) para usar nossa própria divisão
+    df = pd.concat([
+        ds["train"].to_pandas(),
+        ds["validation"].to_pandas(),
+        ds["test"].to_pandas()
+    ], ignore_index=True)
+
+    df = df.rename(columns={"sentence": "text", "label": "label"})
     return df
 
 
 def main(difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, result_path=".", run=1):
-    print("Dataset: Financial PhraseBank")
     print(f"Dificuldade: {difficulty_metric}, modo: {difficulty_mode}, top_k: {difficulty_top_k}")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Dispositivo de treino:", device)
 
-    df = carregar_financial_phrasebank()
+    df = carregar_dataset()
 
-    if SPLIT_CACHE.exists():
-        print("Carregando splits do cache...")
-        cache = torch.load(SPLIT_CACHE)
-        x_train, y_train = cache["x_train"], cache["y_train"]
-        x_val, y_val     = cache["x_val"], cache["y_val"]
-        x_test, y_test   = cache["x_test"], cache["y_test"]
+    EMBEDDING_CACHE = EMBEDDING_NAME
+    LABELS_CACHE = LABELS_NAME
+
+    if EMBEDDING_CACHE.exists() and LABELS_CACHE.exists():
+        print("Carregando embeddings do cache...")
+        embeddings = torch.load(EMBEDDING_CACHE)
+        labels = torch.load(LABELS_CACHE)
     else:
         print("Gerando embeddings com BERT...")
         tokenizer = AutoTokenizer.from_pretrained(BERT_MODEL)
         model_bert = AutoModel.from_pretrained(BERT_MODEL).to(device).eval()
+        embeddings = gerar_embeddings(df['text'].astype(str).tolist(), tokenizer, model_bert, device)
+        labels = torch.tensor(df['label'].values, dtype=torch.long)
+        torch.save(embeddings, EMBEDDING_CACHE)
+        torch.save(labels, LABELS_CACHE)
 
-        # Split treino/val/test 60/10/30
-        train_df, temp_df = train_test_split(df, test_size=0.4, random_state=SEED, stratify=df["label"])
-        val_df, test_df = train_test_split(temp_df, test_size=0.75, random_state=SEED, stratify=temp_df["label"])
+    # split treino/val/test
+    x_temp_np, x_test_np, y_temp_np, y_test_np = train_test_split(
+        embeddings.numpy(), labels.numpy(), test_size=0.2, stratify=labels.numpy(), random_state=SEED
+    )
+    x_train_np, x_val_np, y_train_np, y_val_np = train_test_split(
+        x_temp_np, y_temp_np, test_size=0.25, stratify=y_temp_np, random_state=SEED
+    )
 
-        x_train = gerar_embeddings(train_df["text"].tolist(), tokenizer, model_bert, device)
-        y_train = torch.tensor(train_df["label"].values, dtype=torch.long)
-
-        x_val = gerar_embeddings(val_df["text"].tolist(), tokenizer, model_bert, device)
-        y_val = torch.tensor(val_df["label"].values, dtype=torch.long)
-
-        x_test = gerar_embeddings(test_df["text"].tolist(), tokenizer, model_bert, device)
-        y_test = torch.tensor(test_df["label"].values, dtype=torch.long)
-
-        torch.save({
-            "x_train": x_train, "y_train": y_train,
-            "x_val": x_val, "y_val": y_val,
-            "x_test": x_test, "y_test": y_test
-        }, SPLIT_CACHE)
+    x_train, x_val, x_test = torch.from_numpy(x_train_np), torch.from_numpy(x_val_np), torch.from_numpy(x_test_np)
+    y_train, y_val, y_test = torch.from_numpy(y_train_np), torch.from_numpy(y_val_np), torch.from_numpy(y_test_np)
 
     x_train, x_val, x_test, mean, std = padronizar(x_train, x_val, x_test)
 
