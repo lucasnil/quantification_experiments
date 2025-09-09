@@ -1,7 +1,6 @@
 #!/bin/bash
 export PYTHONPATH=/home/nildaimon/gmnet
 
-DATA_PATH="tweet_eval"
 SCRIPT_PATH="train_tweet_eval.py"
 RESULT_DIR="resultados_tweet_eval"
 
@@ -21,13 +20,11 @@ fi
 
 # Sem curriculum
 python -u $SCRIPT_PATH \
-  --data $DATA_PATH \
   --result_path $RESULT_DIR \
   | tee logs/tweet_eval_none_run${run}.log
 
 # KL - hardest
 python -u $SCRIPT_PATH \
-  --data $DATA_PATH \
   --difficulty_metric kl \
   --difficulty_mode hardest \
   --result_path $RESULT_DIR \
@@ -35,7 +32,6 @@ python -u $SCRIPT_PATH \
 
 # KL - easiest
 python -u $SCRIPT_PATH \
-  --data $DATA_PATH \
   --difficulty_metric kl \
   --difficulty_mode easiest \
   --result_path $RESULT_DIR \
@@ -43,7 +39,6 @@ python -u $SCRIPT_PATH \
 
 # L1 - hardest
 python -u $SCRIPT_PATH \
-  --data $DATA_PATH \
   --difficulty_metric l1 \
   --difficulty_mode hardest \
   --result_path $RESULT_DIR \
@@ -51,7 +46,6 @@ python -u $SCRIPT_PATH \
 
 # L1 - easiest
 python -u $SCRIPT_PATH \
-  --data $DATA_PATH \
   --difficulty_metric l1 \
   --difficulty_mode easiest \
   --result_path $RESULT_DIR \
