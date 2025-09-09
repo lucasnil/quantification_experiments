@@ -1,7 +1,5 @@
 nohup: ignoring input
---- [Thu Aug 28 11:20:13 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
---- [Thu Aug 28 11:20:13 -03 2025] Iniciando a suíte de experimentos 'Sanders' ---
---- [Thu Aug 28 11:50:28 -03 2025] Suíte 'Sanders' concluída. Log salvo em logs/sanders_runner.log ---
---- [Thu Aug 28 11:50:28 -03 2025] Iniciando a suíte de experimentos 'Yelp' ---
---- [Thu Aug 28 12:20:55 -03 2025] Suíte 'Yelp' concluída. Log salvo em logs/yelp_runner.log ---
---- [Thu Aug 28 12:20:55 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
+--- [Tue Sep  9 11:52:59 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
+--- [Tue Sep  9 11:52:59 -03 2025] Iniciando a suíte de experimentos 'TweetEval' ---
+--- [Tue Sep  9 12:15:55 -03 2025] Suíte 'TweetEval' concluída. Log salvo em logs/tweet_eval_runner.log ---
+--- [Tue Sep  9 12:15:55 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
