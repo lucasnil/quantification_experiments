@@ -3,9 +3,7 @@ import argparse
 import os
 from pathlib import Path
 import pandas as pd
-import numpy as np
 import torch
-from sklearn.model_selection import train_test_split
 from torch.utils.data import TensorDataset
 from transformers import AutoTokenizer, AutoModel
 from dlquantification.gmnet import GMNet
@@ -14,16 +12,18 @@ from dlquantification.utils.lossfunc import MAE
 from dlquantification.utils.utils import UnlabeledMixerBagGenerator, APPBagGenerator
 from dlquantification.utils.lequabaggenerator import LeQuaBagGenerator
 from tqdm import tqdm
+from sklearn.model_selection import train_test_split
 
 SEED = 42
 BAG_SIZE = 100
 N_CLASSES = 3
 EMBEDDING_SIZE = 768
-TRAIN_NAME = "yelp_bert"
+TRAIN_NAME = "tweet_eval_sentiment"
 BERT_MODEL = "bert-base-uncased"
 
-EMBEDDING_NAME = Path(f"{TRAIN_NAME}_embeddings.pt")
-LABELS_NAME = Path(f"{TRAIN_NAME}_labels.pt")
+EMBEDDING_CACHE = Path(f"{TRAIN_NAME}_embeddings.pt")
+LABELS_CACHE = Path(f"{TRAIN_NAME}_labels.pt")
+SPLIT_CACHE = Path(f"{TRAIN_NAME}_splits.pt")
 
 torch.manual_seed(SEED)
 
@@ -68,63 +68,49 @@ def criar_bags(x, y, bag_size, n_classes):
     return x_bags, y_bags, prevalences
 
 
-def carregar_dataset(dataset_flag):
-    if dataset_flag.lower() == "yelp":
-        print("Baixando Yelp Review Full do Hugging Face...")
-        ds = load_dataset("Yelp/yelp_review_full")
-        df = ds["train"].to_pandas()
+def carregar_tweeteval():
+    print("Baixando TweetEval Sentiment do Hugging Face...")
+    ds = load_dataset("cardiffnlp/tweet_eval", "sentiment")
 
-        def map_label(star_label):
-            if star_label <= 1:   # 1-2 estrelas
-                return 0          # negativo
-            elif star_label == 2: # 3 estrelas
-                return 1          # neutro
-            else:                 # 4-5 estrelas
-                return 2          # positivo
+    train_df = ds["train"].to_pandas()[["text", "label"]]
+    val_df   = ds["validation"].to_pandas()[["text", "label"]]
+    test_df  = ds["test"].to_pandas()[["text", "label"]]
 
-        df['label'] = df['label'].apply(map_label)
-        df = df[['text', 'label']]
-        return df
-    else:
-        print(f"Carregando dataset local: {dataset_flag}")
-        return pd.read_csv(dataset_flag)
+    return train_df, val_df, test_df
 
 
-def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, result_path=".", run=1):
-    print(f"Dataset: {dataset_path}")
+def main(difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, result_path=".", run=1):
+    print("Dataset: TweetEval Sentiment")
     print(f"Dificuldade: {difficulty_metric}, modo: {difficulty_mode}, top_k: {difficulty_top_k}")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Dispositivo de treino:", device)
 
+    train_df, val_df, test_df = carregar_tweeteval()
 
-    df = carregar_dataset(dataset_path)
-
-    EMBEDDING_CACHE = EMBEDDING_NAME
-    LABELS_CACHE = LABELS_NAME
-
-    if EMBEDDING_CACHE.exists() and LABELS_CACHE.exists():
-        print("Carregando embeddings do cache...")
-        embeddings = torch.load(EMBEDDING_CACHE)
-        labels = torch.load(LABELS_CACHE)
+    if EMBEDDING_CACHE.exists() and LABELS_CACHE.exists() and SPLIT_CACHE.exists():
+        print("Carregando embeddings e splits do cache...")
+        cache = torch.load(SPLIT_CACHE)
+        x_train, y_train = cache["x_train"], cache["y_train"]
+        x_val, y_val     = cache["x_val"], cache["y_val"]
+        x_test, y_test   = cache["x_test"], cache["y_test"]
     else:
         print("Gerando embeddings com BERT...")
         tokenizer = AutoTokenizer.from_pretrained(BERT_MODEL)
         model_bert = AutoModel.from_pretrained(BERT_MODEL).to(device).eval()
-        embeddings = gerar_embeddings(df['text'].astype(str).tolist(), tokenizer, model_bert, device)
-        labels = torch.tensor(df['label'].values, dtype=torch.long)
-        torch.save(embeddings, EMBEDDING_CACHE)
-        torch.save(labels, LABELS_CACHE)
 
-    # split treino/val/test
-    x_temp_np, x_test_np, y_temp_np, y_test_np = train_test_split(
-        embeddings.numpy(), labels.numpy(), test_size=0.2, stratify=labels.numpy(), random_state=SEED
-    )
-    x_train_np, x_val_np, y_train_np, y_val_np = train_test_split(
-        x_temp_np, y_temp_np, test_size=0.25, stratify=y_temp_np, random_state=SEED
-    )
+        train_embeddings = gerar_embeddings(train_df["text"].astype(str).tolist(), tokenizer, model_bert, device)
+        val_embeddings   = gerar_embeddings(val_df["text"].astype(str).tolist(), tokenizer, model_bert, device)
+        test_embeddings  = gerar_embeddings(test_df["text"].astype(str).tolist(), tokenizer, model_bert, device)
 
-    x_train, x_val, x_test = torch.from_numpy(x_train_np), torch.from_numpy(x_val_np), torch.from_numpy(x_test_np)
-    y_train, y_val, y_test = torch.from_numpy(y_train_np), torch.from_numpy(y_val_np), torch.from_numpy(y_test_np)
+        x_train, y_train = train_embeddings, torch.tensor(train_df["label"].values, dtype=torch.long)
+        x_val, y_val     = val_embeddings,   torch.tensor(val_df["label"].values, dtype=torch.long)
+        x_test, y_test   = test_embeddings,  torch.tensor(test_df["label"].values, dtype=torch.long)
+
+        torch.save({
+            "x_train": x_train, "y_train": y_train,
+            "x_val": x_val, "y_val": y_val,
+            "x_test": x_test, "y_test": y_test
+        }, SPLIT_CACHE)
 
     x_train, x_val, x_test, mean, std = padronizar(x_train, x_val, x_test)
 
@@ -190,7 +176,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         "test_bag_generator": test_bag_generator,
         "device": device,
         "quant_loss": loss,
-        "dataset_name": "Yelp",
+        "dataset_name": "TweetEvalSentiment",
         "save_model_path": f"savedmodels/{TRAIN_NAME}{difficulty_str}_run{run}.pkl",
         "wandb_experiment_name": TRAIN_NAME,
         "use_wandb": False,
@@ -226,7 +212,6 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data", required=True, help="Caminho CSV ou 'yelp'")
     parser.add_argument("--difficulty_metric", default=None, choices=["l1", "kl"])
     parser.add_argument("--difficulty_mode", default=None, choices=["hardest", "easiest"])
     parser.add_argument("--difficulty_top_k", type=int, default=None)
@@ -237,7 +222,6 @@ if __name__ == "__main__":
     os.makedirs(args.result_path, exist_ok=True)
 
     main(
-        dataset_path=args.data,
         difficulty_metric=args.difficulty_metric,
         difficulty_top_k=args.difficulty_top_k,
         difficulty_mode=args.difficulty_mode,
