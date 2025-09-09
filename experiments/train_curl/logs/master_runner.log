@@ -1,5 +1,5 @@
 nohup: ignoring input
---- [Tue Sep  9 11:52:59 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
---- [Tue Sep  9 11:52:59 -03 2025] Iniciando a suíte de experimentos 'TweetEval' ---
---- [Tue Sep  9 12:15:55 -03 2025] Suíte 'TweetEval' concluída. Log salvo em logs/tweet_eval_runner.log ---
---- [Tue Sep  9 12:15:55 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
+--- [Tue Sep  9 16:46:33 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
+--- [Tue Sep  9 16:46:33 -03 2025] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---
+--- [Tue Sep  9 17:12:43 -03 2025] Suíte 'FinancialPhraseBank' concluída. Log salvo em logs/financial_runner.log ---
+--- [Tue Sep  9 17:12:43 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
