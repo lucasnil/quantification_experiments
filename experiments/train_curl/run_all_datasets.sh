@@ -18,13 +18,17 @@ mkdir -p logs
 # bash run_all_yelp_experiments.sh > logs/yelp_runner.log 2>&1
 # echo "--- [$(date)] Suíte 'Yelp' concluída. Log salvo em logs/yelp_runner.log ---"
 # --- ETAPA 3: TWEET EVAL ---
-#echo "--- [$(date)] Iniciando a suíte de experimentos 'TweetEval' ---"
-#bash run_all_tweet_eval_experiments.sh > logs/tweet_eval_runner.log 2>&1
-#echo "--- [$(date)] Suíte 'TweetEval' concluída. Log salvo em logs/tweet_eval_runner.log ---"
+# echo "--- [$(date)] Iniciando a suíte de experimentos 'TweetEval' ---"
+# bash run_all_tweet_eval_experiments.sh > logs/tweet_eval_runner.log 2>&1
+# echo "--- [$(date)] Suíte 'TweetEval' concluída. Log salvo em logs/tweet_eval_runner.log ---"
 # --- ETAPA 4: FINANCIAL PHRASEBANK ---
-echo "--- [$(date)] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---"
-bash run_all_financial_experiments.sh > logs/financial_runner.log 2>&1
-echo "--- [$(date)] Suíte 'FinancialPhraseBank' concluída. Log salvo em logs/financial_runner.log ---"
+# echo "--- [$(date)] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---"
+# bash run_all_financial_experiments.sh > logs/financial_runner.log 2>&1
+# echo "--- [$(date)] Suíte 'FinancialPhraseBank' concluída. Log salvo em logs/financial_runner.log ---"
+# --- ETAPA 5: SST-5 ---
+echo "--- [$(date)] Iniciando a suíte de experimentos 'SST-5' ---"
+bash run_all_sst_experiments.sh > logs/sst_runner.log 2>&1
+echo "--- [$(date)] Suíte 'SST-5' concluída. Log salvo em logs/sst_runner.log ---"
 
 
 echo "--- [$(date)] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---"
