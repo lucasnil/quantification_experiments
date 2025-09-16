@@ -72,11 +72,11 @@ def criar_bags(x, y, bag_size, n_classes):
 
 def carregar_sst5():
     print("Baixando Stanford Sentiment Treebank (SST-5) do Hugging Face...")
-    ds = load_dataset("sst")
+    ds = load_dataset("SetFit/sst5")
 
-    train_df = ds["train"].to_pandas()[["sentence", "label"]].rename(columns={"sentence": "text"})
-    val_df   = ds["validation"].to_pandas()[["sentence", "label"]].rename(columns={"sentence": "text"})
-    test_df  = ds["test"].to_pandas()[["sentence", "label"]].rename(columns={"sentence": "text"})
+    train_df = ds["train"].to_pandas()[["text", "label"]]
+    val_df   = ds["validation"].to_pandas()[["text", "label"]]
+    test_df  = ds["test"].to_pandas()[["text", "label"]]
 
     return train_df, val_df, test_df
 
