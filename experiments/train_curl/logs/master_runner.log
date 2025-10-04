@@ -1,13 +1,5 @@
 nohup: ignoring input
---- [Tue Sep 16 16:34:57 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
---- [Tue Sep 16 16:34:57 -03 2025] Iniciando a suíte de experimentos 'Sanders' ---
---- [Tue Sep 16 17:07:20 -03 2025] Suíte 'Sanders' concluída em 1942s. Log salvo em logs/sanders_runner.log ---
---- [Tue Sep 16 17:07:20 -03 2025] Iniciando a suíte de experimentos 'Yelp' ---
---- [Tue Sep 16 17:37:19 -03 2025] Suíte 'Yelp' concluída em 1799s. Log salvo em logs/yelp_runner.log ---
---- [Tue Sep 16 17:37:19 -03 2025] Iniciando a suíte de experimentos 'TweetEval' ---
---- [Tue Sep 16 18:00:33 -03 2025] Suíte 'TweetEval' concluída em 1394s. Log salvo em logs/tweet_eval_runner.log ---
---- [Tue Sep 16 18:00:33 -03 2025] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---
---- [Tue Sep 16 18:25:54 -03 2025] Suíte 'FinancialPhraseBank' concluída em 1521s. Log salvo em logs/financial_runner.log ---
---- [Tue Sep 16 18:25:54 -03 2025] Iniciando a suíte de experimentos 'SST-5' ---
---- [Tue Sep 16 18:49:18 -03 2025] Suíte 'SST-5' concluída em 1404s. Log salvo em logs/sst_runner.log ---
---- [Tue Sep 16 18:49:18 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
+--- [Sat Oct  4 10:06:24 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
+--- [Sat Oct  4 10:06:24 -03 2025] Iniciando a suíte de experimentos 'Yelp' ---
+--- [Sat Oct  4 10:36:51 -03 2025] Suíte 'Yelp' concluída em 1827s. Log salvo em logs/yelp_runner.log ---
+--- [Sat Oct  4 10:36:51 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
