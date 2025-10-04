@@ -69,39 +69,6 @@ def padronizar(x_train, x_val, x_test):
 
 
 
-def criar_bags(x, y, bag_size, n_bags, n_classes):
-    """
-    Gera bags de qualquer tamanho usando amostragem com reposição.
-
-    Args:
-        x (Tensor): embeddings das amostras (n_amostras, n_features)
-        y (Tensor): rótulos (n_amostras,)
-        bag_size (int): tamanho de cada bag
-        n_bags (int): número de bags desejadas
-        n_classes (int): número de classes
-
-    Retorna:
-        x_bags: Tensor (n_bags, bag_size, n_features)
-        y_bags: Tensor (n_bags, bag_size)
-        prevalences: Tensor (n_bags, n_classes)
-    """
-    n_amostras = len(y)
-
-    # amostragem com reposição
-    indices = torch.randint(0, n_amostras, (n_bags, bag_size))
-
-    # seleciona embeddings e rótulos
-    x_bags = x[indices]  # (n_bags, bag_size, n_features)
-    y_bags = y[indices]  # (n_bags, bag_size)
-
-    # calcula prevalências por classe em cada bag
-    prevalences = torch.stack([
-        (y_bags == i).sum(dim=1) / bag_size for i in range(n_classes)
-    ], dim=1)
-
-    return x_bags, y_bags, prevalences
-
-
 def carregar_dataset(dataset_flag):
     if dataset_flag.lower() == "yelp":
         print("Baixando Yelp Review Full do Hugging Face...")
@@ -162,11 +129,23 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
 
     x_train, x_val, x_test, mean, std = padronizar(x_train, x_val, x_test)
 
-    # gerar bags
-    x_train_bags, y_train_bags, train_prevalences = criar_bags(x_train, y_train, BAG_SIZE, N_CLASSES)
-    x_val_bags, y_val_bags, val_prevalences = criar_bags(x_val, y_val, BAG_SIZE, N_CLASSES)
 
-    n_labeled = x_train_bags.numel() // EMBEDDING_SIZE
+# Gerar bags de treino e validação com APPBagGenerator
+    train_bag_generator = APPBagGenerator(device='cpu', seed=SEED)
+    x_train_bags_indexes, train_prevalences = train_bag_generator.compute_bags(
+        n_bags=5000, bag_size=BAG_SIZE, y=y_train
+    )
+    x_train_bags = x_train[x_train_bags_indexes.view(-1)].view(5000, BAG_SIZE, EMBEDDING_SIZE)
+    y_train_bags = y_train[x_train_bags_indexes.view(-1)].view(5000, BAG_SIZE)
+
+    val_bag_generator = APPBagGenerator(device='cpu', seed=SEED+1)
+    x_val_bags_indexes, val_prevalences = val_bag_generator.compute_bags(
+        n_bags=300, bag_size=BAG_SIZE, y=y_val
+    )
+    x_val_bags = x_val[x_val_bags_indexes.view(-1)].view(300, BAG_SIZE, EMBEDDING_SIZE)
+    y_val_bags = y_val[x_val_bags_indexes.view(-1)].view(300, BAG_SIZE)
+
+
     train_dataset = TensorDataset(
         torch.cat([x_train, x_train_bags.view(-1, EMBEDDING_SIZE)]),
         torch.cat([y_train, y_train_bags.view(-1)])
