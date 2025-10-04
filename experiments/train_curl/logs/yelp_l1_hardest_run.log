@@ -7,260 +7,220 @@ Ignoring val_split as train and val datasets where given to fit function
 We have two datasets: training 780000 examples. validation 130000 examples.]
 Using device cuda
 [Yelp] Starting epoch 0...
-[Yelp] Elapsed training time:2.68s
+[Yelp] Elapsed training time:0.99s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.51s
-[Yelp] [Epoch=000] Train Loss=[QuantLoss=0.11849]Val loss = [QuantLoss=0.08189][QuantReg:0.59181][saved best model in this epoch]
+[Yelp] Elapsed validation time:0.57s
+[Yelp] [Epoch=000] Train Loss=[QuantLoss=0.01005]Val loss = [QuantLoss=0.09284][QuantReg:0.00234][saved best model in this epoch]
 [Yelp] Starting epoch 1...
-[Yelp] Elapsed training time:2.52s
+[Yelp] Elapsed training time:0.67s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.54s
-[Yelp] [Epoch=001] Train Loss=[QuantLoss=0.10404]Val loss = [QuantLoss=0.07307][QuantReg:0.42757][saved best model in this epoch]
+[Yelp] Elapsed validation time:0.50s
+[Yelp] [Epoch=001] Train Loss=[QuantLoss=0.00509]Val loss = [QuantLoss=0.25549][QuantReg:0.01198]
 [Yelp] Starting epoch 2...
-[Yelp] Elapsed training time:2.55s
+[Yelp] Elapsed training time:0.69s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.54s
-[Yelp] [Epoch=002] Train Loss=[QuantLoss=0.08520]Val loss = [QuantLoss=0.07231][QuantReg:0.36889][saved best model in this epoch]
+[Yelp] Elapsed validation time:0.46s
+[Yelp] [Epoch=002] Train Loss=[QuantLoss=0.00281]Val loss = [QuantLoss=0.23780][QuantReg:0.01589]
 [Yelp] Starting epoch 3...
-[Yelp] Elapsed training time:2.66s
+[Yelp] Elapsed training time:0.67s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.56s
-[Yelp] [Epoch=003] Train Loss=[QuantLoss=0.08300]Val loss = [QuantLoss=0.06665][QuantReg:0.33146][saved best model in this epoch]
+[Yelp] Elapsed validation time:0.46s
+[Yelp] [Epoch=003] Train Loss=[QuantLoss=0.00099]Val loss = [QuantLoss=0.32246][QuantReg:0.01726]
 [Yelp] Starting epoch 4...
-[Yelp] Elapsed training time:2.73s
+[Yelp] Elapsed training time:0.73s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.55s
-[Yelp] [Epoch=004] Train Loss=[QuantLoss=0.07646]Val loss = [QuantLoss=0.06240][QuantReg:0.32186][saved best model in this epoch]
+[Yelp] [Epoch=004] Train Loss=[QuantLoss=0.00072]Val loss = [QuantLoss=0.35342][QuantReg:0.01672]
 [Yelp] Starting epoch 5...
-[Yelp] Elapsed training time:2.60s
+[Yelp] Elapsed training time:0.79s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.52s
-[Yelp] [Epoch=005] Train Loss=[QuantLoss=0.07514]Val loss = [QuantLoss=0.05727][QuantReg:0.35047][saved best model in this epoch]
+[Yelp] Elapsed validation time:0.54s
+[Yelp] [Epoch=005] Train Loss=[QuantLoss=0.00087]Val loss = [QuantLoss=0.34476][QuantReg:0.01644]
 [Yelp] Starting epoch 6...
-[Yelp] Elapsed training time:2.58s
+[Yelp] Elapsed training time:0.83s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.46s
-[Yelp] [Epoch=006] Train Loss=[QuantLoss=0.07656]Val loss = [QuantLoss=0.05649][QuantReg:0.35852][saved best model in this epoch]
+[Yelp] Elapsed validation time:0.55s
+[Yelp] [Epoch=006] Train Loss=[QuantLoss=0.00081]Val loss = [QuantLoss=0.33243][QuantReg:0.01608]
 [Yelp] Starting epoch 7...
-[Yelp] Elapsed training time:2.73s
+[Yelp] Elapsed training time:0.66s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.48s
-[Yelp] [Epoch=007] Train Loss=[QuantLoss=0.07193]Val loss = [QuantLoss=0.06107][QuantReg:0.36216]
+[Yelp] Elapsed validation time:0.54s
+[Yelp] [Epoch=007] Train Loss=[QuantLoss=0.00082]Val loss = [QuantLoss=0.31790][QuantReg:0.01563]
 [Yelp] Starting epoch 8...
-[Yelp] Elapsed training time:2.67s
+[Yelp] Elapsed training time:0.82s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.51s
-[Yelp] [Epoch=008] Train Loss=[QuantLoss=0.07313]Val loss = [QuantLoss=0.05518][QuantReg:0.35189][saved best model in this epoch]
+[Yelp] [Epoch=008] Train Loss=[QuantLoss=0.00083]Val loss = [QuantLoss=0.31248][QuantReg:0.01485]
 [Yelp] Starting epoch 9...
-[Yelp] Elapsed training time:2.63s
+[Yelp] Elapsed training time:0.82s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.46s
-[Yelp] [Epoch=009] Train Loss=[QuantLoss=0.06720]Val loss = [QuantLoss=0.06419][QuantReg:0.34394]
+[Yelp] Elapsed validation time:0.49s
+[Yelp] [Epoch=009] Train Loss=[QuantLoss=0.00077]Val loss = [QuantLoss=0.31003][QuantReg:0.01545]
 [Yelp] Starting epoch 10...
-[Yelp] Elapsed training time:2.54s
+[Yelp] Elapsed training time:0.69s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.54s
-[Yelp] [Epoch=010] Train Loss=[QuantLoss=0.06756]Val loss = [QuantLoss=0.05967][QuantReg:0.34504]
+[Yelp] [Epoch=010] Train Loss=[QuantLoss=0.00084]Val loss = [QuantLoss=0.32282][QuantReg:0.01465]
 [Yelp] Starting epoch 11...
-[Yelp] Elapsed training time:2.58s
+[Yelp] Elapsed training time:0.68s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.49s
-[Yelp] [Epoch=011] Train Loss=[QuantLoss=0.06640]Val loss = [QuantLoss=0.05825][QuantReg:0.35599]
+[Yelp] Elapsed validation time:0.47s
+[Yelp] [Epoch=011] Train Loss=[QuantLoss=0.00088]Val loss = [QuantLoss=0.31594][QuantReg:0.01479]
 [Yelp] Starting epoch 12...
-[Yelp] Elapsed training time:2.57s
+[Yelp] Elapsed training time:0.66s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.51s
-[Yelp] [Epoch=012] Train Loss=[QuantLoss=0.06538]Val loss = [QuantLoss=0.05935][QuantReg:0.35507]
+[Yelp] [Epoch=012] Train Loss=[QuantLoss=0.00083]Val loss = [QuantLoss=0.31172][QuantReg:0.01463]
 [Yelp] Starting epoch 13...
-[Yelp] Elapsed training time:2.48s
+[Yelp] Elapsed training time:0.71s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.55s
-[Yelp] [Epoch=013] Train Loss=[QuantLoss=0.06698]Val loss = [QuantLoss=0.05969][QuantReg:0.35155]
+[Yelp] Elapsed validation time:0.48s
+[Yelp] [Epoch=013] Train Loss=[QuantLoss=0.00083]Val loss = [QuantLoss=0.31259][QuantReg:0.01472]
 [Yelp] Starting epoch 14...
-[Yelp] Elapsed training time:2.58s
+[Yelp] Elapsed training time:0.70s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.53s
-[Yelp] [Epoch=014] Train Loss=[QuantLoss=0.06425]Val loss = [QuantLoss=0.05530][QuantReg:0.34229]
+[Yelp] [Epoch=014] Train Loss=[QuantLoss=0.00087]Val loss = [QuantLoss=0.32034][QuantReg:0.01411]
 [Yelp] Starting epoch 15...
-[Yelp] Elapsed training time:2.60s
+[Yelp] Elapsed training time:0.67s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.55s
-[Yelp] [Epoch=015] Train Loss=[QuantLoss=0.06436]Val loss = [QuantLoss=0.05751][QuantReg:0.33357]
+[Yelp] Elapsed validation time:0.48s
+[Yelp] [Epoch=015] Train Loss=[QuantLoss=0.00088]Val loss = [QuantLoss=0.32200][QuantReg:0.01358]
 [Yelp] Starting epoch 16...
-[Yelp] Elapsed training time:2.56s
+[Yelp] Elapsed training time:0.84s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.54s
-[Yelp] [Epoch=016] Train Loss=[QuantLoss=0.06603]Val loss = [QuantLoss=0.05779][QuantReg:0.32883]
+[Yelp] Elapsed validation time:0.47s
+[Yelp] [Epoch=016] Train Loss=[QuantLoss=0.00088]Val loss = [QuantLoss=0.32314][QuantReg:0.01381]
 [Yelp] Starting epoch 17...
-[Yelp] Elapsed training time:2.60s
+[Yelp] Elapsed training time:0.80s
+[Yelp] Starting validation...
+[Yelp] Elapsed validation time:0.46s
+[Yelp] [Epoch=017] Train Loss=[QuantLoss=0.00088]Val loss = [QuantLoss=0.32106][QuantReg:0.01432]
+[Yelp] Starting epoch 18...
+[Yelp] Elapsed training time:0.80s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.54s
-[Yelp] [Epoch=017] Train Loss=[QuantLoss=0.06256]Val loss = [QuantLoss=0.05644][QuantReg:0.32051]
-[Yelp] Starting epoch 18...
-[Yelp] Elapsed training time:2.53s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.52s
-[Yelp] [Epoch=018] Train Loss=[QuantLoss=0.06579]Val loss = [QuantLoss=0.05950][QuantReg:0.32327]
+[Yelp] [Epoch=018] Train Loss=[QuantLoss=0.00090]Val loss = [QuantLoss=0.32278][QuantReg:0.01380]
 [Yelp] Starting epoch 19...
-[Yelp] Elapsed training time:2.59s
+[Yelp] Elapsed training time:0.67s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.52s
-[Yelp] [Epoch=019] Train Loss=[QuantLoss=0.06262]Val loss = [QuantLoss=0.06470][QuantReg:0.32433]
+[Yelp] Elapsed validation time:0.54s
+[Yelp] [Epoch=019] Train Loss=[QuantLoss=0.00095]Val loss = [QuantLoss=0.32852][QuantReg:0.01387]
 [Yelp] Starting epoch 20...
-[Yelp] Elapsed training time:2.59s
+[Yelp] Elapsed training time:0.82s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.53s
-[Yelp] [Epoch=020] Train Loss=[QuantLoss=0.06372]Val loss = [QuantLoss=0.06050][QuantReg:0.31446]
+[Yelp] Elapsed validation time:0.50s
+[Yelp] [Epoch=020] Train Loss=[QuantLoss=0.00087]Val loss = [QuantLoss=0.32444][QuantReg:0.01406]
 [Yelp] Starting epoch 21...
-[Yelp] Elapsed training time:2.63s
+[Yelp] Elapsed training time:0.70s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.51s
-[Yelp] [Epoch=021] Train Loss=[QuantLoss=0.06484]Val loss = [QuantLoss=0.05803][QuantReg:0.31039]
+[Yelp] Elapsed validation time:0.49s
+[Yelp] [Epoch=021] Train Loss=[QuantLoss=0.00084]Val loss = [QuantLoss=0.32015][QuantReg:0.01387]
 [Yelp] Starting epoch 22...
-[Yelp] Elapsed training time:2.58s
+[Yelp] Elapsed training time:0.68s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.49s
-[Yelp] [Epoch=022] Train Loss=[QuantLoss=0.06304]Val loss = [QuantLoss=0.06333][QuantReg:0.29831]
+[Yelp] Elapsed validation time:0.53s
+[Yelp] [Epoch=022] Train Loss=[QuantLoss=0.00088]Val loss = [QuantLoss=0.32233][QuantReg:0.01333]
 [Yelp] Starting epoch 23...
-[Yelp] Elapsed training time:2.58s
+[Yelp] Elapsed training time:0.68s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.49s
-[Yelp] [Epoch=023] Train Loss=[QuantLoss=0.06220]Val loss = [QuantLoss=0.05769][QuantReg:0.29685]
+[Yelp] Elapsed validation time:0.51s
+[Yelp] [Epoch=023] Train Loss=[QuantLoss=0.00076]Val loss = [QuantLoss=0.31923][QuantReg:0.01368]
 [Yelp] Starting epoch 24...
-[Yelp] Elapsed training time:2.55s
+[Yelp] Elapsed training time:0.74s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.51s
-[Yelp] [Epoch=024] Train Loss=[QuantLoss=0.06562]Val loss = [QuantLoss=0.06140][QuantReg:0.29484]
+[Yelp] Elapsed validation time:0.47s
+[Yelp] [Epoch=024] Train Loss=[QuantLoss=0.00099]Val loss = [QuantLoss=0.32264][QuantReg:0.01374]
 [Yelp] Starting epoch 25...
-[Yelp] Elapsed training time:2.72s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.48s
-[Yelp] [Epoch=025] Train Loss=[QuantLoss=0.06366]Val loss = [QuantLoss=0.05709][QuantReg:0.28417]
-[Yelp] Starting epoch 26...
-[Yelp] Elapsed training time:2.69s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.55s
-[Yelp] [Epoch=026] Train Loss=[QuantLoss=0.06463]Val loss = [QuantLoss=0.07053][QuantReg:0.27968]
-[Yelp] Starting epoch 27...
-[Yelp] Elapsed training time:2.59s
+[Yelp] Elapsed training time:0.73s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.51s
-[Yelp] [Epoch=027] Train Loss=[QuantLoss=0.06473]Val loss = [QuantLoss=0.05948][QuantReg:0.27570]
+[Yelp] [Epoch=025] Train Loss=[QuantLoss=0.00081]Val loss = [QuantLoss=0.33051][QuantReg:0.01367]
+[Yelp] Starting epoch 26...
+[Yelp] Elapsed training time:0.69s
+[Yelp] Starting validation...
+[Yelp] Elapsed validation time:0.48s
+[Yelp] [Epoch=026] Train Loss=[QuantLoss=0.00074]Val loss = [QuantLoss=0.32845][QuantReg:0.01371]
+[Yelp] Starting epoch 27...
+[Yelp] Elapsed training time:0.69s
+[Yelp] Starting validation...
+[Yelp] Elapsed validation time:0.49s
+[Yelp] [Epoch=027] Train Loss=[QuantLoss=0.00081]Val loss = [QuantLoss=0.33637][QuantReg:0.01381]
 [Yelp] Starting epoch 28...
-[Yelp] Elapsed training time:2.52s
+[Yelp] Elapsed training time:0.68s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.49s
-[Yelp] [Epoch=028] Train Loss=[QuantLoss=0.06407]Val loss = [QuantLoss=0.05596][QuantReg:0.27450]
+[Yelp] Elapsed validation time:0.53s
+[Yelp] [Epoch=028] Train Loss=[QuantLoss=0.00081]Val loss = [QuantLoss=0.32325][QuantReg:0.01318]
 [Yelp] Starting epoch 29...
-[Yelp] Elapsed training time:2.54s
+[Yelp] Elapsed training time:0.71s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.46s
-[Yelp] [Epoch=029] Train Loss=[QuantLoss=0.06136]Val loss = [QuantLoss=0.06109][QuantReg:0.27204]
+[Yelp] Elapsed validation time:0.54s
+[Yelp] [Epoch=029] Train Loss=[QuantLoss=0.00087]Val loss = [QuantLoss=0.32709][QuantReg:0.01360]
 [Yelp] Starting epoch 30...
-[Yelp] Elapsed training time:2.57s
+[Yelp] Elapsed training time:0.70s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.52s
-[Yelp] [Epoch=030] Train Loss=[QuantLoss=0.06914]Val loss = [QuantLoss=0.07038][QuantReg:0.26570]
+[Yelp] Elapsed validation time:0.53s
+[Yelp] [Epoch=030] Train Loss=[QuantLoss=0.00098]Val loss = [QuantLoss=0.33078][QuantReg:0.01362]
 [Yelp] Starting epoch 31...
-[Yelp] Elapsed training time:2.57s
+[Yelp] Elapsed training time:0.69s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.48s
-[Yelp] [Epoch=031] Train Loss=[QuantLoss=0.05481]Val loss = [QuantLoss=0.07170][QuantReg:0.26453]
+[Yelp] Elapsed validation time:0.52s
+[Yelp] [Epoch=031] Train Loss=[QuantLoss=0.00092]Val loss = [QuantLoss=0.33560][QuantReg:0.01329]
 [Yelp] Starting epoch 32...
-[Yelp] Elapsed training time:2.56s
+[Yelp] Elapsed training time:0.69s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.52s
-[Yelp] [Epoch=032] Train Loss=[QuantLoss=0.05334]Val loss = [QuantLoss=0.07163][QuantReg:0.26467]
+[Yelp] Elapsed validation time:0.51s
+[Yelp] [Epoch=032] Train Loss=[QuantLoss=0.00085]Val loss = [QuantLoss=0.33953][QuantReg:0.01336]
 [Yelp] Starting epoch 33...
-[Yelp] Elapsed training time:2.72s
+[Yelp] Elapsed training time:0.68s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.53s
-[Yelp] [Epoch=033] Train Loss=[QuantLoss=0.05367]Val loss = [QuantLoss=0.07218][QuantReg:0.26520]
+[Yelp] [Epoch=033] Train Loss=[QuantLoss=0.00101]Val loss = [QuantLoss=0.33154][QuantReg:0.01343]
 [Yelp] Starting epoch 34...
-[Yelp] Elapsed training time:2.74s
+[Yelp] Elapsed training time:0.70s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.55s
-[Yelp] [Epoch=034] Train Loss=[QuantLoss=0.05280]Val loss = [QuantLoss=0.07005][QuantReg:0.26565]
+[Yelp] Elapsed validation time:0.52s
+[Yelp] [Epoch=034] Train Loss=[QuantLoss=0.00085]Val loss = [QuantLoss=0.33396][QuantReg:0.01344]
 [Yelp] Starting epoch 35...
-[Yelp] Elapsed training time:2.56s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.56s
-[Yelp] [Epoch=035] Train Loss=[QuantLoss=0.05437]Val loss = [QuantLoss=0.06124][QuantReg:0.26567]
-[Yelp] Starting epoch 36...
-[Yelp] Elapsed training time:2.58s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.58s
-[Yelp] [Epoch=036] Train Loss=[QuantLoss=0.05384]Val loss = [QuantLoss=0.06836][QuantReg:0.26467]
-[Yelp] Starting epoch 37...
-[Yelp] Elapsed training time:2.61s
+[Yelp] Elapsed training time:0.72s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.50s
-[Yelp] [Epoch=037] Train Loss=[QuantLoss=0.05489]Val loss = [QuantLoss=0.06729][QuantReg:0.26602]
+[Yelp] [Epoch=035] Train Loss=[QuantLoss=0.00086]Val loss = [QuantLoss=0.32963][QuantReg:0.01355]
+[Yelp] Starting epoch 36...
+[Yelp] Elapsed training time:0.69s
+[Yelp] Starting validation...
+[Yelp] Elapsed validation time:0.51s
+[Yelp] [Epoch=036] Train Loss=[QuantLoss=0.00081]Val loss = [QuantLoss=0.33373][QuantReg:0.01338]
+[Yelp] Starting epoch 37...
+[Yelp] Elapsed training time:0.69s
+[Yelp] Starting validation...
+[Yelp] Elapsed validation time:0.48s
+[Yelp] [Epoch=037] Train Loss=[QuantLoss=0.00085]Val loss = [QuantLoss=0.34415][QuantReg:0.01356]
 [Yelp] Starting epoch 38...
-[Yelp] Elapsed training time:2.75s
+[Yelp] Elapsed training time:0.74s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.52s
-[Yelp] [Epoch=038] Train Loss=[QuantLoss=0.05425]Val loss = [QuantLoss=0.07134][QuantReg:0.26532]
+[Yelp] Elapsed validation time:0.50s
+[Yelp] [Epoch=038] Train Loss=[QuantLoss=0.00089]Val loss = [QuantLoss=0.33872][QuantReg:0.01334]
 [Yelp] Starting epoch 39...
-[Yelp] Elapsed training time:2.60s
+[Yelp] Elapsed training time:0.67s
 [Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.48s
-[Yelp] [Epoch=039] Train Loss=[QuantLoss=0.05249]Val loss = [QuantLoss=0.07185][QuantReg:0.26443]
+[Yelp] Elapsed validation time:0.50s
+[Yelp] [Epoch=039] Train Loss=[QuantLoss=0.00085]Val loss = [QuantLoss=0.33768][QuantReg:0.01347]
 [Yelp] Starting epoch 40...
-[Yelp] Elapsed training time:2.61s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.52s
-[Yelp] [Epoch=040] Train Loss=[QuantLoss=0.05280]Val loss = [QuantLoss=0.06645][QuantReg:0.26413]
-[Yelp] Starting epoch 41...
-[Yelp] Elapsed training time:2.58s
+[Yelp] Elapsed training time:0.67s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.48s
-[Yelp] [Epoch=041] Train Loss=[QuantLoss=0.05216]Val loss = [QuantLoss=0.06448][QuantReg:0.26322]
+[Yelp] [Epoch=040] Train Loss=[QuantLoss=0.00080]Val loss = [QuantLoss=0.32951][QuantReg:0.01331]
+[Yelp] Starting epoch 41...
+[Yelp] Elapsed training time:0.67s
+[Yelp] Starting validation...
+[Yelp] Elapsed validation time:0.51s
+[Yelp] [Epoch=041] Train Loss=[QuantLoss=0.00083]Val loss = [QuantLoss=0.33239][QuantReg:0.01380]
 [Yelp] Starting epoch 42...
-[Yelp] Elapsed training time:2.59s
+[Yelp] Elapsed training time:0.66s
 [Yelp] Starting validation...
 [Yelp] Elapsed validation time:0.53s
-[Yelp] [Epoch=042] Train Loss=[QuantLoss=0.05227]Val loss = [QuantLoss=0.07058][QuantReg:0.26196]
-[Yelp] Starting epoch 43...
-[Yelp] Elapsed training time:2.57s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.47s
-[Yelp] [Epoch=043] Train Loss=[QuantLoss=0.05209]Val loss = [QuantLoss=0.06663][QuantReg:0.26325]
-[Yelp] Starting epoch 44...
-[Yelp] Elapsed training time:2.69s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.52s
-[Yelp] [Epoch=044] Train Loss=[QuantLoss=0.05258]Val loss = [QuantLoss=0.06640][QuantReg:0.26420]
-[Yelp] Starting epoch 45...
-[Yelp] Elapsed training time:2.58s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.50s
-[Yelp] [Epoch=045] Train Loss=[QuantLoss=0.05251]Val loss = [QuantLoss=0.07318][QuantReg:0.26398]
-[Yelp] Starting epoch 46...
-[Yelp] Elapsed training time:2.55s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.48s
-[Yelp] [Epoch=046] Train Loss=[QuantLoss=0.05305]Val loss = [QuantLoss=0.06360][QuantReg:0.26462]
-[Yelp] Starting epoch 47...
-[Yelp] Elapsed training time:2.57s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.49s
-[Yelp] [Epoch=047] Train Loss=[QuantLoss=0.05288]Val loss = [QuantLoss=0.06686][QuantReg:0.26410]
-[Yelp] Starting epoch 48...
-[Yelp] Elapsed training time:2.53s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.47s
-[Yelp] [Epoch=048] Train Loss=[QuantLoss=0.05232]Val loss = [QuantLoss=0.06585][QuantReg:0.26506]
-[Yelp] Starting epoch 49...
-[Yelp] Elapsed training time:2.55s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.46s
-[Yelp] [Epoch=049] Train Loss=[QuantLoss=0.05348]Val loss = [QuantLoss=0.06713][QuantReg:0.26337]
-[Yelp] Starting epoch 50...
-[Yelp] Elapsed training time:2.57s
-[Yelp] Starting validation...
-[Yelp] Elapsed validation time:0.50s
-[Yelp] [Epoch=050] Train Loss=[QuantLoss=0.05148]Val loss = [QuantLoss=0.06888][QuantReg:0.26209]
-[Yelp] Early stopping in epoch 50!
+[Yelp] [Epoch=042] Train Loss=[QuantLoss=0.00082]Val loss = [QuantLoss=0.34186][QuantReg:0.01334]
+[Yelp] Early stopping in epoch 42!
 [Yelp] Restoring best model...
-MAE médio: 0.0803 ± 0.0446
+MAE médio: 0.1682 ± 0.1068
