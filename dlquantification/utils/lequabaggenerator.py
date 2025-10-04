@@ -88,7 +88,7 @@ class LeQuaBagGenerator(BaseBagGenerator):
 
             # Aplica corte top_k se definido
             if self.difficulty_top_k is not None:
-                sorted_idxs = sorted_idxs[self.difficulty_top_k:]
+                sorted_idxs = sorted_idxs[:self.difficulty_top_k]
 
             samples_indexes = samples_indexes[sorted_idxs, :]
             prevalences = prevalences[sorted_idxs, :]
