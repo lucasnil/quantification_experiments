@@ -11,7 +11,7 @@ from transformers import AutoTokenizer, AutoModel
 from dlquantification.gmnet import GMNet
 from dlquantification.featureextraction.nofe import NoFeatureExtractionModule
 from dlquantification.utils.lossfunc import MAE
-from dlquantification.utils.utils import UnlabeledMixerBagGenerator, APPBagGenerator
+from dlquantification.utils.utils import UnlabeledMixerBagGenerator, APPBagGenerator, DifficultySortedAPPBagGenerator
 from dlquantification.utils.lequabaggenerator import LeQuaBagGenerator
 from tqdm import tqdm
 
@@ -50,21 +50,55 @@ def padronizar(x_train, x_val, x_test):
     return (x_train - mean)/std, (x_val - mean)/std, (x_test - mean)/std, mean, std
 
 
-def criar_bags(x, y, bag_size, n_classes):
-    total_samples = len(x)
-    n_bags = total_samples // bag_size
-    if n_bags == 0:
-        print(f"[criar_bags] bag_size={bag_size} é muito grande para o número de amostras ({total_samples}).")
-        empty_shape = (0, bag_size, x.shape[1])
-        return torch.empty(empty_shape), torch.empty((0, bag_size), dtype=torch.long), torch.empty((0, n_classes))
-    shuffled_indices = torch.randperm(total_samples)
-    x, y = x[shuffled_indices], y[shuffled_indices]
+# def criar_bags(x, y, bag_size, n_classes):
+#     total_samples = len(x)
+#     n_bags = total_samples // bag_size
+#     if n_bags == 0:
+#         print(f"[criar_bags] bag_size={bag_size} é muito grande para o número de amostras ({total_samples}).")
+#         empty_shape = (0, bag_size, x.shape[1])
+#         return torch.empty(empty_shape), torch.empty((0, bag_size), dtype=torch.long), torch.empty((0, n_classes))
+#     shuffled_indices = torch.randperm(total_samples)
+#     x, y = x[shuffled_indices], y[shuffled_indices]
 
-    x = x[:n_bags * bag_size]
-    y = y[:n_bags * bag_size]
-    x_bags = x.view(n_bags, bag_size, -1)
-    y_bags = y.view(n_bags, bag_size)
-    prevalences = torch.stack([(y_bags == i).sum(dim=1) / bag_size for i in range(n_classes)], dim=1)
+#     x = x[:n_bags * bag_size]
+#     y = y[:n_bags * bag_size]
+#     x_bags = x.view(n_bags, bag_size, -1)
+#     y_bags = y.view(n_bags, bag_size)
+#     prevalences = torch.stack([(y_bags == i).sum(dim=1) / bag_size for i in range(n_classes)], dim=1)
+#     return x_bags, y_bags, prevalences
+
+
+
+def criar_bags(x, y, bag_size, n_bags, n_classes):
+    """
+    Gera bags de qualquer tamanho usando amostragem com reposição.
+
+    Args:
+        x (Tensor): embeddings das amostras (n_amostras, n_features)
+        y (Tensor): rótulos (n_amostras,)
+        bag_size (int): tamanho de cada bag
+        n_bags (int): número de bags desejadas
+        n_classes (int): número de classes
+
+    Retorna:
+        x_bags: Tensor (n_bags, bag_size, n_features)
+        y_bags: Tensor (n_bags, bag_size)
+        prevalences: Tensor (n_bags, n_classes)
+    """
+    n_amostras = len(y)
+
+    # amostragem com reposição
+    indices = torch.randint(0, n_amostras, (n_bags, bag_size))
+
+    # seleciona embeddings e rótulos
+    x_bags = x[indices]  # (n_bags, bag_size, n_features)
+    y_bags = y[indices]  # (n_bags, bag_size)
+
+    # calcula prevalências por classe em cada bag
+    prevalences = torch.stack([
+        (y_bags == i).sum(dim=1) / bag_size for i in range(n_classes)
+    ], dim=1)
+
     return x_bags, y_bags, prevalences
 
 
@@ -142,14 +176,9 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         torch.full((x_val_bags.view(-1, EMBEDDING_SIZE).shape[0],), fill_value=-1, dtype=torch.long)
     )
 
-    train_bag_generator = LeQuaBagGenerator(
+    train_bag_generator = DifficultySortedAPPBagGenerator(
         device='cpu',
         seed=SEED,
-        prevalences=train_prevalences,
-        sample_size=BAG_SIZE,
-        app_bags_proportion=1,
-        mixed_bags_proportion=0,
-        labeled_unlabeled_split=(range(0, n_labeled), range(n_labeled, 2 * n_labeled)),
         difficulty_metric=difficulty_metric,
         difficulty_top_k=difficulty_top_k,
         difficulty_mode=difficulty_mode
@@ -207,7 +236,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         "bag_size": BAG_SIZE,
         "linear_sizes": [4000],
         "n_gm_layers": 9,
-        "num_gaussians": [10] * 9,
+        "num_gaussians": [100] * 9,
         "gaussian_dimensions": [5] * 9,
         "patience": 20,
         "verbose": 8

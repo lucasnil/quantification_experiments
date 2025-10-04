@@ -88,6 +88,122 @@ class APPBagGenerator(BaseBagGenerator):
                 samples_indexes[i, :] = bag_samples[suffle]
             return samples_indexes, prevalences
 
+class DifficultySortedAPPBagGenerator(BaseBagGenerator):
+    """
+    Uma variação da APPBagGenerator que ordena os bags gerados com base em uma
+    métrica de dificuldade.
+
+    A dificuldade é definida como a "distância" da distribuição de classes de um bag
+    para uma distribuição perfeitamente balanceada. Bags "difíceis" são muito
+    desbalanceados, enquanto bags "fáceis" são mais próximos do balanceamento.
+    """
+
+    def __init__(
+        self,
+        device,
+        seed=2032,
+        difficulty_metric=None,  # 'l1' ou 'kl'
+        difficulty_top_k=None,   # int ou None -> quantos bags manter
+        difficulty_mode="hardest", # 'hardest' ou 'easiest'
+    ):
+        """
+        Construtor da classe.
+
+        Args:
+            device: O dispositivo do PyTorch (e.g., 'cpu' ou 'cuda').
+            seed (int): Semente para a geração de números aleatórios.
+            difficulty_metric (str, optional): A métrica a ser usada para ordenar os bags.
+                                               Opções: 'l1' ou 'kl'. Se None, nenhuma ordenação é feita. Default é None.
+            difficulty_top_k (int, optional): Mantém apenas os top K bags mais difíceis/fáceis.
+                                              Se None, todos os bags são mantidos. Default é None.
+            difficulty_mode (str, optional): 'hardest' para selecionar os bags mais desbalanceados,
+                                             'easiest' para os mais balanceados. Default é 'hardest'.
+        """
+        self.device = device
+        self.gen = torch.Generator(device=device)
+        self.gen.manual_seed(seed)
+        self.seed = seed
+        self.uses_labels = True
+        self.difficulty_metric = difficulty_metric
+        self.difficulty_top_k = difficulty_top_k
+        self.difficulty_mode = difficulty_mode
+
+    def compute_bags(self, n_bags, bag_size, y):
+        """
+        Gera os bags e, opcionalmente, os ordena por dificuldade.
+        """
+        with torch.no_grad():
+            if not torch.is_tensor(y):
+                y = torch.IntTensor(y).to(self.device)
+
+            # ------------------------------------------------------------------
+            # 1. Geração de Bags (Lógica original da APPBagGenerator)
+            # ------------------------------------------------------------------
+            samples_indexes = torch.zeros((n_bags, bag_size), dtype=torch.int64, device=self.device)
+            classes = torch.unique(y)
+            n_classes = len(classes)
+            class_indices = {cls.item(): torch.where(y == cls)[0] for cls in classes}
+            prevalences = torch.zeros((n_bags, n_classes), device=self.device)
+
+            for i in range(n_bags):
+                low = round(bag_size * 0.01)
+                high = round(bag_size * 0.99)
+                ps = torch.randint(low, high, (n_classes - 1,), generator=self.gen, device=self.device)
+                ps = torch.cat([ps, torch.tensor([0, bag_size], device=self.device)])
+                ps = torch.sort(ps)[0]
+                ps = ps[1:] - ps[:-1]
+                prevalences[i, :] = ps / bag_size
+
+                bag_samples = []
+                for n, p in zip(classes, ps):
+                    if p > 0:
+                        indices = class_indices[n.item()]
+                        sampled_indices = indices[torch.randint(len(indices), (p,), generator=self.gen, device=self.device)]
+                        bag_samples.append(sampled_indices)
+
+                bag_samples = torch.cat(bag_samples)
+                shuffle = torch.randperm(bag_size, generator=self.gen, device=self.device)
+                samples_indexes[i, :] = bag_samples[shuffle]
+
+            # ------------------------------------------------------------------
+            # 2. Ordenação por Dificuldade (Lógica da LeQuaBagGenerator)
+            # ------------------------------------------------------------------
+            if self.difficulty_metric is not None:
+                balanced = torch.full((n_classes,), 1 / n_classes, device=self.device, dtype=prevalences.dtype)
+
+                if self.difficulty_metric == 'l1':
+                    difficulty = torch.sum(torch.abs(prevalences - balanced), dim=1)
+                elif self.difficulty_metric == 'kl':
+                    eps = 1e-8
+                    difficulty = torch.sum(prevalences * torch.log((prevalences + eps) / (balanced + eps)), dim=1)
+                else:
+                    raise ValueError(f"Métrica de dificuldade desconhecida: {self.difficulty_metric}")
+
+                if self.difficulty_mode == "hardest":
+                    sorted_idxs = torch.argsort(difficulty, descending=True)
+                elif self.difficulty_mode == "easiest":
+                    sorted_idxs = torch.argsort(difficulty, descending=False)
+                else:
+                    raise ValueError("Modo de dificuldade inválido, esperado 'hardest' ou 'easiest'")
+
+                if self.difficulty_top_k is not None:
+                    sorted_idxs = sorted_idxs[:self.difficulty_top_k]
+
+                samples_indexes = samples_indexes[sorted_idxs, :]
+                prevalences = prevalences[sorted_idxs, :]
+
+            return samples_indexes, prevalences
+
+    def get_parameters_to_log(self):
+        """Retorna um dicionário com os parâmetros para logging."""
+        return {
+            'baggeneratorname': 'DifficultySortedAPPBagGenerator',
+            'seed': self.seed,
+            'difficulty_metric': self.difficulty_metric,
+            'difficulty_top_k': self.difficulty_top_k,
+            'difficulty_mode': self.difficulty_mode
+        }
+
 
 class ProgressiveAPPBagGenerator(BaseBagGenerator):
     """
