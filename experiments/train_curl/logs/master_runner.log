@@ -1,5 +1,5 @@
 nohup: ignoring input
---- [Sat Oct  4 14:24:27 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
---- [Sat Oct  4 14:24:27 -03 2025] Iniciando a suíte de experimentos 'Yelp' ---
---- [Sat Oct  4 16:05:27 -03 2025] Suíte 'Yelp' concluída em 6060s. Log salvo em logs/yelp_runner.log ---
---- [Sat Oct  4 16:05:27 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
+--- [Mon Oct  6 10:16:04 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
+--- [Mon Oct  6 10:16:04 -03 2025] Iniciando a suíte de experimentos 'Yelp' ---
+--- [Mon Oct  6 16:56:55 -03 2025] Suíte 'Yelp' concluída em 24051s. Log salvo em logs/yelp_runner.log ---
+--- [Mon Oct  6 16:56:55 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
