@@ -36,7 +36,6 @@ python -u $SCRIPT_PATH \
   --data $DATA_PATH \
   --difficulty_metric kl \
   --difficulty_mode hardest \
-  --difficulty_top_k 50 \
   --result_path $RESULT_DIR \
   | tee logs/yelp_kl_hardest_run${run}.log
 time_end=$(date +%s)
@@ -48,7 +47,6 @@ python -u $SCRIPT_PATH \
   --data $DATA_PATH \
   --difficulty_metric kl \
   --difficulty_mode easiest \
-  --difficulty_top_k 50 \
   --result_path $RESULT_DIR \
   | tee logs/yelp_kl_easiest_run${run}.log
 time_end=$(date +%s)
@@ -60,7 +58,6 @@ python -u $SCRIPT_PATH \
   --data $DATA_PATH \
   --difficulty_metric l1 \
   --difficulty_mode hardest \
-  --difficulty_top_k 50 \
   --result_path $RESULT_DIR \
   | tee logs/yelp_l1_hardest_run${run}.log
 time_end=$(date +%s)
@@ -72,7 +69,6 @@ python -u $SCRIPT_PATH \
   --data $DATA_PATH \
   --difficulty_metric l1 \
   --difficulty_mode easiest \
-  --difficulty_top_k 50 \
   --result_path $RESULT_DIR \
   | tee logs/yelp_l1_easiest_run${run}.log
 time_end=$(date +%s)
