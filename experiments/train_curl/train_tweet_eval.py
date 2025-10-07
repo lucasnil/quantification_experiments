@@ -113,11 +113,19 @@ def main(difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, re
 
     x_train, x_val, x_test, mean, std = padronizar(x_train, x_val, x_test)
 
-    # gerar bags
-    x_train_bags, y_train_bags, train_prevalences = criar_bags(x_train, y_train, BAG_SIZE, N_CLASSES)
-    x_val_bags, y_val_bags, val_prevalences = criar_bags(x_val, y_val, BAG_SIZE, N_CLASSES)
+    train_bag_generator = APPBagGenerator(device='cpu', seed=SEED)
+    x_train_bags_indexes, train_prevalences = train_bag_generator.compute_bags(
+        n_bags=5000, bag_size=BAG_SIZE, y=y_train
+    )
+    x_train_bags = x_train[x_train_bags_indexes.view(-1)].view(5000, BAG_SIZE, EMBEDDING_SIZE)
+    y_train_bags = y_train[x_train_bags_indexes.view(-1)].view(5000, BAG_SIZE)
 
-    n_labeled = x_train_bags.numel() // EMBEDDING_SIZE
+    val_bag_generator = APPBagGenerator(device='cpu', seed=SEED+1)
+    x_val_bags_indexes, val_prevalences = val_bag_generator.compute_bags(
+        n_bags=300, bag_size=BAG_SIZE, y=y_val
+    )
+    x_val_bags = x_val[x_val_bags_indexes.view(-1)].view(300, BAG_SIZE, EMBEDDING_SIZE)
+
     train_dataset = TensorDataset(
         torch.cat([x_train, x_train_bags.view(-1, EMBEDDING_SIZE)]),
         torch.cat([y_train, y_train_bags.view(-1)])
