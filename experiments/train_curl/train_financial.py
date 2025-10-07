@@ -15,7 +15,7 @@ from dlquantification.utils.utils import UnlabeledMixerBagGenerator, APPBagGener
 from tqdm import tqdm
 
 SEED = 42
-BAG_SIZE = 100
+BAG_SIZE = 1000
 N_CLASSES = 3
 EMBEDDING_SIZE = 768
 TRAIN_NAME = "financial_phrasebank"
