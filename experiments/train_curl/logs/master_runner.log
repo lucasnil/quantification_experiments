@@ -1,13 +1,11 @@
 nohup: ignoring input
---- [Tue Oct  7 00:17:07 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
---- [Tue Oct  7 00:17:07 -03 2025] Iniciando a suíte de experimentos 'Sanders' ---
---- [Tue Oct  7 00:18:25 -03 2025] Suíte 'Sanders' concluída em 78s. Log salvo em logs/sanders_runner.log ---
---- [Tue Oct  7 00:18:25 -03 2025] Iniciando a suíte de experimentos 'Yelp' ---
---- [Tue Oct  7 07:00:03 -03 2025] Suíte 'Yelp' concluída em 24098s. Log salvo em logs/yelp_runner.log ---
---- [Tue Oct  7 07:00:03 -03 2025] Iniciando a suíte de experimentos 'TweetEval' ---
---- [Tue Oct  7 08:45:07 -03 2025] Suíte 'TweetEval' concluída em 6304s. Log salvo em logs/tweet_eval_runner.log ---
---- [Tue Oct  7 08:45:07 -03 2025] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---
---- [Tue Oct  7 08:46:36 -03 2025] Suíte 'FinancialPhraseBank' concluída em 89s. Log salvo em logs/financial_runner.log ---
---- [Tue Oct  7 08:46:36 -03 2025] Iniciando a suíte de experimentos 'SST-5' ---
---- [Tue Oct  7 09:21:32 -03 2025] Suíte 'SST-5' concluída em 2096s. Log salvo em logs/sst_runner.log ---
---- [Tue Oct  7 09:21:32 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
+--- [Tue Oct  7 09:51:14 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
+--- [Tue Oct  7 09:51:14 -03 2025] Iniciando a suíte de experimentos 'Sanders' ---
+--- [Tue Oct  7 11:52:35 -03 2025] Suíte 'Sanders' concluída em 7281s. Log salvo em logs/sanders_runner.log ---
+--- [Tue Oct  7 11:52:35 -03 2025] Iniciando a suíte de experimentos 'TweetEval' ---
+--- [Tue Oct  7 12:52:04 -03 2025] Suíte 'TweetEval' concluída em 3569s. Log salvo em logs/tweet_eval_runner.log ---
+--- [Tue Oct  7 12:52:04 -03 2025] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---
+--- [Tue Oct  7 13:42:54 -03 2025] Suíte 'FinancialPhraseBank' concluída em 3050s. Log salvo em logs/financial_runner.log ---
+--- [Tue Oct  7 13:42:54 -03 2025] Iniciando a suíte de experimentos 'SST-5' ---
+--- [Tue Oct  7 14:17:10 -03 2025] Suíte 'SST-5' concluída em 2056s. Log salvo em logs/sst_runner.log ---
+--- [Tue Oct  7 14:17:10 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
