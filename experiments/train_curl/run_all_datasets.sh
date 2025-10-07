@@ -18,20 +18,20 @@ elapsed=$((end_time - start_time))
 echo "--- [$(date)] Suíte 'Sanders' concluída em ${elapsed}s. Log salvo em logs/sanders_runner.log ---"
 
 # --- ETAPA 2: YELP ---
-echo "--- [$(date)] Iniciando a suíte de experimentos 'Yelp' ---"
-start_time=$(date +%s)
-bash run_all_yelp_experiments.sh > logs/yelp_runner.log 2>&1
-end_time=$(date +%s)
-elapsed=$((end_time - start_time))
-echo "--- [$(date)] Suíte 'Yelp' concluída em ${elapsed}s. Log salvo em logs/yelp_runner.log ---"
+# echo "--- [$(date)] Iniciando a suíte de experimentos 'Yelp' ---"
+# start_time=$(date +%s)
+# bash run_all_yelp_experiments.sh > logs/yelp_runner.log 2>&1
+# end_time=$(date +%s)
+# elapsed=$((end_time - start_time))
+# echo "--- [$(date)] Suíte 'Yelp' concluída em ${elapsed}s. Log salvo em logs/yelp_runner.log ---"
 
-# --- ETAPA 3: TWEET EVAL ---
-echo "--- [$(date)] Iniciando a suíte de experimentos 'TweetEval' ---"
-start_time=$(date +%s)
-bash run_all_tweet_eval_experiments.sh > logs/tweet_eval_runner.log 2>&1
-end_time=$(date +%s)
-elapsed=$((end_time - start_time))
-echo "--- [$(date)] Suíte 'TweetEval' concluída em ${elapsed}s. Log salvo em logs/tweet_eval_runner.log ---"
+# # --- ETAPA 3: TWEET EVAL ---
+# echo "--- [$(date)] Iniciando a suíte de experimentos 'TweetEval' ---"
+# start_time=$(date +%s)
+# bash run_all_tweet_eval_experiments.sh > logs/tweet_eval_runner.log 2>&1
+# end_time=$(date +%s)
+# elapsed=$((end_time - start_time))
+# echo "--- [$(date)] Suíte 'TweetEval' concluída em ${elapsed}s. Log salvo em logs/tweet_eval_runner.log ---"
 
 # --- ETAPA 4: FINANCIAL PHRASEBANK ---
 echo "--- [$(date)] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---"
