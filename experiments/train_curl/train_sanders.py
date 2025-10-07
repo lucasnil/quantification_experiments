@@ -136,8 +136,6 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     train_bag_generator = DifficultySortedAPPBagGenerator(
         device='cpu',
         seed=SEED,
-        prevalences=train_prevalences,
-        sample_size=BAG_SIZE,
         difficulty_metric=difficulty_metric,
         difficulty_top_k=difficulty_top_k,
         difficulty_mode=difficulty_mode
