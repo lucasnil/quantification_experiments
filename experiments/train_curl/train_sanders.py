@@ -14,7 +14,7 @@ from dlquantification.utils.utils import UnlabeledMixerBagGenerator, APPBagGener
 from tqdm import tqdm
 
 SEED = 42
-BAG_SIZE = 1000
+BAG_SIZE = 500
 N_CLASSES = 3
 EMBEDDING_SIZE = 768
 TRAIN_NAME = "twitter_bert"
