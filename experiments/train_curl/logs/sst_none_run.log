@@ -4,508 +4,423 @@ Dispositivo de treino: cuda
 Baixando Stanford Sentiment Treebank (SST-5) do Hugging Face...
 Carregando embeddings e splits do cache...
 Ignoring val_split as train and val datasets where given to fit function
-We have two datasets: training 17044 examples. validation 1100 examples.]
+We have two datasets: training 16544 examples. validation 1000 examples.]
 Using device cuda
 [SST-5] Starting epoch 0...
-[SST-5] Elapsed training time:2.48s
+[SST-5] Elapsed training time:13.22s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.34s
-[SST-5] [Epoch=000] Train Loss=[QuantLoss=0.07561]Val loss = [QuantLoss=0.07550][QuantReg:0.29555][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.23s
+[SST-5] [Epoch=000] Train Loss=[QuantLoss=0.05103]Val loss = [QuantLoss=0.06403][QuantReg:0.38708][saved best model in this epoch]
 [SST-5] Starting epoch 1...
-[SST-5] Elapsed training time:2.41s
+[SST-5] Elapsed training time:13.24s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.30s
-[SST-5] [Epoch=001] Train Loss=[QuantLoss=0.05934]Val loss = [QuantLoss=0.06865][QuantReg:0.26489][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.27s
+[SST-5] [Epoch=001] Train Loss=[QuantLoss=0.03228]Val loss = [QuantLoss=0.02834][QuantReg:0.30590][saved best model in this epoch]
 [SST-5] Starting epoch 2...
-[SST-5] Elapsed training time:2.41s
+[SST-5] Elapsed training time:13.03s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.33s
-[SST-5] [Epoch=002] Train Loss=[QuantLoss=0.05398]Val loss = [QuantLoss=0.07403][QuantReg:0.26882]
+[SST-5] Elapsed validation time:1.23s
+[SST-5] [Epoch=002] Train Loss=[QuantLoss=0.03227]Val loss = [QuantLoss=0.03430][QuantReg:0.29059]
 [SST-5] Starting epoch 3...
-[SST-5] Elapsed training time:2.38s
+[SST-5] Elapsed training time:13.05s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.31s
-[SST-5] [Epoch=003] Train Loss=[QuantLoss=0.04955]Val loss = [QuantLoss=0.05943][QuantReg:0.25535][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.25s
+[SST-5] [Epoch=003] Train Loss=[QuantLoss=0.02945]Val loss = [QuantLoss=0.03246][QuantReg:0.29621]
 [SST-5] Starting epoch 4...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:13.11s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.31s
-[SST-5] [Epoch=004] Train Loss=[QuantLoss=0.04669]Val loss = [QuantLoss=0.06723][QuantReg:0.24705]
+[SST-5] Elapsed validation time:1.28s
+[SST-5] [Epoch=004] Train Loss=[QuantLoss=0.02638]Val loss = [QuantLoss=0.03434][QuantReg:0.29600]
 [SST-5] Starting epoch 5...
-[SST-5] Elapsed training time:2.45s
+[SST-5] Elapsed training time:12.84s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.33s
-[SST-5] [Epoch=005] Train Loss=[QuantLoss=0.04552]Val loss = [QuantLoss=0.06913][QuantReg:0.26050]
+[SST-5] Elapsed validation time:1.25s
+[SST-5] [Epoch=005] Train Loss=[QuantLoss=0.02604]Val loss = [QuantLoss=0.03637][QuantReg:0.28135]
 [SST-5] Starting epoch 6...
-[SST-5] Elapsed training time:2.42s
+[SST-5] Elapsed training time:13.09s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.31s
-[SST-5] [Epoch=006] Train Loss=[QuantLoss=0.04248]Val loss = [QuantLoss=0.06438][QuantReg:0.25842]
+[SST-5] Elapsed validation time:1.23s
+[SST-5] [Epoch=006] Train Loss=[QuantLoss=0.02643]Val loss = [QuantLoss=0.02632][QuantReg:0.28759][saved best model in this epoch]
 [SST-5] Starting epoch 7...
-[SST-5] Elapsed training time:2.53s
+[SST-5] Elapsed training time:13.02s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.35s
-[SST-5] [Epoch=007] Train Loss=[QuantLoss=0.04134]Val loss = [QuantLoss=0.05445][QuantReg:0.26569][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.28s
+[SST-5] [Epoch=007] Train Loss=[QuantLoss=0.02826]Val loss = [QuantLoss=0.03084][QuantReg:0.29167]
 [SST-5] Starting epoch 8...
-[SST-5] Elapsed training time:2.44s
+[SST-5] Elapsed training time:13.08s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.34s
-[SST-5] [Epoch=008] Train Loss=[QuantLoss=0.04198]Val loss = [QuantLoss=0.06289][QuantReg:0.27263]
+[SST-5] Elapsed validation time:1.32s
+[SST-5] [Epoch=008] Train Loss=[QuantLoss=0.02597]Val loss = [QuantLoss=0.03399][QuantReg:0.27351]
 [SST-5] Starting epoch 9...
-[SST-5] Elapsed training time:2.48s
+[SST-5] Elapsed training time:12.95s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.26s
-[SST-5] [Epoch=009] Train Loss=[QuantLoss=0.04068]Val loss = [QuantLoss=0.05613][QuantReg:0.27409]
+[SST-5] Elapsed validation time:1.22s
+[SST-5] [Epoch=009] Train Loss=[QuantLoss=0.02954]Val loss = [QuantLoss=0.03240][QuantReg:0.28007]
 [SST-5] Starting epoch 10...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:13.07s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.26s
-[SST-5] [Epoch=010] Train Loss=[QuantLoss=0.03943]Val loss = [QuantLoss=0.05938][QuantReg:0.26953]
+[SST-5] Elapsed validation time:1.23s
+[SST-5] [Epoch=010] Train Loss=[QuantLoss=0.02688]Val loss = [QuantLoss=0.03262][QuantReg:0.27023]
 [SST-5] Starting epoch 11...
-[SST-5] Elapsed training time:2.41s
+[SST-5] Elapsed training time:12.91s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.28s
-[SST-5] [Epoch=011] Train Loss=[QuantLoss=0.03969]Val loss = [QuantLoss=0.05893][QuantReg:0.26662]
+[SST-5] Elapsed validation time:1.28s
+[SST-5] [Epoch=011] Train Loss=[QuantLoss=0.02461]Val loss = [QuantLoss=0.02542][QuantReg:0.27459][saved best model in this epoch]
 [SST-5] Starting epoch 12...
-[SST-5] Elapsed training time:2.44s
+[SST-5] Elapsed training time:13.11s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.26s
-[SST-5] [Epoch=012] Train Loss=[QuantLoss=0.03807]Val loss = [QuantLoss=0.06288][QuantReg:0.25920]
+[SST-5] Elapsed validation time:1.28s
+[SST-5] [Epoch=012] Train Loss=[QuantLoss=0.02601]Val loss = [QuantLoss=0.02136][QuantReg:0.28350][saved best model in this epoch]
 [SST-5] Starting epoch 13...
-[SST-5] Elapsed training time:2.56s
+[SST-5] Elapsed training time:13.10s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.30s
-[SST-5] [Epoch=013] Train Loss=[QuantLoss=0.03883]Val loss = [QuantLoss=0.05440][QuantReg:0.26896][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.36s
+[SST-5] [Epoch=013] Train Loss=[QuantLoss=0.02411]Val loss = [QuantLoss=0.02585][QuantReg:0.28098]
 [SST-5] Starting epoch 14...
-[SST-5] Elapsed training time:2.42s
+[SST-5] Elapsed training time:12.90s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.35s
-[SST-5] [Epoch=014] Train Loss=[QuantLoss=0.03676]Val loss = [QuantLoss=0.05209][QuantReg:0.26357][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.24s
+[SST-5] [Epoch=014] Train Loss=[QuantLoss=0.02424]Val loss = [QuantLoss=0.03456][QuantReg:0.28632]
 [SST-5] Starting epoch 15...
-[SST-5] Elapsed training time:2.48s
+[SST-5] Elapsed training time:13.00s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.24s
-[SST-5] [Epoch=015] Train Loss=[QuantLoss=0.03766]Val loss = [QuantLoss=0.05548][QuantReg:0.26543]
+[SST-5] Elapsed validation time:1.37s
+[SST-5] [Epoch=015] Train Loss=[QuantLoss=0.02390]Val loss = [QuantLoss=0.03335][QuantReg:0.28264]
 [SST-5] Starting epoch 16...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:13.09s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.32s
-[SST-5] [Epoch=016] Train Loss=[QuantLoss=0.03746]Val loss = [QuantLoss=0.05259][QuantReg:0.26252]
+[SST-5] Elapsed validation time:1.33s
+[SST-5] [Epoch=016] Train Loss=[QuantLoss=0.02519]Val loss = [QuantLoss=0.02968][QuantReg:0.27622]
 [SST-5] Starting epoch 17...
-[SST-5] Elapsed training time:2.39s
+[SST-5] Elapsed training time:13.09s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.28s
-[SST-5] [Epoch=017] Train Loss=[QuantLoss=0.03526]Val loss = [QuantLoss=0.05541][QuantReg:0.26583]
+[SST-5] Elapsed validation time:1.30s
+[SST-5] [Epoch=017] Train Loss=[QuantLoss=0.02510]Val loss = [QuantLoss=0.02316][QuantReg:0.27216]
 [SST-5] Starting epoch 18...
-[SST-5] Elapsed training time:2.43s
+[SST-5] Elapsed training time:13.15s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.30s
-[SST-5] [Epoch=018] Train Loss=[QuantLoss=0.03473]Val loss = [QuantLoss=0.04815][QuantReg:0.26927][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.27s
+[SST-5] [Epoch=018] Train Loss=[QuantLoss=0.02396]Val loss = [QuantLoss=0.02172][QuantReg:0.26775]
 [SST-5] Starting epoch 19...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:13.08s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.28s
-[SST-5] [Epoch=019] Train Loss=[QuantLoss=0.03557]Val loss = [QuantLoss=0.05615][QuantReg:0.26209]
+[SST-5] Elapsed validation time:1.27s
+[SST-5] [Epoch=019] Train Loss=[QuantLoss=0.02364]Val loss = [QuantLoss=0.02886][QuantReg:0.27947]
 [SST-5] Starting epoch 20...
-[SST-5] Elapsed training time:2.45s
+[SST-5] Elapsed training time:13.13s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.31s
-[SST-5] [Epoch=020] Train Loss=[QuantLoss=0.03684]Val loss = [QuantLoss=0.05165][QuantReg:0.26267]
+[SST-5] Elapsed validation time:1.24s
+[SST-5] [Epoch=020] Train Loss=[QuantLoss=0.02614]Val loss = [QuantLoss=0.02772][QuantReg:0.28054]
 [SST-5] Starting epoch 21...
-[SST-5] Elapsed training time:2.43s
+[SST-5] Elapsed training time:13.15s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.30s
-[SST-5] [Epoch=021] Train Loss=[QuantLoss=0.03430]Val loss = [QuantLoss=0.05189][QuantReg:0.26985]
+[SST-5] Elapsed validation time:1.36s
+[SST-5] [Epoch=021] Train Loss=[QuantLoss=0.02366]Val loss = [QuantLoss=0.01979][QuantReg:0.27503][saved best model in this epoch]
 [SST-5] Starting epoch 22...
-[SST-5] Elapsed training time:2.43s
+[SST-5] Elapsed training time:13.14s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.27s
-[SST-5] [Epoch=022] Train Loss=[QuantLoss=0.03475]Val loss = [QuantLoss=0.05040][QuantReg:0.26061]
+[SST-5] Elapsed validation time:1.24s
+[SST-5] [Epoch=022] Train Loss=[QuantLoss=0.02254]Val loss = [QuantLoss=0.02181][QuantReg:0.26835]
 [SST-5] Starting epoch 23...
-[SST-5] Elapsed training time:2.40s
+[SST-5] Elapsed training time:12.88s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.30s
-[SST-5] [Epoch=023] Train Loss=[QuantLoss=0.03477]Val loss = [QuantLoss=0.05496][QuantReg:0.26569]
+[SST-5] Elapsed validation time:1.25s
+[SST-5] [Epoch=023] Train Loss=[QuantLoss=0.02237]Val loss = [QuantLoss=0.02211][QuantReg:0.26907]
 [SST-5] Starting epoch 24...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:12.82s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.25s
-[SST-5] [Epoch=024] Train Loss=[QuantLoss=0.03612]Val loss = [QuantLoss=0.05289][QuantReg:0.25889]
+[SST-5] Elapsed validation time:1.31s
+[SST-5] [Epoch=024] Train Loss=[QuantLoss=0.02340]Val loss = [QuantLoss=0.02457][QuantReg:0.25483]
 [SST-5] Starting epoch 25...
-[SST-5] Elapsed training time:2.58s
+[SST-5] Elapsed training time:13.01s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.28s
-[SST-5] [Epoch=025] Train Loss=[QuantLoss=0.03439]Val loss = [QuantLoss=0.05026][QuantReg:0.26194]
+[SST-5] Elapsed validation time:1.29s
+[SST-5] [Epoch=025] Train Loss=[QuantLoss=0.02277]Val loss = [QuantLoss=0.02572][QuantReg:0.25592]
 [SST-5] Starting epoch 26...
-[SST-5] Elapsed training time:2.59s
+[SST-5] Elapsed training time:13.10s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.31s
-[SST-5] [Epoch=026] Train Loss=[QuantLoss=0.03310]Val loss = [QuantLoss=0.04902][QuantReg:0.25946]
+[SST-5] Elapsed validation time:1.30s
+[SST-5] [Epoch=026] Train Loss=[QuantLoss=0.02265]Val loss = [QuantLoss=0.02464][QuantReg:0.26230]
 [SST-5] Starting epoch 27...
-[SST-5] Elapsed training time:2.49s
+[SST-5] Elapsed training time:13.09s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.32s
-[SST-5] [Epoch=027] Train Loss=[QuantLoss=0.03282]Val loss = [QuantLoss=0.05495][QuantReg:0.26068]
+[SST-5] Elapsed validation time:1.25s
+[SST-5] [Epoch=027] Train Loss=[QuantLoss=0.02586]Val loss = [QuantLoss=0.03157][QuantReg:0.26498]
 [SST-5] Starting epoch 28...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:13.02s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.31s
-[SST-5] [Epoch=028] Train Loss=[QuantLoss=0.03218]Val loss = [QuantLoss=0.04644][QuantReg:0.26650][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.29s
+[SST-5] [Epoch=028] Train Loss=[QuantLoss=0.02376]Val loss = [QuantLoss=0.01942][QuantReg:0.27198][saved best model in this epoch]
 [SST-5] Starting epoch 29...
-[SST-5] Elapsed training time:2.48s
+[SST-5] Elapsed training time:13.03s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.27s
-[SST-5] [Epoch=029] Train Loss=[QuantLoss=0.03368]Val loss = [QuantLoss=0.04550][QuantReg:0.26467][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.30s
+[SST-5] [Epoch=029] Train Loss=[QuantLoss=0.02266]Val loss = [QuantLoss=0.02251][QuantReg:0.26787]
 [SST-5] Starting epoch 30...
-[SST-5] Elapsed training time:2.57s
+[SST-5] Elapsed training time:12.96s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.31s
-[SST-5] [Epoch=030] Train Loss=[QuantLoss=0.03222]Val loss = [QuantLoss=0.05345][QuantReg:0.25738]
+[SST-5] Elapsed validation time:1.24s
+[SST-5] [Epoch=030] Train Loss=[QuantLoss=0.02466]Val loss = [QuantLoss=0.02855][QuantReg:0.26400]
 [SST-5] Starting epoch 31...
-[SST-5] Elapsed training time:2.44s
+[SST-5] Elapsed training time:13.02s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.30s
-[SST-5] [Epoch=031] Train Loss=[QuantLoss=0.03246]Val loss = [QuantLoss=0.04899][QuantReg:0.25170]
+[SST-5] Elapsed validation time:1.30s
+[SST-5] [Epoch=031] Train Loss=[QuantLoss=0.02199]Val loss = [QuantLoss=0.01932][QuantReg:0.27147][saved best model in this epoch]
 [SST-5] Starting epoch 32...
-[SST-5] Elapsed training time:2.55s
+[SST-5] Elapsed training time:13.09s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.27s
-[SST-5] [Epoch=032] Train Loss=[QuantLoss=0.03181]Val loss = [QuantLoss=0.05116][QuantReg:0.25223]
+[SST-5] Elapsed validation time:1.31s
+[SST-5] [Epoch=032] Train Loss=[QuantLoss=0.02217]Val loss = [QuantLoss=0.02293][QuantReg:0.27037]
 [SST-5] Starting epoch 33...
-[SST-5] Elapsed training time:2.48s
+[SST-5] Elapsed training time:13.16s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.27s
-[SST-5] [Epoch=033] Train Loss=[QuantLoss=0.03365]Val loss = [QuantLoss=0.04369][QuantReg:0.24801][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.33s
+[SST-5] [Epoch=033] Train Loss=[QuantLoss=0.02284]Val loss = [QuantLoss=0.03083][QuantReg:0.26295]
 [SST-5] Starting epoch 34...
-[SST-5] Elapsed training time:2.47s
+[SST-5] Elapsed training time:13.17s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.26s
-[SST-5] [Epoch=034] Train Loss=[QuantLoss=0.03229]Val loss = [QuantLoss=0.04681][QuantReg:0.25061]
+[SST-5] Elapsed validation time:1.26s
+[SST-5] [Epoch=034] Train Loss=[QuantLoss=0.02211]Val loss = [QuantLoss=0.02683][QuantReg:0.25941]
 [SST-5] Starting epoch 35...
-[SST-5] Elapsed training time:2.60s
+[SST-5] Elapsed training time:13.13s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.27s
-[SST-5] [Epoch=035] Train Loss=[QuantLoss=0.03224]Val loss = [QuantLoss=0.04558][QuantReg:0.24746]
+[SST-5] Elapsed validation time:1.23s
+[SST-5] [Epoch=035] Train Loss=[QuantLoss=0.02241]Val loss = [QuantLoss=0.02587][QuantReg:0.25880]
 [SST-5] Starting epoch 36...
-[SST-5] Elapsed training time:2.57s
+[SST-5] Elapsed training time:13.15s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.37s
-[SST-5] [Epoch=036] Train Loss=[QuantLoss=0.03218]Val loss = [QuantLoss=0.05592][QuantReg:0.25690]
+[SST-5] Elapsed validation time:1.22s
+[SST-5] [Epoch=036] Train Loss=[QuantLoss=0.02242]Val loss = [QuantLoss=0.01878][QuantReg:0.26616][saved best model in this epoch]
 [SST-5] Starting epoch 37...
-[SST-5] Elapsed training time:2.57s
+[SST-5] Elapsed training time:13.16s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.32s
-[SST-5] [Epoch=037] Train Loss=[QuantLoss=0.03293]Val loss = [QuantLoss=0.04698][QuantReg:0.25348]
+[SST-5] Elapsed validation time:1.23s
+[SST-5] [Epoch=037] Train Loss=[QuantLoss=0.02308]Val loss = [QuantLoss=0.02323][QuantReg:0.26032]
 [SST-5] Starting epoch 38...
-[SST-5] Elapsed training time:2.41s
+[SST-5] Elapsed training time:12.73s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.28s
-[SST-5] [Epoch=038] Train Loss=[QuantLoss=0.02933]Val loss = [QuantLoss=0.05023][QuantReg:0.25189]
+[SST-5] Elapsed validation time:1.23s
+[SST-5] [Epoch=038] Train Loss=[QuantLoss=0.02323]Val loss = [QuantLoss=0.02229][QuantReg:0.26066]
 [SST-5] Starting epoch 39...
-[SST-5] Elapsed training time:2.38s
+[SST-5] Elapsed training time:13.06s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.31s
-[SST-5] [Epoch=039] Train Loss=[QuantLoss=0.03086]Val loss = [QuantLoss=0.04547][QuantReg:0.25443]
+[SST-5] Elapsed validation time:1.27s
+[SST-5] [Epoch=039] Train Loss=[QuantLoss=0.02259]Val loss = [QuantLoss=0.02389][QuantReg:0.25870]
 [SST-5] Starting epoch 40...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:12.95s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.27s
-[SST-5] [Epoch=040] Train Loss=[QuantLoss=0.03152]Val loss = [QuantLoss=0.04663][QuantReg:0.25517]
+[SST-5] Elapsed validation time:1.34s
+[SST-5] [Epoch=040] Train Loss=[QuantLoss=0.02148]Val loss = [QuantLoss=0.01650][QuantReg:0.25571][saved best model in this epoch]
 [SST-5] Starting epoch 41...
-[SST-5] Elapsed training time:2.59s
+[SST-5] Elapsed training time:12.79s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.37s
-[SST-5] [Epoch=041] Train Loss=[QuantLoss=0.03071]Val loss = [QuantLoss=0.04600][QuantReg:0.25589]
+[SST-5] Elapsed validation time:1.41s
+[SST-5] [Epoch=041] Train Loss=[QuantLoss=0.02242]Val loss = [QuantLoss=0.03376][QuantReg:0.25839]
 [SST-5] Starting epoch 42...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:13.10s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.28s
-[SST-5] [Epoch=042] Train Loss=[QuantLoss=0.02923]Val loss = [QuantLoss=0.04495][QuantReg:0.25405]
+[SST-5] Elapsed validation time:1.24s
+[SST-5] [Epoch=042] Train Loss=[QuantLoss=0.02401]Val loss = [QuantLoss=0.02190][QuantReg:0.26018]
 [SST-5] Starting epoch 43...
-[SST-5] Elapsed training time:2.63s
+[SST-5] Elapsed training time:13.10s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.26s
-[SST-5] [Epoch=043] Train Loss=[QuantLoss=0.03108]Val loss = [QuantLoss=0.04752][QuantReg:0.26083]
+[SST-5] Elapsed validation time:1.33s
+[SST-5] [Epoch=043] Train Loss=[QuantLoss=0.02239]Val loss = [QuantLoss=0.02894][QuantReg:0.25661]
 [SST-5] Starting epoch 44...
-[SST-5] Elapsed training time:2.56s
+[SST-5] Elapsed training time:12.92s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.29s
-[SST-5] [Epoch=044] Train Loss=[QuantLoss=0.03240]Val loss = [QuantLoss=0.04544][QuantReg:0.26029]
+[SST-5] Elapsed validation time:1.31s
+[SST-5] [Epoch=044] Train Loss=[QuantLoss=0.02125]Val loss = [QuantLoss=0.02321][QuantReg:0.26273]
 [SST-5] Starting epoch 45...
-[SST-5] Elapsed training time:2.43s
+[SST-5] Elapsed training time:13.24s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.33s
-[SST-5] [Epoch=045] Train Loss=[QuantLoss=0.02948]Val loss = [QuantLoss=0.04806][QuantReg:0.25384]
+[SST-5] Elapsed validation time:1.39s
+[SST-5] [Epoch=045] Train Loss=[QuantLoss=0.02255]Val loss = [QuantLoss=0.02858][QuantReg:0.26201]
 [SST-5] Starting epoch 46...
-[SST-5] Elapsed training time:2.44s
+[SST-5] Elapsed training time:12.99s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.42s
-[SST-5] [Epoch=046] Train Loss=[QuantLoss=0.02902]Val loss = [QuantLoss=0.05157][QuantReg:0.25381]
+[SST-5] Elapsed validation time:1.37s
+[SST-5] [Epoch=046] Train Loss=[QuantLoss=0.02013]Val loss = [QuantLoss=0.02255][QuantReg:0.26109]
 [SST-5] Starting epoch 47...
-[SST-5] Elapsed training time:2.47s
+[SST-5] Elapsed training time:12.99s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.29s
-[SST-5] [Epoch=047] Train Loss=[QuantLoss=0.03145]Val loss = [QuantLoss=0.04965][QuantReg:0.25276]
+[SST-5] Elapsed validation time:1.37s
+[SST-5] [Epoch=047] Train Loss=[QuantLoss=0.02289]Val loss = [QuantLoss=0.02694][QuantReg:0.26144]
 [SST-5] Starting epoch 48...
-[SST-5] Elapsed training time:2.44s
+[SST-5] Elapsed training time:12.89s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.44s
-[SST-5] [Epoch=048] Train Loss=[QuantLoss=0.02945]Val loss = [QuantLoss=0.04960][QuantReg:0.25689]
+[SST-5] Elapsed validation time:1.36s
+[SST-5] [Epoch=048] Train Loss=[QuantLoss=0.02129]Val loss = [QuantLoss=0.02891][QuantReg:0.25893]
 [SST-5] Starting epoch 49...
-[SST-5] Elapsed training time:2.47s
+[SST-5] Elapsed training time:12.97s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.29s
-[SST-5] [Epoch=049] Train Loss=[QuantLoss=0.02838]Val loss = [QuantLoss=0.05313][QuantReg:0.25317]
+[SST-5] Elapsed validation time:1.35s
+[SST-5] [Epoch=049] Train Loss=[QuantLoss=0.02381]Val loss = [QuantLoss=0.02426][QuantReg:0.25805]
 [SST-5] Starting epoch 50...
-[SST-5] Elapsed training time:2.48s
+[SST-5] Elapsed training time:13.01s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.41s
-[SST-5] [Epoch=050] Train Loss=[QuantLoss=0.03111]Val loss = [QuantLoss=0.04769][QuantReg:0.25675]
+[SST-5] Elapsed validation time:1.47s
+[SST-5] [Epoch=050] Train Loss=[QuantLoss=0.02067]Val loss = [QuantLoss=0.02409][QuantReg:0.25779]
 [SST-5] Starting epoch 51...
-[SST-5] Elapsed training time:2.57s
+[SST-5] Elapsed training time:13.05s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.32s
-[SST-5] [Epoch=051] Train Loss=[QuantLoss=0.02926]Val loss = [QuantLoss=0.04358][QuantReg:0.25499][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.39s
+[SST-5] [Epoch=051] Train Loss=[QuantLoss=0.02034]Val loss = [QuantLoss=0.02820][QuantReg:0.25511]
 [SST-5] Starting epoch 52...
-[SST-5] Elapsed training time:2.45s
+[SST-5] Elapsed training time:12.99s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.37s
-[SST-5] [Epoch=052] Train Loss=[QuantLoss=0.03070]Val loss = [QuantLoss=0.04526][QuantReg:0.26121]
+[SST-5] Elapsed validation time:1.34s
+[SST-5] [Epoch=052] Train Loss=[QuantLoss=0.02303]Val loss = [QuantLoss=0.03002][QuantReg:0.25648]
 [SST-5] Starting epoch 53...
-[SST-5] Elapsed training time:2.39s
+[SST-5] Elapsed training time:13.03s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=053] Train Loss=[QuantLoss=0.03076]Val loss = [QuantLoss=0.04775][QuantReg:0.25505]
+[SST-5] Elapsed validation time:1.36s
+[SST-5] [Epoch=053] Train Loss=[QuantLoss=0.02284]Val loss = [QuantLoss=0.03763][QuantReg:0.25700]
 [SST-5] Starting epoch 54...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:13.08s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.43s
-[SST-5] [Epoch=054] Train Loss=[QuantLoss=0.02850]Val loss = [QuantLoss=0.05065][QuantReg:0.25018]
+[SST-5] Elapsed validation time:1.37s
+[SST-5] [Epoch=054] Train Loss=[QuantLoss=0.02140]Val loss = [QuantLoss=0.03720][QuantReg:0.25716]
 [SST-5] Starting epoch 55...
-[SST-5] Elapsed training time:2.44s
+[SST-5] Elapsed training time:13.14s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.43s
-[SST-5] [Epoch=055] Train Loss=[QuantLoss=0.03052]Val loss = [QuantLoss=0.05825][QuantReg:0.24693]
+[SST-5] Elapsed validation time:1.36s
+[SST-5] [Epoch=055] Train Loss=[QuantLoss=0.02140]Val loss = [QuantLoss=0.02716][QuantReg:0.26085]
 [SST-5] Starting epoch 56...
-[SST-5] Elapsed training time:2.46s
+[SST-5] Elapsed training time:13.03s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=056] Train Loss=[QuantLoss=0.02966]Val loss = [QuantLoss=0.04708][QuantReg:0.24962]
+[SST-5] Elapsed validation time:1.36s
+[SST-5] [Epoch=056] Train Loss=[QuantLoss=0.02125]Val loss = [QuantLoss=0.02785][QuantReg:0.25720]
 [SST-5] Starting epoch 57...
-[SST-5] Elapsed training time:2.39s
+[SST-5] Elapsed training time:12.93s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.42s
-[SST-5] [Epoch=057] Train Loss=[QuantLoss=0.02739]Val loss = [QuantLoss=0.04016][QuantReg:0.25288][saved best model in this epoch]
+[SST-5] Elapsed validation time:1.41s
+[SST-5] [Epoch=057] Train Loss=[QuantLoss=0.02339]Val loss = [QuantLoss=0.03318][QuantReg:0.24951]
 [SST-5] Starting epoch 58...
-[SST-5] Elapsed training time:2.54s
+[SST-5] Elapsed training time:12.98s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.43s
-[SST-5] [Epoch=058] Train Loss=[QuantLoss=0.03053]Val loss = [QuantLoss=0.04613][QuantReg:0.25452]
+[SST-5] Elapsed validation time:1.37s
+[SST-5] [Epoch=058] Train Loss=[QuantLoss=0.02120]Val loss = [QuantLoss=0.02274][QuantReg:0.24890]
 [SST-5] Starting epoch 59...
-[SST-5] Elapsed training time:2.54s
+[SST-5] Elapsed training time:13.13s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=059] Train Loss=[QuantLoss=0.02955]Val loss = [QuantLoss=0.04531][QuantReg:0.25548]
+[SST-5] Elapsed validation time:1.42s
+[SST-5] [Epoch=059] Train Loss=[QuantLoss=0.01986]Val loss = [QuantLoss=0.02271][QuantReg:0.25376]
 [SST-5] Starting epoch 60...
-[SST-5] Elapsed training time:2.63s
+[SST-5] Elapsed training time:13.01s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.32s
-[SST-5] [Epoch=060] Train Loss=[QuantLoss=0.02863]Val loss = [QuantLoss=0.04875][QuantReg:0.25144]
+[SST-5] Elapsed validation time:1.31s
+[SST-5] [Epoch=060] Train Loss=[QuantLoss=0.02245]Val loss = [QuantLoss=0.02730][QuantReg:0.25224]
 [SST-5] Starting epoch 61...
-[SST-5] Elapsed training time:2.41s
+[SST-5] Elapsed training time:12.91s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.42s
-[SST-5] [Epoch=061] Train Loss=[QuantLoss=0.02902]Val loss = [QuantLoss=0.04484][QuantReg:0.25180]
+[SST-5] Elapsed validation time:1.38s
+[SST-5] [Epoch=061] Train Loss=[QuantLoss=0.02072]Val loss = [QuantLoss=0.02716][QuantReg:0.25880]
 [SST-5] Starting epoch 62...
-[SST-5] Elapsed training time:2.42s
+[SST-5] Elapsed training time:13.11s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=062] Train Loss=[QuantLoss=0.02917]Val loss = [QuantLoss=0.04357][QuantReg:0.25323]
+[SST-5] Elapsed validation time:1.41s
+[SST-5] [Epoch=062] Train Loss=[QuantLoss=0.01909]Val loss = [QuantLoss=0.02055][QuantReg:0.25561]
 [SST-5] Starting epoch 63...
-[SST-5] Elapsed training time:2.43s
+[SST-5] Elapsed training time:13.16s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=063] Train Loss=[QuantLoss=0.03091]Val loss = [QuantLoss=0.04533][QuantReg:0.25462]
+[SST-5] Elapsed validation time:1.35s
+[SST-5] [Epoch=063] Train Loss=[QuantLoss=0.01716]Val loss = [QuantLoss=0.02492][QuantReg:0.25515]
 [SST-5] Starting epoch 64...
-[SST-5] Elapsed training time:2.42s
+[SST-5] Elapsed training time:13.01s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.32s
-[SST-5] [Epoch=064] Train Loss=[QuantLoss=0.02830]Val loss = [QuantLoss=0.04728][QuantReg:0.25641]
+[SST-5] Elapsed validation time:1.39s
+[SST-5] [Epoch=064] Train Loss=[QuantLoss=0.01717]Val loss = [QuantLoss=0.02449][QuantReg:0.25419]
 [SST-5] Starting epoch 65...
-[SST-5] Elapsed training time:2.39s
+[SST-5] Elapsed training time:13.24s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=065] Train Loss=[QuantLoss=0.02850]Val loss = [QuantLoss=0.04529][QuantReg:0.26002]
+[SST-5] Elapsed validation time:1.35s
+[SST-5] [Epoch=065] Train Loss=[QuantLoss=0.01714]Val loss = [QuantLoss=0.02556][QuantReg:0.25498]
 [SST-5] Starting epoch 66...
-[SST-5] Elapsed training time:2.38s
+[SST-5] Elapsed training time:13.11s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=066] Train Loss=[QuantLoss=0.02833]Val loss = [QuantLoss=0.04447][QuantReg:0.25678]
+[SST-5] Elapsed validation time:1.32s
+[SST-5] [Epoch=066] Train Loss=[QuantLoss=0.01789]Val loss = [QuantLoss=0.03096][QuantReg:0.25486]
 [SST-5] Starting epoch 67...
-[SST-5] Elapsed training time:2.50s
+[SST-5] Elapsed training time:13.04s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=067] Train Loss=[QuantLoss=0.02771]Val loss = [QuantLoss=0.04321][QuantReg:0.25461]
+[SST-5] Elapsed validation time:1.38s
+[SST-5] [Epoch=067] Train Loss=[QuantLoss=0.01730]Val loss = [QuantLoss=0.02618][QuantReg:0.25453]
 [SST-5] Starting epoch 68...
-[SST-5] Elapsed training time:2.53s
+[SST-5] Elapsed training time:13.31s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=068] Train Loss=[QuantLoss=0.02915]Val loss = [QuantLoss=0.04697][QuantReg:0.25420]
+[SST-5] Elapsed validation time:1.31s
+[SST-5] [Epoch=068] Train Loss=[QuantLoss=0.01686]Val loss = [QuantLoss=0.02419][QuantReg:0.25581]
 [SST-5] Starting epoch 69...
-[SST-5] Elapsed training time:2.61s
+[SST-5] Elapsed training time:13.15s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=069] Train Loss=[QuantLoss=0.02827]Val loss = [QuantLoss=0.04539][QuantReg:0.25132]
+[SST-5] Elapsed validation time:1.37s
+[SST-5] [Epoch=069] Train Loss=[QuantLoss=0.01793]Val loss = [QuantLoss=0.02385][QuantReg:0.25555]
 [SST-5] Starting epoch 70...
-[SST-5] Elapsed training time:2.42s
+[SST-5] Elapsed training time:13.28s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.38s
-[SST-5] [Epoch=070] Train Loss=[QuantLoss=0.02817]Val loss = [QuantLoss=0.05476][QuantReg:0.25483]
+[SST-5] Elapsed validation time:1.41s
+[SST-5] [Epoch=070] Train Loss=[QuantLoss=0.01661]Val loss = [QuantLoss=0.02364][QuantReg:0.25567]
 [SST-5] Starting epoch 71...
-[SST-5] Elapsed training time:2.45s
+[SST-5] Elapsed training time:13.13s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.41s
-[SST-5] [Epoch=071] Train Loss=[QuantLoss=0.02929]Val loss = [QuantLoss=0.04758][QuantReg:0.26109]
+[SST-5] Elapsed validation time:1.42s
+[SST-5] [Epoch=071] Train Loss=[QuantLoss=0.01649]Val loss = [QuantLoss=0.02237][QuantReg:0.25507]
 [SST-5] Starting epoch 72...
-[SST-5] Elapsed training time:2.43s
+[SST-5] Elapsed training time:13.16s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.41s
-[SST-5] [Epoch=072] Train Loss=[QuantLoss=0.02931]Val loss = [QuantLoss=0.04658][QuantReg:0.25470]
+[SST-5] Elapsed validation time:1.30s
+[SST-5] [Epoch=072] Train Loss=[QuantLoss=0.01596]Val loss = [QuantLoss=0.02787][QuantReg:0.25453]
 [SST-5] Starting epoch 73...
-[SST-5] Elapsed training time:2.45s
+[SST-5] Elapsed training time:13.15s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.38s
-[SST-5] [Epoch=073] Train Loss=[QuantLoss=0.02830]Val loss = [QuantLoss=0.04616][QuantReg:0.24889]
+[SST-5] Elapsed validation time:1.41s
+[SST-5] [Epoch=073] Train Loss=[QuantLoss=0.01629]Val loss = [QuantLoss=0.02535][QuantReg:0.25521]
 [SST-5] Starting epoch 74...
-[SST-5] Elapsed training time:2.41s
+[SST-5] Elapsed training time:12.90s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.36s
-[SST-5] [Epoch=074] Train Loss=[QuantLoss=0.02692]Val loss = [QuantLoss=0.05181][QuantReg:0.25114]
+[SST-5] Elapsed validation time:1.37s
+[SST-5] [Epoch=074] Train Loss=[QuantLoss=0.01600]Val loss = [QuantLoss=0.02547][QuantReg:0.25550]
 [SST-5] Starting epoch 75...
-[SST-5] Elapsed training time:2.41s
+[SST-5] Elapsed training time:13.18s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=075] Train Loss=[QuantLoss=0.02884]Val loss = [QuantLoss=0.05094][QuantReg:0.25102]
+[SST-5] Elapsed validation time:1.33s
+[SST-5] [Epoch=075] Train Loss=[QuantLoss=0.01679]Val loss = [QuantLoss=0.02726][QuantReg:0.25433]
 [SST-5] Starting epoch 76...
-[SST-5] Elapsed training time:2.40s
+[SST-5] Elapsed training time:12.64s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.42s
-[SST-5] [Epoch=076] Train Loss=[QuantLoss=0.02860]Val loss = [QuantLoss=0.04580][QuantReg:0.24584]
+[SST-5] Elapsed validation time:1.31s
+[SST-5] [Epoch=076] Train Loss=[QuantLoss=0.01548]Val loss = [QuantLoss=0.02143][QuantReg:0.25481]
 [SST-5] Starting epoch 77...
-[SST-5] Elapsed training time:2.40s
+[SST-5] Elapsed training time:13.10s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=077] Train Loss=[QuantLoss=0.02860]Val loss = [QuantLoss=0.04766][QuantReg:0.25121]
+[SST-5] Elapsed validation time:1.46s
+[SST-5] [Epoch=077] Train Loss=[QuantLoss=0.01693]Val loss = [QuantLoss=0.02302][QuantReg:0.25599]
 [SST-5] Starting epoch 78...
-[SST-5] Elapsed training time:2.38s
+[SST-5] Elapsed training time:13.06s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.37s
-[SST-5] [Epoch=078] Train Loss=[QuantLoss=0.02712]Val loss = [QuantLoss=0.05023][QuantReg:0.25421]
+[SST-5] Elapsed validation time:1.42s
+[SST-5] [Epoch=078] Train Loss=[QuantLoss=0.01574]Val loss = [QuantLoss=0.02167][QuantReg:0.25574]
 [SST-5] Starting epoch 79...
-[SST-5] Elapsed training time:2.54s
+[SST-5] Elapsed training time:13.21s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.41s
-[SST-5] [Epoch=079] Train Loss=[QuantLoss=0.02528]Val loss = [QuantLoss=0.04536][QuantReg:0.25974]
+[SST-5] Elapsed validation time:1.37s
+[SST-5] [Epoch=079] Train Loss=[QuantLoss=0.01625]Val loss = [QuantLoss=0.02899][QuantReg:0.25554]
 [SST-5] Starting epoch 80...
-[SST-5] Elapsed training time:2.41s
+[SST-5] Elapsed training time:13.03s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.41s
-[SST-5] [Epoch=080] Train Loss=[QuantLoss=0.02380]Val loss = [QuantLoss=0.04576][QuantReg:0.25752]
+[SST-5] Elapsed validation time:1.40s
+[SST-5] [Epoch=080] Train Loss=[QuantLoss=0.01579]Val loss = [QuantLoss=0.02465][QuantReg:0.25519]
 [SST-5] Starting epoch 81...
-[SST-5] Elapsed training time:2.65s
+[SST-5] Elapsed training time:13.08s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=081] Train Loss=[QuantLoss=0.02388]Val loss = [QuantLoss=0.04303][QuantReg:0.25605]
+[SST-5] Elapsed validation time:1.30s
+[SST-5] [Epoch=081] Train Loss=[QuantLoss=0.01607]Val loss = [QuantLoss=0.02253][QuantReg:0.25574]
 [SST-5] Starting epoch 82...
-[SST-5] Elapsed training time:2.48s
+[SST-5] Elapsed training time:13.10s
 [SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=082] Train Loss=[QuantLoss=0.02345]Val loss = [QuantLoss=0.04232][QuantReg:0.25763]
-[SST-5] Starting epoch 83...
-[SST-5] Elapsed training time:2.57s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=083] Train Loss=[QuantLoss=0.02352]Val loss = [QuantLoss=0.04303][QuantReg:0.25727]
-[SST-5] Starting epoch 84...
-[SST-5] Elapsed training time:2.52s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=084] Train Loss=[QuantLoss=0.02265]Val loss = [QuantLoss=0.04297][QuantReg:0.25740]
-[SST-5] Starting epoch 85...
-[SST-5] Elapsed training time:2.43s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=085] Train Loss=[QuantLoss=0.02162]Val loss = [QuantLoss=0.04346][QuantReg:0.25514]
-[SST-5] Starting epoch 86...
-[SST-5] Elapsed training time:2.62s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=086] Train Loss=[QuantLoss=0.02130]Val loss = [QuantLoss=0.04108][QuantReg:0.25298]
-[SST-5] Starting epoch 87...
-[SST-5] Elapsed training time:2.40s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.41s
-[SST-5] [Epoch=087] Train Loss=[QuantLoss=0.02261]Val loss = [QuantLoss=0.04645][QuantReg:0.25341]
-[SST-5] Starting epoch 88...
-[SST-5] Elapsed training time:2.51s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=088] Train Loss=[QuantLoss=0.02182]Val loss = [QuantLoss=0.04279][QuantReg:0.25375]
-[SST-5] Starting epoch 89...
-[SST-5] Elapsed training time:2.61s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=089] Train Loss=[QuantLoss=0.02057]Val loss = [QuantLoss=0.04280][QuantReg:0.25263]
-[SST-5] Starting epoch 90...
-[SST-5] Elapsed training time:2.48s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.32s
-[SST-5] [Epoch=090] Train Loss=[QuantLoss=0.02134]Val loss = [QuantLoss=0.04136][QuantReg:0.25323]
-[SST-5] Starting epoch 91...
-[SST-5] Elapsed training time:2.42s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.33s
-[SST-5] [Epoch=091] Train Loss=[QuantLoss=0.02181]Val loss = [QuantLoss=0.04405][QuantReg:0.25266]
-[SST-5] Starting epoch 92...
-[SST-5] Elapsed training time:2.46s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.39s
-[SST-5] [Epoch=092] Train Loss=[QuantLoss=0.02114]Val loss = [QuantLoss=0.04469][QuantReg:0.25449]
-[SST-5] Starting epoch 93...
-[SST-5] Elapsed training time:2.50s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.41s
-[SST-5] [Epoch=093] Train Loss=[QuantLoss=0.02154]Val loss = [QuantLoss=0.04396][QuantReg:0.25184]
-[SST-5] Starting epoch 94...
-[SST-5] Elapsed training time:2.47s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=094] Train Loss=[QuantLoss=0.02097]Val loss = [QuantLoss=0.04223][QuantReg:0.25261]
-[SST-5] Starting epoch 95...
-[SST-5] Elapsed training time:2.45s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=095] Train Loss=[QuantLoss=0.02098]Val loss = [QuantLoss=0.04069][QuantReg:0.25270]
-[SST-5] Starting epoch 96...
-[SST-5] Elapsed training time:2.61s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.40s
-[SST-5] [Epoch=096] Train Loss=[QuantLoss=0.02126]Val loss = [QuantLoss=0.04303][QuantReg:0.25329]
-[SST-5] Starting epoch 97...
-[SST-5] Elapsed training time:2.46s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.38s
-[SST-5] [Epoch=097] Train Loss=[QuantLoss=0.02085]Val loss = [QuantLoss=0.04345][QuantReg:0.25293]
-[SST-5] Starting epoch 98...
-[SST-5] Elapsed training time:2.41s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.35s
-[SST-5] [Epoch=098] Train Loss=[QuantLoss=0.02014]Val loss = [QuantLoss=0.04442][QuantReg:0.25417]
-[SST-5] Starting epoch 99...
-[SST-5] Elapsed training time:2.60s
-[SST-5] Starting validation...
-[SST-5] Elapsed validation time:0.41s
-[SST-5] [Epoch=099] Train Loss=[QuantLoss=0.02039]Val loss = [QuantLoss=0.04289][QuantReg:0.25155]
-[SST-5] Early stopping in epoch 99!
+[SST-5] Elapsed validation time:1.42s
+[SST-5] [Epoch=082] Train Loss=[QuantLoss=0.01593]Val loss = [QuantLoss=0.02329][QuantReg:0.25695]
+[SST-5] Early stopping in epoch 82!
 [SST-5] Restoring best model...
-MAE médio: 0.1035 ± 0.0390
+MAE médio: 0.0999 ± 0.0384
