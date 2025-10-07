@@ -9,13 +9,12 @@ from transformers import AutoTokenizer, AutoModel
 from dlquantification.gmnet import GMNet
 from dlquantification.featureextraction.nofe import NoFeatureExtractionModule
 from dlquantification.utils.lossfunc import MAE
-from dlquantification.utils.utils import UnlabeledMixerBagGenerator, APPBagGenerator
-from dlquantification.utils.lequabaggenerator import LeQuaBagGenerator
+from dlquantification.utils.utils import UnlabeledMixerBagGenerator, APPBagGenerator, DifficultySortedAPPBagGenerator
 from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 
 SEED = 42
-BAG_SIZE = 100
+BAG_SIZE = 1000
 N_CLASSES = 3
 EMBEDDING_SIZE = 768
 TRAIN_NAME = "tweet_eval_sentiment"
@@ -128,14 +127,11 @@ def main(difficulty_metric=None, difficulty_top_k=None, difficulty_mode=None, re
         torch.full((x_val_bags.view(-1, EMBEDDING_SIZE).shape[0],), fill_value=-1, dtype=torch.long)
     )
 
-    train_bag_generator = LeQuaBagGenerator(
+    train_bag_generator = DifficultySortedAPPBagGenerator(
         device='cpu',
         seed=SEED,
         prevalences=train_prevalences,
         sample_size=BAG_SIZE,
-        app_bags_proportion=1,
-        mixed_bags_proportion=0,
-        labeled_unlabeled_split=(range(0, n_labeled), range(n_labeled, 2 * n_labeled)),
         difficulty_metric=difficulty_metric,
         difficulty_top_k=difficulty_top_k,
         difficulty_mode=difficulty_mode

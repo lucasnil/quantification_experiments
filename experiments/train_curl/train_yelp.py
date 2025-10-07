@@ -143,7 +143,6 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         n_bags=300, bag_size=BAG_SIZE, y=y_val
     )
     x_val_bags = x_val[x_val_bags_indexes.view(-1)].view(300, BAG_SIZE, EMBEDDING_SIZE)
-    y_val_bags = y_val[x_val_bags_indexes.view(-1)].view(300, BAG_SIZE)
 
 
     train_dataset = TensorDataset(
