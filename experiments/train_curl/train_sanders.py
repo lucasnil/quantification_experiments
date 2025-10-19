@@ -192,7 +192,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         "device": device,
         "quant_loss": loss,
         "dataset_name": "SST-5",
-        "save_model_path": f"savedmodels/{TRAIN_NAME}{difficulty_str}_run{run}.pkl",
+        "save_model_path": f"savedmodels/{TRAIN_NAME}_{difficulty_suffix}_run{run}.pkl",
         "wandb_experiment_name": TRAIN_NAME,
         "use_wandb": False,
         "num_workers": 4,
