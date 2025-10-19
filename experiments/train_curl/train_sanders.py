@@ -182,6 +182,7 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
     save_model_path = f"savedmodels/{TRAIN_NAME}_{difficulty_suffix}_run{run}.pkl"
 
     params = {
+        # ... (outros parâmetros que não mudam) ...
         "n_classes": N_CLASSES,
         "random_seed": SEED,
         "feature_extraction_module": fe,
@@ -190,29 +191,32 @@ def main(dataset_path, difficulty_metric=None, difficulty_top_k=None, difficulty
         "test_bag_generator": test_bag_generator,
         "device": device,
         "quant_loss": loss,
-        "dataset_name": "Twitter",
-        "save_model_path": save_model_path,
+        "dataset_name": "SST-5",
+        "save_model_path": f"savedmodels/{TRAIN_NAME}{difficulty_str}_run{run}.pkl",
         "wandb_experiment_name": TRAIN_NAME,
         "use_wandb": False,
-        "use_multiple_devices": False,
         "num_workers": 4,
-        "train_epochs": 1000,
+
+        # --- PARÂMETROS AJUSTADOS ---
+
+        "train_epochs": 300,             # Reduzido drasticamente para evitar treino excessivo
         "test_epochs": 1,
-        "start_lr": 5e-03,
-        "end_lr": 1e-04,
-        "lr_factor": 0.5,
+        "start_lr": 1e-03,               # Taxa de aprendizado inicial um pouco menor
+        "end_lr": 1e-05,                 # Ajustado para acompanhar a nova start_lr
         "batch_size": 128,
-        "gradient_accumulation": 1,
-        "weight_decay": 0.001,
-        "dropout": 0.5,
+        "weight_decay": 0.01,            # AUMENTADO: Regularização L2 mais forte
+        "dropout": 0.5,                  # Mantido, pois já é um valor forte
+
         "cka_regularization": "view",
         "n_bags": [5000, 300, 1],
         "bag_size": BAG_SIZE,
-        "linear_sizes": [4000],
-        "n_gm_layers": 9,
-        "num_gaussians": [10] * 9,
-        "gaussian_dimensions": [5] * 9,
-        "patience": 20,
+
+        "linear_sizes": [1024],          # REDUZIDO: Camada densa muito menor
+        "n_gm_layers": 4,                # REDUZIDO: Menos camadas, modelo mais simples
+        "num_gaussians": [8] * 4,        # REDUZIDO: Menos gaussianas
+        "gaussian_dimensions": [3] * 4,  # REDUZIDO: Menos dimensões por gaussiana
+
+        "patience": 15,                  # REDUZIDO: Para o treino mais rápido se não houver melhora
         "verbose": 8
     }
 
