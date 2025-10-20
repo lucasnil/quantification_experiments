@@ -6,7 +6,7 @@ Gerando embeddings com BERT...
 Ignoring val_split as train and val datasets where given to fit function
 We have two datasets: training 2545615 examples. validation 150000 examples.]
 Using device cuda
-[TweetEvalSentiment] Starting epoch 0...
+[SST-5] Starting epoch 0...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -23,8 +23,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.70s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.50s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -41,9 +41,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.15s
-[TweetEvalSentiment] [Epoch=000] Train Loss=[QuantLoss=0.04794]Val loss = [QuantLoss=0.11858][QuantReg:0.35994][saved best model in this epoch]
-[TweetEvalSentiment] Starting epoch 1...
+[SST-5] Elapsed validation time:1.12s
+[SST-5] [Epoch=000] Train Loss=[QuantLoss=0.06876]Val loss = [QuantLoss=0.07186][QuantReg:0.37429][saved best model in this epoch]
+[SST-5] Starting epoch 1...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -60,8 +60,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.71s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.46s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -78,9 +78,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.23s
-[TweetEvalSentiment] [Epoch=001] Train Loss=[QuantLoss=0.06303]Val loss = [QuantLoss=0.10023][QuantReg:0.33106][saved best model in this epoch]
-[TweetEvalSentiment] Starting epoch 2...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=001] Train Loss=[QuantLoss=0.04915]Val loss = [QuantLoss=0.06606][QuantReg:0.46821][saved best model in this epoch]
+[SST-5] Starting epoch 2...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -97,8 +97,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.57s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.42s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -115,9 +115,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.28s
-[TweetEvalSentiment] [Epoch=002] Train Loss=[QuantLoss=0.06639]Val loss = [QuantLoss=0.07437][QuantReg:0.31843][saved best model in this epoch]
-[TweetEvalSentiment] Starting epoch 3...
+[SST-5] Elapsed validation time:1.09s
+[SST-5] [Epoch=002] Train Loss=[QuantLoss=0.04621]Val loss = [QuantLoss=0.07243][QuantReg:0.49189]
+[SST-5] Starting epoch 3...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -134,8 +134,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.74s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.29s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -152,9 +152,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.12s
-[TweetEvalSentiment] [Epoch=003] Train Loss=[QuantLoss=0.04923]Val loss = [QuantLoss=0.07432][QuantReg:0.30473][saved best model in this epoch]
-[TweetEvalSentiment] Starting epoch 4...
+[SST-5] Elapsed validation time:1.05s
+[SST-5] [Epoch=003] Train Loss=[QuantLoss=0.03963]Val loss = [QuantLoss=0.05467][QuantReg:0.49424][saved best model in this epoch]
+[SST-5] Starting epoch 4...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -171,8 +171,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.67s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.45s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -189,9 +189,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.12s
-[TweetEvalSentiment] [Epoch=004] Train Loss=[QuantLoss=0.04893]Val loss = [QuantLoss=0.06268][QuantReg:0.28932][saved best model in this epoch]
-[TweetEvalSentiment] Starting epoch 5...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=004] Train Loss=[QuantLoss=0.03833]Val loss = [QuantLoss=0.06878][QuantReg:0.45492]
+[SST-5] Starting epoch 5...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -208,8 +208,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.72s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.57s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -226,9 +226,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.14s
-[TweetEvalSentiment] [Epoch=005] Train Loss=[QuantLoss=0.04393]Val loss = [QuantLoss=0.04816][QuantReg:0.28506][saved best model in this epoch]
-[TweetEvalSentiment] Starting epoch 6...
+[SST-5] Elapsed validation time:1.10s
+[SST-5] [Epoch=005] Train Loss=[QuantLoss=0.03715]Val loss = [QuantLoss=0.04647][QuantReg:0.46059][saved best model in this epoch]
+[SST-5] Starting epoch 6...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -245,8 +245,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.59s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.48s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -263,9 +263,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.19s
-[TweetEvalSentiment] [Epoch=006] Train Loss=[QuantLoss=0.04733]Val loss = [QuantLoss=0.05731][QuantReg:0.26936]
-[TweetEvalSentiment] Starting epoch 7...
+[SST-5] Elapsed validation time:1.11s
+[SST-5] [Epoch=006] Train Loss=[QuantLoss=0.04115]Val loss = [QuantLoss=0.05872][QuantReg:0.44414]
+[SST-5] Starting epoch 7...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -282,8 +282,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.50s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.41s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -300,9 +300,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.12s
-[TweetEvalSentiment] [Epoch=007] Train Loss=[QuantLoss=0.04086]Val loss = [QuantLoss=0.04773][QuantReg:0.26083][saved best model in this epoch]
-[TweetEvalSentiment] Starting epoch 8...
+[SST-5] Elapsed validation time:1.17s
+[SST-5] [Epoch=007] Train Loss=[QuantLoss=0.03350]Val loss = [QuantLoss=0.04546][QuantReg:0.46057][saved best model in this epoch]
+[SST-5] Starting epoch 8...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -319,8 +319,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.56s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.44s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -337,9 +337,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.19s
-[TweetEvalSentiment] [Epoch=008] Train Loss=[QuantLoss=0.04630]Val loss = [QuantLoss=0.04797][QuantReg:0.25247]
-[TweetEvalSentiment] Starting epoch 9...
+[SST-5] Elapsed validation time:1.10s
+[SST-5] [Epoch=008] Train Loss=[QuantLoss=0.04253]Val loss = [QuantLoss=0.06439][QuantReg:0.43863]
+[SST-5] Starting epoch 9...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -356,8 +356,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.62s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.40s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -374,9 +374,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.17s
-[TweetEvalSentiment] [Epoch=009] Train Loss=[QuantLoss=0.04907]Val loss = [QuantLoss=0.05687][QuantReg:0.24764]
-[TweetEvalSentiment] Starting epoch 10...
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=009] Train Loss=[QuantLoss=0.04067]Val loss = [QuantLoss=0.06261][QuantReg:0.45188]
+[SST-5] Starting epoch 10...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -393,8 +393,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.57s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.40s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -411,9 +411,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.35s
-[TweetEvalSentiment] [Epoch=010] Train Loss=[QuantLoss=0.04524]Val loss = [QuantLoss=0.07714][QuantReg:0.24089]
-[TweetEvalSentiment] Starting epoch 11...
+[SST-5] Elapsed validation time:1.05s
+[SST-5] [Epoch=010] Train Loss=[QuantLoss=0.03698]Val loss = [QuantLoss=0.05732][QuantReg:0.45289]
+[SST-5] Starting epoch 11...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -430,8 +430,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.47s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.47s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -448,9 +448,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.25s
-[TweetEvalSentiment] [Epoch=011] Train Loss=[QuantLoss=0.04455]Val loss = [QuantLoss=0.05187][QuantReg:0.25281]
-[TweetEvalSentiment] Starting epoch 12...
+[SST-5] Elapsed validation time:1.04s
+[SST-5] [Epoch=011] Train Loss=[QuantLoss=0.03533]Val loss = [QuantLoss=0.05478][QuantReg:0.47930]
+[SST-5] Starting epoch 12...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -467,8 +467,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.65s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.50s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -485,9 +485,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.22s
-[TweetEvalSentiment] [Epoch=012] Train Loss=[QuantLoss=0.04446]Val loss = [QuantLoss=0.07432][QuantReg:0.25106]
-[TweetEvalSentiment] Starting epoch 13...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=012] Train Loss=[QuantLoss=0.03473]Val loss = [QuantLoss=0.06145][QuantReg:0.45986]
+[SST-5] Starting epoch 13...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -504,8 +504,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.67s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.27s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -522,9 +522,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.20s
-[TweetEvalSentiment] [Epoch=013] Train Loss=[QuantLoss=0.03856]Val loss = [QuantLoss=0.06912][QuantReg:0.25326]
-[TweetEvalSentiment] Starting epoch 14...
+[SST-5] Elapsed validation time:1.07s
+[SST-5] [Epoch=013] Train Loss=[QuantLoss=0.03393]Val loss = [QuantLoss=0.05896][QuantReg:0.45833]
+[SST-5] Starting epoch 14...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -541,8 +541,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.65s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.34s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -559,9 +559,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.23s
-[TweetEvalSentiment] [Epoch=014] Train Loss=[QuantLoss=0.04732]Val loss = [QuantLoss=0.05309][QuantReg:0.24422]
-[TweetEvalSentiment] Starting epoch 15...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=014] Train Loss=[QuantLoss=0.03798]Val loss = [QuantLoss=0.04129][QuantReg:0.43446][saved best model in this epoch]
+[SST-5] Starting epoch 15...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -578,8 +578,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.61s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.46s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -596,9 +596,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.30s
-[TweetEvalSentiment] [Epoch=015] Train Loss=[QuantLoss=0.04882]Val loss = [QuantLoss=0.04349][QuantReg:0.23976][saved best model in this epoch]
-[TweetEvalSentiment] Starting epoch 16...
+[SST-5] Elapsed validation time:1.09s
+[SST-5] [Epoch=015] Train Loss=[QuantLoss=0.03873]Val loss = [QuantLoss=0.03903][QuantReg:0.44856][saved best model in this epoch]
+[SST-5] Starting epoch 16...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -615,8 +615,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.56s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.62s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -633,9 +633,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.29s
-[TweetEvalSentiment] [Epoch=016] Train Loss=[QuantLoss=0.04111]Val loss = [QuantLoss=0.05470][QuantReg:0.23800]
-[TweetEvalSentiment] Starting epoch 17...
+[SST-5] Elapsed validation time:1.13s
+[SST-5] [Epoch=016] Train Loss=[QuantLoss=0.03408]Val loss = [QuantLoss=0.05338][QuantReg:0.46068]
+[SST-5] Starting epoch 17...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -652,8 +652,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.62s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.41s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -670,9 +670,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.33s
-[TweetEvalSentiment] [Epoch=017] Train Loss=[QuantLoss=0.04007]Val loss = [QuantLoss=0.06031][QuantReg:0.24298]
-[TweetEvalSentiment] Starting epoch 18...
+[SST-5] Elapsed validation time:1.01s
+[SST-5] [Epoch=017] Train Loss=[QuantLoss=0.03345]Val loss = [QuantLoss=0.05116][QuantReg:0.45284]
+[SST-5] Starting epoch 18...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -689,8 +689,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.58s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.54s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -707,9 +707,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.11s
-[TweetEvalSentiment] [Epoch=018] Train Loss=[QuantLoss=0.04121]Val loss = [QuantLoss=0.05363][QuantReg:0.23921]
-[TweetEvalSentiment] Starting epoch 19...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=018] Train Loss=[QuantLoss=0.03269]Val loss = [QuantLoss=0.04932][QuantReg:0.46290]
+[SST-5] Starting epoch 19...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -726,8 +726,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.41s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.45s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -744,9 +744,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.18s
-[TweetEvalSentiment] [Epoch=019] Train Loss=[QuantLoss=0.04246]Val loss = [QuantLoss=0.05517][QuantReg:0.23493]
-[TweetEvalSentiment] Starting epoch 20...
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=019] Train Loss=[QuantLoss=0.03618]Val loss = [QuantLoss=0.05204][QuantReg:0.43588]
+[SST-5] Starting epoch 20...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -763,8 +763,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.57s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.46s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -781,9 +781,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.21s
-[TweetEvalSentiment] [Epoch=020] Train Loss=[QuantLoss=0.03878]Val loss = [QuantLoss=0.06083][QuantReg:0.22869]
-[TweetEvalSentiment] Starting epoch 21...
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=020] Train Loss=[QuantLoss=0.03311]Val loss = [QuantLoss=0.05763][QuantReg:0.44235]
+[SST-5] Starting epoch 21...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -800,8 +800,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.50s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.32s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -818,9 +818,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.16s
-[TweetEvalSentiment] [Epoch=021] Train Loss=[QuantLoss=0.03831]Val loss = [QuantLoss=0.06027][QuantReg:0.21924]
-[TweetEvalSentiment] Starting epoch 22...
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=021] Train Loss=[QuantLoss=0.02948]Val loss = [QuantLoss=0.04856][QuantReg:0.43635]
+[SST-5] Starting epoch 22...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -837,8 +837,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.54s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.46s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -855,9 +855,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.27s
-[TweetEvalSentiment] [Epoch=022] Train Loss=[QuantLoss=0.03827]Val loss = [QuantLoss=0.04406][QuantReg:0.22241]
-[TweetEvalSentiment] Starting epoch 23...
+[SST-5] Elapsed validation time:1.03s
+[SST-5] [Epoch=022] Train Loss=[QuantLoss=0.03273]Val loss = [QuantLoss=0.05205][QuantReg:0.42651]
+[SST-5] Starting epoch 23...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -874,8 +874,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.46s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.61s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -892,9 +892,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.22s
-[TweetEvalSentiment] [Epoch=023] Train Loss=[QuantLoss=0.03973]Val loss = [QuantLoss=0.05994][QuantReg:0.22604]
-[TweetEvalSentiment] Starting epoch 24...
+[SST-5] Elapsed validation time:1.13s
+[SST-5] [Epoch=023] Train Loss=[QuantLoss=0.03361]Val loss = [QuantLoss=0.06093][QuantReg:0.40765]
+[SST-5] Starting epoch 24...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -911,8 +911,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.64s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.39s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -929,9 +929,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.15s
-[TweetEvalSentiment] [Epoch=024] Train Loss=[QuantLoss=0.03880]Val loss = [QuantLoss=0.05451][QuantReg:0.22497]
-[TweetEvalSentiment] Starting epoch 25...
+[SST-5] Elapsed validation time:1.07s
+[SST-5] [Epoch=024] Train Loss=[QuantLoss=0.03257]Val loss = [QuantLoss=0.05204][QuantReg:0.43079]
+[SST-5] Starting epoch 25...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -948,8 +948,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.77s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.69s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -966,9 +966,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.20s
-[TweetEvalSentiment] [Epoch=025] Train Loss=[QuantLoss=0.03975]Val loss = [QuantLoss=0.05299][QuantReg:0.22716]
-[TweetEvalSentiment] Starting epoch 26...
+[SST-5] Elapsed validation time:1.05s
+[SST-5] [Epoch=025] Train Loss=[QuantLoss=0.03446]Val loss = [QuantLoss=0.05205][QuantReg:0.43457]
+[SST-5] Starting epoch 26...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -985,8 +985,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.78s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.57s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1003,9 +1003,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.17s
-[TweetEvalSentiment] [Epoch=026] Train Loss=[QuantLoss=0.03617]Val loss = [QuantLoss=0.06534][QuantReg:0.22576]
-[TweetEvalSentiment] Starting epoch 27...
+[SST-5] Elapsed validation time:1.10s
+[SST-5] [Epoch=026] Train Loss=[QuantLoss=0.02958]Val loss = [QuantLoss=0.05041][QuantReg:0.42721]
+[SST-5] Starting epoch 27...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1022,8 +1022,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.55s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.67s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1040,9 +1040,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.17s
-[TweetEvalSentiment] [Epoch=027] Train Loss=[QuantLoss=0.04113]Val loss = [QuantLoss=0.05975][QuantReg:0.22323]
-[TweetEvalSentiment] Starting epoch 28...
+[SST-5] Elapsed validation time:1.10s
+[SST-5] [Epoch=027] Train Loss=[QuantLoss=0.03009]Val loss = [QuantLoss=0.04985][QuantReg:0.42139]
+[SST-5] Starting epoch 28...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1059,8 +1059,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.70s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.62s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1077,9 +1077,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.23s
-[TweetEvalSentiment] [Epoch=028] Train Loss=[QuantLoss=0.04222]Val loss = [QuantLoss=0.05242][QuantReg:0.21515]
-[TweetEvalSentiment] Starting epoch 29...
+[SST-5] Elapsed validation time:1.12s
+[SST-5] [Epoch=028] Train Loss=[QuantLoss=0.03030]Val loss = [QuantLoss=0.05514][QuantReg:0.42165]
+[SST-5] Starting epoch 29...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1096,8 +1096,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.59s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.42s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1114,9 +1114,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.11s
-[TweetEvalSentiment] [Epoch=029] Train Loss=[QuantLoss=0.03662]Val loss = [QuantLoss=0.04904][QuantReg:0.21841]
-[TweetEvalSentiment] Starting epoch 30...
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=029] Train Loss=[QuantLoss=0.03168]Val loss = [QuantLoss=0.05910][QuantReg:0.41667]
+[SST-5] Starting epoch 30...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1133,8 +1133,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.66s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.37s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1151,9 +1151,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.16s
-[TweetEvalSentiment] [Epoch=030] Train Loss=[QuantLoss=0.03898]Val loss = [QuantLoss=0.06509][QuantReg:0.22401]
-[TweetEvalSentiment] Starting epoch 31...
+[SST-5] Elapsed validation time:1.07s
+[SST-5] [Epoch=030] Train Loss=[QuantLoss=0.03236]Val loss = [QuantLoss=0.06001][QuantReg:0.41651]
+[SST-5] Starting epoch 31...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1170,8 +1170,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.81s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.42s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1188,9 +1188,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.26s
-[TweetEvalSentiment] [Epoch=031] Train Loss=[QuantLoss=0.04100]Val loss = [QuantLoss=0.06257][QuantReg:0.22408]
-[TweetEvalSentiment] Starting epoch 32...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=031] Train Loss=[QuantLoss=0.03405]Val loss = [QuantLoss=0.06640][QuantReg:0.41655]
+[SST-5] Starting epoch 32...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1207,8 +1207,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.58s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.44s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1225,9 +1225,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.26s
-[TweetEvalSentiment] [Epoch=032] Train Loss=[QuantLoss=0.04123]Val loss = [QuantLoss=0.06090][QuantReg:0.21749]
-[TweetEvalSentiment] Starting epoch 33...
+[SST-5] Elapsed validation time:1.07s
+[SST-5] [Epoch=032] Train Loss=[QuantLoss=0.03439]Val loss = [QuantLoss=0.06511][QuantReg:0.43551]
+[SST-5] Starting epoch 33...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1244,8 +1244,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.78s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.46s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1262,9 +1262,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.25s
-[TweetEvalSentiment] [Epoch=033] Train Loss=[QuantLoss=0.03720]Val loss = [QuantLoss=0.06549][QuantReg:0.21237]
-[TweetEvalSentiment] Starting epoch 34...
+[SST-5] Elapsed validation time:1.09s
+[SST-5] [Epoch=033] Train Loss=[QuantLoss=0.02829]Val loss = [QuantLoss=0.05620][QuantReg:0.43182]
+[SST-5] Starting epoch 34...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1281,8 +1281,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.53s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.49s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1299,9 +1299,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.22s
-[TweetEvalSentiment] [Epoch=034] Train Loss=[QuantLoss=0.03792]Val loss = [QuantLoss=0.05862][QuantReg:0.21573]
-[TweetEvalSentiment] Starting epoch 35...
+[SST-5] Elapsed validation time:1.07s
+[SST-5] [Epoch=034] Train Loss=[QuantLoss=0.03020]Val loss = [QuantLoss=0.04180][QuantReg:0.42685]
+[SST-5] Starting epoch 35...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1318,8 +1318,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.45s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.56s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1336,9 +1336,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.22s
-[TweetEvalSentiment] [Epoch=035] Train Loss=[QuantLoss=0.04061]Val loss = [QuantLoss=0.04417][QuantReg:0.21809]
-[TweetEvalSentiment] Starting epoch 36...
+[SST-5] Elapsed validation time:1.02s
+[SST-5] [Epoch=035] Train Loss=[QuantLoss=0.03148]Val loss = [QuantLoss=0.05890][QuantReg:0.42482]
+[SST-5] Starting epoch 36...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1355,8 +1355,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.69s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.42s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1373,9 +1373,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.19s
-[TweetEvalSentiment] [Epoch=036] Train Loss=[QuantLoss=0.03965]Val loss = [QuantLoss=0.06723][QuantReg:0.21597]
-[TweetEvalSentiment] Starting epoch 37...
+[SST-5] Elapsed validation time:1.13s
+[SST-5] [Epoch=036] Train Loss=[QuantLoss=0.02999]Val loss = [QuantLoss=0.06164][QuantReg:0.42176]
+[SST-5] Starting epoch 37...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1392,8 +1392,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.83s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.46s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1410,9 +1410,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.19s
-[TweetEvalSentiment] [Epoch=037] Train Loss=[QuantLoss=0.03591]Val loss = [QuantLoss=0.05425][QuantReg:0.21407]
-[TweetEvalSentiment] Starting epoch 38...
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=037] Train Loss=[QuantLoss=0.02890]Val loss = [QuantLoss=0.03869][QuantReg:0.41629][saved best model in this epoch]
+[SST-5] Starting epoch 38...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1429,8 +1429,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.74s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.42s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1447,9 +1447,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.10s
-[TweetEvalSentiment] [Epoch=038] Train Loss=[QuantLoss=0.03654]Val loss = [QuantLoss=0.05645][QuantReg:0.21331]
-[TweetEvalSentiment] Starting epoch 39...
+[SST-5] Elapsed validation time:1.10s
+[SST-5] [Epoch=038] Train Loss=[QuantLoss=0.02743]Val loss = [QuantLoss=0.04485][QuantReg:0.41733]
+[SST-5] Starting epoch 39...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1466,8 +1466,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.87s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.69s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1484,9 +1484,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.12s
-[TweetEvalSentiment] [Epoch=039] Train Loss=[QuantLoss=0.03330]Val loss = [QuantLoss=0.05320][QuantReg:0.21333]
-[TweetEvalSentiment] Starting epoch 40...
+[SST-5] Elapsed validation time:1.10s
+[SST-5] [Epoch=039] Train Loss=[QuantLoss=0.02792]Val loss = [QuantLoss=0.05412][QuantReg:0.41882]
+[SST-5] Starting epoch 40...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1503,8 +1503,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.77s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.47s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1521,9 +1521,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.11s
-[TweetEvalSentiment] [Epoch=040] Train Loss=[QuantLoss=0.03353]Val loss = [QuantLoss=0.06083][QuantReg:0.21425]
-[TweetEvalSentiment] Starting epoch 41...
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=040] Train Loss=[QuantLoss=0.02932]Val loss = [QuantLoss=0.05749][QuantReg:0.41788]
+[SST-5] Starting epoch 41...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1540,8 +1540,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.43s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.40s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1558,9 +1558,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.12s
-[TweetEvalSentiment] [Epoch=041] Train Loss=[QuantLoss=0.03311]Val loss = [QuantLoss=0.06292][QuantReg:0.21440]
-[TweetEvalSentiment] Starting epoch 42...
+[SST-5] Elapsed validation time:1.07s
+[SST-5] [Epoch=041] Train Loss=[QuantLoss=0.02923]Val loss = [QuantLoss=0.05362][QuantReg:0.42076]
+[SST-5] Starting epoch 42...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1577,8 +1577,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.63s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.52s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1595,9 +1595,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.24s
-[TweetEvalSentiment] [Epoch=042] Train Loss=[QuantLoss=0.03335]Val loss = [QuantLoss=0.06018][QuantReg:0.21379]
-[TweetEvalSentiment] Starting epoch 43...
+[SST-5] Elapsed validation time:1.10s
+[SST-5] [Epoch=042] Train Loss=[QuantLoss=0.02927]Val loss = [QuantLoss=0.05952][QuantReg:0.41996]
+[SST-5] Starting epoch 43...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1614,8 +1614,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.53s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.47s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1632,9 +1632,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.30s
-[TweetEvalSentiment] [Epoch=043] Train Loss=[QuantLoss=0.03080]Val loss = [QuantLoss=0.05442][QuantReg:0.21340]
-[TweetEvalSentiment] Starting epoch 44...
+[SST-5] Elapsed validation time:0.99s
+[SST-5] [Epoch=043] Train Loss=[QuantLoss=0.02764]Val loss = [QuantLoss=0.04851][QuantReg:0.41836]
+[SST-5] Starting epoch 44...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1651,8 +1651,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.49s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.56s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1669,9 +1669,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.13s
-[TweetEvalSentiment] [Epoch=044] Train Loss=[QuantLoss=0.02986]Val loss = [QuantLoss=0.05013][QuantReg:0.21258]
-[TweetEvalSentiment] Starting epoch 45...
+[SST-5] Elapsed validation time:1.09s
+[SST-5] [Epoch=044] Train Loss=[QuantLoss=0.02676]Val loss = [QuantLoss=0.04440][QuantReg:0.41765]
+[SST-5] Starting epoch 45...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1688,8 +1688,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.58s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.50s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1706,9 +1706,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.12s
-[TweetEvalSentiment] [Epoch=045] Train Loss=[QuantLoss=0.03148]Val loss = [QuantLoss=0.06006][QuantReg:0.21249]
-[TweetEvalSentiment] Starting epoch 46...
+[SST-5] Elapsed validation time:1.00s
+[SST-5] [Epoch=045] Train Loss=[QuantLoss=0.02922]Val loss = [QuantLoss=0.05953][QuantReg:0.41818]
+[SST-5] Starting epoch 46...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1725,8 +1725,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.55s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.43s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1743,9 +1743,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.20s
-[TweetEvalSentiment] [Epoch=046] Train Loss=[QuantLoss=0.03079]Val loss = [QuantLoss=0.05798][QuantReg:0.21187]
-[TweetEvalSentiment] Starting epoch 47...
+[SST-5] Elapsed validation time:1.13s
+[SST-5] [Epoch=046] Train Loss=[QuantLoss=0.02882]Val loss = [QuantLoss=0.05125][QuantReg:0.41243]
+[SST-5] Starting epoch 47...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1762,8 +1762,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.47s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.41s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1780,9 +1780,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.19s
-[TweetEvalSentiment] [Epoch=047] Train Loss=[QuantLoss=0.03149]Val loss = [QuantLoss=0.06422][QuantReg:0.21159]
-[TweetEvalSentiment] Starting epoch 48...
+[SST-5] Elapsed validation time:1.05s
+[SST-5] [Epoch=047] Train Loss=[QuantLoss=0.02874]Val loss = [QuantLoss=0.06008][QuantReg:0.41702]
+[SST-5] Starting epoch 48...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1799,8 +1799,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.67s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.45s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1817,9 +1817,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.10s
-[TweetEvalSentiment] [Epoch=048] Train Loss=[QuantLoss=0.02915]Val loss = [QuantLoss=0.06236][QuantReg:0.21251]
-[TweetEvalSentiment] Starting epoch 49...
+[SST-5] Elapsed validation time:1.05s
+[SST-5] [Epoch=048] Train Loss=[QuantLoss=0.02696]Val loss = [QuantLoss=0.05761][QuantReg:0.41850]
+[SST-5] Starting epoch 49...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1836,8 +1836,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.69s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.39s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1854,9 +1854,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.18s
-[TweetEvalSentiment] [Epoch=049] Train Loss=[QuantLoss=0.03275]Val loss = [QuantLoss=0.06087][QuantReg:0.21239]
-[TweetEvalSentiment] Starting epoch 50...
+[SST-5] Elapsed validation time:1.03s
+[SST-5] [Epoch=049] Train Loss=[QuantLoss=0.02937]Val loss = [QuantLoss=0.05763][QuantReg:0.41419]
+[SST-5] Starting epoch 50...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1873,8 +1873,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.74s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.41s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1891,9 +1891,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.29s
-[TweetEvalSentiment] [Epoch=050] Train Loss=[QuantLoss=0.02815]Val loss = [QuantLoss=0.04978][QuantReg:0.21197]
-[TweetEvalSentiment] Starting epoch 51...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=050] Train Loss=[QuantLoss=0.02635]Val loss = [QuantLoss=0.04304][QuantReg:0.41150]
+[SST-5] Starting epoch 51...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1910,8 +1910,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.65s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.61s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1928,9 +1928,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.27s
-[TweetEvalSentiment] [Epoch=051] Train Loss=[QuantLoss=0.02951]Val loss = [QuantLoss=0.05134][QuantReg:0.21215]
-[TweetEvalSentiment] Starting epoch 52...
+[SST-5] Elapsed validation time:1.09s
+[SST-5] [Epoch=051] Train Loss=[QuantLoss=0.02725]Val loss = [QuantLoss=0.04793][QuantReg:0.41388]
+[SST-5] Starting epoch 52...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1947,8 +1947,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.73s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.48s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1965,9 +1965,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.21s
-[TweetEvalSentiment] [Epoch=052] Train Loss=[QuantLoss=0.02858]Val loss = [QuantLoss=0.05174][QuantReg:0.21199]
-[TweetEvalSentiment] Starting epoch 53...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=052] Train Loss=[QuantLoss=0.02652]Val loss = [QuantLoss=0.05104][QuantReg:0.41486]
+[SST-5] Starting epoch 53...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -1984,8 +1984,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.64s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.36s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2002,9 +2002,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.27s
-[TweetEvalSentiment] [Epoch=053] Train Loss=[QuantLoss=0.03118]Val loss = [QuantLoss=0.06562][QuantReg:0.21183]
-[TweetEvalSentiment] Starting epoch 54...
+[SST-5] Elapsed validation time:1.04s
+[SST-5] [Epoch=053] Train Loss=[QuantLoss=0.02927]Val loss = [QuantLoss=0.06509][QuantReg:0.41393]
+[SST-5] Starting epoch 54...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2021,8 +2021,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.63s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.51s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2039,9 +2039,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.33s
-[TweetEvalSentiment] [Epoch=054] Train Loss=[QuantLoss=0.03064]Val loss = [QuantLoss=0.05641][QuantReg:0.21112]
-[TweetEvalSentiment] Starting epoch 55...
+[SST-5] Elapsed validation time:1.12s
+[SST-5] [Epoch=054] Train Loss=[QuantLoss=0.02786]Val loss = [QuantLoss=0.05401][QuantReg:0.41669]
+[SST-5] Starting epoch 55...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2058,8 +2058,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.58s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.60s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2076,9 +2076,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.13s
-[TweetEvalSentiment] [Epoch=055] Train Loss=[QuantLoss=0.03101]Val loss = [QuantLoss=0.06227][QuantReg:0.21121]
-[TweetEvalSentiment] Starting epoch 56...
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=055] Train Loss=[QuantLoss=0.02868]Val loss = [QuantLoss=0.05850][QuantReg:0.41519]
+[SST-5] Starting epoch 56...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2095,8 +2095,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.61s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.39s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2113,9 +2113,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.22s
-[TweetEvalSentiment] [Epoch=056] Train Loss=[QuantLoss=0.03029]Val loss = [QuantLoss=0.06302][QuantReg:0.21232]
-[TweetEvalSentiment] Starting epoch 57...
+[SST-5] Elapsed validation time:1.01s
+[SST-5] [Epoch=056] Train Loss=[QuantLoss=0.02742]Val loss = [QuantLoss=0.05368][QuantReg:0.41505]
+[SST-5] Starting epoch 57...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2132,8 +2132,8 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed training time:7.68s
-[TweetEvalSentiment] Starting validation...
+[SST-5] Elapsed training time:5.33s
+[SST-5] Starting validation...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2150,10 +2150,9 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[TweetEvalSentiment] Elapsed validation time:1.20s
-[TweetEvalSentiment] [Epoch=057] Train Loss=[QuantLoss=0.02946]Val loss = [QuantLoss=0.05371][QuantReg:0.21241]
-[TweetEvalSentiment] Early stopping in epoch 57!
-[TweetEvalSentiment] Restoring best model...
+[SST-5] Elapsed validation time:1.08s
+[SST-5] [Epoch=057] Train Loss=[QuantLoss=0.02689]Val loss = [QuantLoss=0.04360][QuantReg:0.41373]
+[SST-5] Starting epoch 58...
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
@@ -2170,4 +2169,449 @@ huggingface/tokenizers: The current process just got forked, after parallelism h
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-MAE médio: 0.1085 ± 0.0350
+[SST-5] Elapsed training time:5.37s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.05s
+[SST-5] [Epoch=058] Train Loss=[QuantLoss=0.02636]Val loss = [QuantLoss=0.04107][QuantReg:0.41440]
+[SST-5] Starting epoch 59...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.64s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.07s
+[SST-5] [Epoch=059] Train Loss=[QuantLoss=0.03043]Val loss = [QuantLoss=0.04913][QuantReg:0.41314]
+[SST-5] Starting epoch 60...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.49s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.15s
+[SST-5] [Epoch=060] Train Loss=[QuantLoss=0.02522]Val loss = [QuantLoss=0.04775][QuantReg:0.41405]
+[SST-5] Starting epoch 61...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.41s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.11s
+[SST-5] [Epoch=061] Train Loss=[QuantLoss=0.03204]Val loss = [QuantLoss=0.05553][QuantReg:0.41306]
+[SST-5] Starting epoch 62...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.49s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=062] Train Loss=[QuantLoss=0.03023]Val loss = [QuantLoss=0.05621][QuantReg:0.41272]
+[SST-5] Starting epoch 63...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.51s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.06s
+[SST-5] [Epoch=063] Train Loss=[QuantLoss=0.02742]Val loss = [QuantLoss=0.06113][QuantReg:0.41621]
+[SST-5] Starting epoch 64...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.41s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.05s
+[SST-5] [Epoch=064] Train Loss=[QuantLoss=0.02756]Val loss = [QuantLoss=0.05687][QuantReg:0.41392]
+[SST-5] Starting epoch 65...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.42s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.10s
+[SST-5] [Epoch=065] Train Loss=[QuantLoss=0.02890]Val loss = [QuantLoss=0.04826][QuantReg:0.41324]
+[SST-5] Starting epoch 66...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.37s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.09s
+[SST-5] [Epoch=066] Train Loss=[QuantLoss=0.02713]Val loss = [QuantLoss=0.05195][QuantReg:0.41399]
+[SST-5] Starting epoch 67...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.45s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.07s
+[SST-5] [Epoch=067] Train Loss=[QuantLoss=0.02556]Val loss = [QuantLoss=0.04777][QuantReg:0.41399]
+[SST-5] Starting epoch 68...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.44s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.01s
+[SST-5] [Epoch=068] Train Loss=[QuantLoss=0.02810]Val loss = [QuantLoss=0.04824][QuantReg:0.41359]
+[SST-5] Starting epoch 69...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed training time:5.34s
+[SST-5] Starting validation...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[SST-5] Elapsed validation time:1.12s
+[SST-5] [Epoch=069] Train Loss=[QuantLoss=0.02863]Val loss = [QuantLoss=0.05685][QuantReg:0.41483]
+[SST-5] Early stopping in epoch 69!
+[SST-5] Restoring best model...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+MAE médio: 0.1041 ± 0.0361

@@ -1,11 +1,11 @@
 nohup: ignoring input
---- [Tue Oct  7 09:51:14 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
---- [Tue Oct  7 09:51:14 -03 2025] Iniciando a suíte de experimentos 'Sanders' ---
---- [Tue Oct  7 11:52:35 -03 2025] Suíte 'Sanders' concluída em 7281s. Log salvo em logs/sanders_runner.log ---
---- [Tue Oct  7 11:52:35 -03 2025] Iniciando a suíte de experimentos 'TweetEval' ---
---- [Tue Oct  7 12:52:04 -03 2025] Suíte 'TweetEval' concluída em 3569s. Log salvo em logs/tweet_eval_runner.log ---
---- [Tue Oct  7 12:52:04 -03 2025] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---
---- [Tue Oct  7 13:42:54 -03 2025] Suíte 'FinancialPhraseBank' concluída em 3050s. Log salvo em logs/financial_runner.log ---
---- [Tue Oct  7 13:42:54 -03 2025] Iniciando a suíte de experimentos 'SST-5' ---
---- [Tue Oct  7 14:17:10 -03 2025] Suíte 'SST-5' concluída em 2056s. Log salvo em logs/sst_runner.log ---
---- [Tue Oct  7 14:17:10 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
+--- [Sun Oct 19 13:56:08 -03 2025] INICIANDO SCRIPT MESTRE DE EXECUÇÃO DE TODOS OS DATASETS ---
+--- [Sun Oct 19 13:56:08 -03 2025] Iniciando a suíte de experimentos 'Sanders' ---
+--- [Sun Oct 19 13:56:22 -03 2025] Suíte 'Sanders' concluída em 14s. Log salvo em logs/sanders_runner.log ---
+--- [Sun Oct 19 13:56:22 -03 2025] Iniciando a suíte de experimentos 'TweetEval' ---
+--- [Sun Oct 19 14:41:03 -03 2025] Suíte 'TweetEval' concluída em 2681s. Log salvo em logs/tweet_eval_runner.log ---
+--- [Sun Oct 19 14:41:03 -03 2025] Iniciando a suíte de experimentos 'FinancialPhraseBank' ---
+--- [Sun Oct 19 14:48:48 -03 2025] Suíte 'FinancialPhraseBank' concluída em 465s. Log salvo em logs/financial_runner.log ---
+--- [Sun Oct 19 14:48:48 -03 2025] Iniciando a suíte de experimentos 'SST-5' ---
+--- [Sun Oct 19 15:24:00 -03 2025] Suíte 'SST-5' concluída em 2112s. Log salvo em logs/sst_runner.log ---
+--- [Sun Oct 19 15:24:00 -03 2025] SCRIPT MESTRE CONCLUÍDO. TODOS OS EXPERIMENTOS FORAM FINALIZADOS. ---
